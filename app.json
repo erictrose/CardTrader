@@ -1,0 +1,8 @@
+{
+  "name": "CardTrader",
+  "description": "Make, Battle, Bet and Trade",
+  "repository": "https://github.com/erictrose/cardtrader",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}

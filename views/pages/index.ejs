@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cardMaker">
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body ng-controller="mainCtrl">
+    <!----------->
+    <!--profile-->
+    <!----------->
+    <div class="profile-circle">
+       <img src="{{ userData.github.profileImageURL }}" class="profile-pic">
+    </div>
+    <div ng-repeat="user in userData">
+        <p class="profile-name">hello {{ userData.github.displayName }}</p>
+    </div>
+    <!-------->
+    <!--logo-->
+    <!-------->
+    <div class="logo">
+        <img src="logo.png">
+    </div>
+    <!---------->
+    <!--logout-->
+    <!---------->
+    <div class="logout-button" ng-click="ghLogin()">
+        <a href="#/logout">login</a>
+    </div>
+    <!------->
+    <!--nav-->
+    <!------->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-------------------->
+        <!--nav toggle group-->
+        <!-------------------->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav nav-pills nav-justified">
+                <li role="presentation" class="nav-item"><a href="#">MAKE</a></li>
+                <li role="presentation" class="nav-item disabled"><a href="#">BATTLE</a></li>
+                <li role="presentation" class="nav-item disabled"><a href="#">BET</a></li>
+                <li role="presentation" class="nav-item disabled"><a href="#">TRADE</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+    <!-------->
+    <!--body-->
+    <!-------->
+    <div class="row">
+        <!------------------------->
+        <!--all new cards section-->
+        <!------------------------->
+        <div class="new-all col-sm-5">
+            <p class="page-header">all new cards</p>
+            <div class="all-new-card-result {{ card.cardColor }}" ng-repeat="card in cards">
+                <p class="all-new-card-type">{{ card.cardType }}</p>
+                <p class="all-new-card-name">{{ card.cardName }}</p>
+                <img src="{{ card.cardImg }}" class="all-new-card-image">
+                <p class="all-new-card-description">{{ card.cardDesc }}</p>
+                <p class="all-new-card-numbers">{{ card.cardAttack }}/{{ card.cardDefense }}</p>
+            </div>
+        </div>
+        <!----------------------->
+        <!--new by type section-->
+        <!----------------------->
+        <div class="new-type col-sm-5">
+            <p class="page-header">new cards by type</p>
+            <!--newest green card-->
+            <div class="new-type-card-result {{ card.cardColor }}" ng-repeat="card in newestByType | filter:{ cardColor: 'green' } | orderBy:'createTime':true | limitTo:1">
+                <p class="new-type-card-type">{{ card.cardType }}</p>
+                <p class="new-type-card-name">{{ card.cardName }}</p>
+                <img src="{{ card.cardImg }}" class="new-type-card-image">
+                <p class="new-type-card-description">{{ card.cardDesc }}</p>
+                <p class="new-type-card-numbers">{{ card.cardAttack }}/{{ card.cardDefense }}</p>
+            </div>
+            <!--newest blue card-->
+            <div class="new-type-card-result {{ card.cardColor }}" ng-repeat="card in newestByType | filter:{ cardColor: 'blue' } | orderBy:'createTime':true | limitTo:1">
+                <p class="new-type-card-type">{{ card.cardType }}</p>
+                <p class="new-type-card-name">{{ card.cardName }}</p>
+                <img src="{{ card.cardImg }}" class="new-type-card-image">
+                <p class="new-type-card-description">{{ card.cardDesc }}</p>
+                <p class="new-type-card-numbers">{{ card.cardAttack }}/{{ card.cardDefense }}</p>
+            </div>
+            <!--newest purple card-->
+            <div class="new-type-card-result {{ card.cardColor }}" ng-repeat="card in newestByType | filter:{ cardColor: 'purple' } | orderBy:'createTime':true | limitTo:1">
+                <p class="new-type-card-type">{{ card.cardType }}</p>
+                <p class="new-type-card-name">{{ card.cardName }}</p>
+                <img src="{{ card.cardImg }}" class="new-type-card-image">
+                <p class="new-type-card-description">{{ card.cardDesc }}</p>
+                <p class="new-type-card-numbers">{{ card.cardAttack }}/{{ card.cardDefense }}</p>
+            </div>
+            <!--newest yellow card-->
+            <div class="new-type-card-result {{ card.cardColor }}" ng-repeat="card in newestByType | filter:{ cardColor: 'yellow' } | orderBy:'createTime':true | limitTo:1">
+                <p class="new-type-card-type">{{ card.cardType }}</p>
+                <p class="new-type-card-name">{{ card.cardName }}</p>
+                <img src="{{ card.cardImg }}" class="new-type-card-image">
+                <p class="new-type-card-description">{{ card.cardDesc }}</p>
+                <p class="new-type-card-numbers">{{ card.cardAttack }}/{{ card.cardDefense }}</p>
+            </div>
+        </div>
+        <!----------------------->
+        <!--add new card button-->
+        <!----------------------->
+        <div class="col-sm-2">
+            <button type="button" class="add-card" data-toggle="modal" data-target="#myModal">+</button>
+        </div>
+        <!------------------>
+        <!--add card modal-->
+        <!------------------>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            <!-- Modal content-->
+                <div class="modal-content" ng-style="cardBodyColor">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-body">
+                        <!--card type-->
+                        <input class="add-input add-type" ng-model="cardType" type="text" id="cardTypeInput" placeholder="card type">
+                        <!--card attack-->
+                        <input class="add-input add-attack" ng-model="cardAttack" type="text" id="cardAttackInput" placeholder="#">
+                        <!--number seperator-->
+                        <p class="number-seperator">/</p>
+                        <!--card defense-->
+                        <input class="add-input add-defense" ng-model="cardDefense" type="text" id="cardDefenseInput" placeholder="#">
+                        <!--card name-->
+                        <input class="add-input add-name" ng-model="cardName" type="text" id="cardNameInput" placeholder="card name">
+                        <!--add image-->
+                        <div class="dropzone" file-dropzone="[image/png, image/jpeg, image/gif]"
+                        file="image" file-name="imageFileName" data-max-file-size="3">
+                            <span class="drop-text">Drop Image Here</span>
+                        </div>
+                        <div class="image-container">
+                            <img ng-src={{image}} />
+                        </div>
+                        <!--manual add image-->
+                        <input class="add-input add-img" ng-model="cardImg" type="text" id="cardImgInput" placeholder="card image url">
+                        <!--card description-->
+                        <textarea class="add-input add-desc" ng-model="cardDesc" type="text" id="cardDescInput" placeholder="card description"></textarea>
+                        <!--card color-->
+                        <div class="color-holder">
+                            <label>
+                            <input type="radio" ng-model="cardColor" value="lightgrey" ng-click="cardBodyColor={'background-color':'#c2c1c1'}">
+                            Common
+                            </label>
+                            <label>
+                            <input type="radio" ng-model="cardColor" value="green" ng-click="cardBodyColor={'background-color':'#59b947'}">
+                            Uncommon
+                            </label>
+                            <label>
+                            <input type="radio" ng-model="cardColor" value="blue" ng-click="cardBodyColor={'background-color':'#5784c3'}">
+                            Rare
+                            </label>
+                            <label>
+                            <input type="radio" ng-model="cardColor" value="purple" ng-click="cardBodyColor={'background-color':'#8955a2'}">
+                            Super
+                            </label>
+                            <label>
+                            <input type="radio" ng-model="cardColor" value="yellow" ng-click="cardBodyColor={'background-color':'#fcb315'}">
+                            Ultra
+                            </label>
+                        </div>
+                    </div>
+                        <button type="button" ng-click="addCard($event)" class="btn btn-default add-button" data-dismiss="modal">add card</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="/lang-logo.png">
+    </a>
+    <h1>Getting Started with Node on Heroku</h1>
+    <p>This is a sample Node application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
+    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a>
+    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+  </div>
+</div>
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
+    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" class="alert-link">Getting Started with Node on Heroku</a> tutorial.
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
+      <ul>
+        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/node-js-getting-started">Heroku Button</a> on the repository.</li>
+
+        <li>When Heroku received the source code, it grabbed all the dependencies in the <a href="https://github.com/heroku/node-js-getting-started/blob/master/package.json">package.json</a>.</li>
+        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
+        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
+        <li>Check out the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started</a> guide to learn more!</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
+      <ul>
+        <li><a href="https://www.heroku.com/home">Heroku</a></li>
+        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
+        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
+        <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node Apps on Heroku</a></li>
+      </ul>
+    </div>
+  </div>  row 
+   <div class="alert alert-info text-center" role="alert">
+    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
+  </div>
+</div>
+-->
+
+</body>
+</html>

@@ -4,13 +4,13 @@
 
 /*
 
-app name: cardMaker
+app name: cardTrader
 dependencies: firebase
 controllers: mainCtrl
 
 */
 
-var cardMaker = angular.module("cardMaker", ["firebase"]);
+var cardTrader = angular.module("cardTrader", ["firebase"]);
 ///////////////////
 //MAIN CONTROLLER//
 ///////////////////
@@ -28,7 +28,7 @@ newestByType
 addCard()
 */
 
-cardMaker.controller("mainCtrl", ["$scope", "$firebaseArray", "$firebaseAuth",
+cardTrader.controller("mainCtrl", ["$scope", "$firebaseArray", "$firebaseAuth",
 function($scope, $firebaseArray, $firebaseAuth){
     ////////////////
     //IMAGE UPLOAD//
@@ -40,8 +40,8 @@ function($scope, $firebaseArray, $firebaseAuth){
     ////////////
     //FIREBASE//
     ////////////
-    var firebaseAuth = new Firebase("https://cardmaker.firebaseio.com");
-    var firebaseCards = new Firebase("https://cardmaker.firebaseio.com/cards");
+    var firebaseAuth = new Firebase("https://cardtraderdb.firebaseio.com");
+    var firebaseCards = new Firebase("https://cardtraderdb.firebaseio.com/cards");
     var auth = $firebaseAuth(firebaseAuth);
     $scope.cards = $firebaseArray(firebaseCards);
     $scope.newestByType = $firebaseArray(firebaseCards);
@@ -96,7 +96,7 @@ function($scope, $firebaseArray, $firebaseAuth){
 ///////////////////////////////
 //DIRECTIVES FOR IMAGE UPLOAD//
 ///////////////////////////////
-cardMaker.directive('fileDropzone', function() {
+cardTrader.directive('fileDropzone', function() {
   return {
     restrict: 'A',
     scope: {

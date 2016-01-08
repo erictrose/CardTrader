@@ -3,119 +3,401 @@
 <head>
   <% include ../partials/header.ejs %>
 </head>
-
 <body ng-controller="mainCtrl">
     <!----------->
     <!--profile-->
     <!----------->
+<!--
     <div class="profile-circle">
        <img src="{{ userData.github.profileImageURL }}" class="profile-pic">
     </div>
     <div ng-repeat="user in userData">
         <p class="profile-name">hello {{ userData.github.displayName }}</p>
     </div>
+-->
     <!-------->
     <!--logo-->
     <!-------->
+<!--
     <div class="logo">
         <img src="images/logo.png">
     </div>
+-->
     <!---------->
     <!--logout-->
     <!---------->
+<!--
     <div class="logout-button" ng-click="ghLogin()">
         <a href="#/logout">login</a>
     </div>
-    <!------->
-    <!--nav-->
-    <!------->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <!-------------------->
-        <!--nav toggle group-->
-        <!-------------------->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav nav-pills nav-justified">
-                <li role="presentation" class="nav-item"><a href="#">MAKE</a></li>
-                <li role="presentation" class="nav-item disabled"><a href="#">BATTLE</a></li>
-                <li role="presentation" class="nav-item disabled"><a href="#">BET</a></li>
-                <li role="presentation" class="nav-item disabled"><a href="#">TRADE</a></li>
-            </ul>
-        </div>
-      </div>
-    </nav>
+-->
     <!-------->
     <!--body-->
     <!-------->
-    <div class="row">
+<!--    <div class="row">-->
         <!------------------------->
         <!--all new cards section-->
         <!------------------------->
-        <div class="new-all col-sm-5">
-            <p class="page-header">all new cards</p>
-            <div class="all-new-card-result {{ card.cardColor }}" ng-repeat="card in cards">
-                <p class="all-new-card-type">{{ card.cardType }}</p>
-                <p class="all-new-card-name">{{ card.cardName }}</p>
-                <img src="{{ card.cardImg }}" class="all-new-card-image">
-                <p class="all-new-card-description">{{ card.cardDesc }}</p>
-                <p class="all-new-card-numbers">{{ card.cardAttack }}/{{ card.cardDefense }}</p>
+        
+        
+        
+        
+        
+    <!------------------>
+    <!--MAIN CONTAINER-->
+    <!------------------>
+        <div class="container">
+        <div class="top">
+            <div class="profile">
+                profile
+            </div>
+            <div class="logo">
+                <p class="nowrap">Card Trader</p>
+            </div>
+            <div class="logout">
+                logout
             </div>
         </div>
-        <!----------------------->
-        <!--new by type section-->
-        <!----------------------->
-        <div class="new-type col-sm-5">
-            <p class="page-header">new cards by type</p>
-            <!--newest green card-->
-            <div class="new-type-card-result {{ card.cardColor }}" ng-repeat="card in newestByType | filter:{ cardColor: 'green' } | orderBy:'createTime':true | limitTo:1">
-                <p class="new-type-card-type">{{ card.cardType }}</p>
-                <p class="new-type-card-name">{{ card.cardName }}</p>
-                <img src="{{ card.cardImg }}" class="new-type-card-image">
-                <p class="new-type-card-description">{{ card.cardDesc }}</p>
-                <p class="new-type-card-numbers">{{ card.cardAttack }}/{{ card.cardDefense }}</p>
+        <div class="sections">
+            <div class="section-text">
+                <button class="section-button">
+                    MAKE
+                </button>
             </div>
-            <!--newest blue card-->
-            <div class="new-type-card-result {{ card.cardColor }}" ng-repeat="card in newestByType | filter:{ cardColor: 'blue' } | orderBy:'createTime':true | limitTo:1">
-                <p class="new-type-card-type">{{ card.cardType }}</p>
-                <p class="new-type-card-name">{{ card.cardName }}</p>
-                <img src="{{ card.cardImg }}" class="new-type-card-image">
-                <p class="new-type-card-description">{{ card.cardDesc }}</p>
-                <p class="new-type-card-numbers">{{ card.cardAttack }}/{{ card.cardDefense }}</p>
+            <div class="section-text">
+                <button class="section-button">
+                    BATTLE
+                </button>
             </div>
-            <!--newest purple card-->
-            <div class="new-type-card-result {{ card.cardColor }}" ng-repeat="card in newestByType | filter:{ cardColor: 'purple' } | orderBy:'createTime':true | limitTo:1">
-                <p class="new-type-card-type">{{ card.cardType }}</p>
-                <p class="new-type-card-name">{{ card.cardName }}</p>
-                <img src="{{ card.cardImg }}" class="new-type-card-image">
-                <p class="new-type-card-description">{{ card.cardDesc }}</p>
-                <p class="new-type-card-numbers">{{ card.cardAttack }}/{{ card.cardDefense }}</p>
+            <div class="section-text">
+                <button class="section-button">
+                    BET
+                </button>
             </div>
-            <!--newest yellow card-->
-            <div class="new-type-card-result {{ card.cardColor }}" ng-repeat="card in newestByType | filter:{ cardColor: 'yellow' } | orderBy:'createTime':true | limitTo:1">
-                <p class="new-type-card-type">{{ card.cardType }}</p>
-                <p class="new-type-card-name">{{ card.cardName }}</p>
-                <img src="{{ card.cardImg }}" class="new-type-card-image">
-                <p class="new-type-card-description">{{ card.cardDesc }}</p>
-                <p class="new-type-card-numbers">{{ card.cardAttack }}/{{ card.cardDefense }}</p>
+            <div class="section-text">
+                <button class="section-button">
+                    TRADE
+                </button>
             </div>
         </div>
-        <!----------------------->
-        <!--add new card button-->
-        <!----------------------->
-        <div class="col-sm-2">
-            <button type="button" class="add-card" data-toggle="modal" data-target="#myModal">+</button>
+        <div class="middle">
+            <div class="new">
+                <div class="divider new-divider-1">
+                    Newest 20
+                </div>
+                
+                
+                <!--ng-repeat this for 20 cards-->
+                <div class="new-card {{card.cardColor}}" ng-repeat="card in cards">
+                    <div class="new-card-top">
+                        <p class="new-card-type">
+                            {{card.cardType}}
+                        </p>
+                        <p class="new-card-title">
+                            {{card.cardName}}
+                        </p>
+                        <p class="new-card-number">
+                            {{card.cardAttack}}/{{card.cardDefense}}
+                        </p>
+                    </div>
+                    <img class="new-card-image" src="{{card.cardImg}}" alt="card image">
+                    <p class="new-card-desc">
+                        {{card.cardDesc}}
+                    </p>
+                </div>
+                
+                
+            </div>
+            <div class="bytype">
+                <div class="divider bytype-divider-1">
+                    Newest by rarity (4)
+                </div>
+                
+                
+<!--                ADD CARD TEMPLATE COLORS TO CSS!!!-->
+                
+                <!--NEWEST BY RARITY-->
+                <!--green-->
+                <div class="bytype-card {{card.cardColor}}" ng-repeat="card in newestByType | filter:{ cardColor: 'green' } | orderBy:'createTime':true | limitTo:1">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            {{card.cardType}}
+                        </p>
+                        <p class="bytype-card-title">
+                            {{card.cardName}}
+                        </p>
+                        <p class="bytype-card-number">
+                            {{card.cardAttack}}/{{card.cardDefense}}
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="{{card.cardImg}}" alt="card image">
+                    <p class="bytype-card-desc">
+                        {{card.cardDesc}}
+                    </p>
+                </div>
+                <!--blue-->
+                <div class="bytype-card {{card.cardColor}}" ng-repeat="card in newestByType | filter:{ cardColor: 'blue' } | orderBy:'createTime':true | limitTo:1">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            {{card.cardType}}
+                        </p>
+                        <p class="bytype-card-title">
+                            {{card.cardName}}
+                        </p>
+                        <p class="bytype-card-number">
+                            {{card.cardAttack}}/{{card.cardDefense}}
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="{{card.cardImg}}" alt="card image">
+                    <p class="bytype-card-desc">
+                        {{card.cardDesc}}
+                    </p>
+                </div>
+                <!--purple-->
+                <div class="bytype-card {{card.cardColor}}" ng-repeat="card in newestByType | filter:{ cardColor: 'purple' } | orderBy:'createTime':true | limitTo:1">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            {{card.cardType}}
+                        </p>
+                        <p class="bytype-card-title">
+                            {{card.cardName}}
+                        </p>
+                        <p class="bytype-card-number">
+                            {{card.cardAttack}}/{{card.cardDefense}}
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="{{card.cardImg}}" alt="card image">
+                    <p class="bytype-card-desc">
+                        {{card.cardDesc}}
+                    </p>
+                </div>
+                <!--yellow-->
+                <div class="bytype-card {{card.cardColor}}" ng-repeat="card in newestByType | filter:{ cardColor: 'yellow' } | orderBy:'createTime':true | limitTo:1">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            {{card.cardType}}
+                        </p>
+                        <p class="bytype-card-title">
+                            {{card.cardName}}
+                        </p>
+                        <p class="bytype-card-number">
+                            {{card.cardAttack}}/{{card.cardDefense}}
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="{{card.cardImg}}" alt="card image">
+                    <p class="bytype-card-desc">
+                        {{card.cardDesc}}
+                    </p>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                <div class="divider bytype-divider-2">
+                    Newest by __________ (5)
+                </div>
+                
+                
+                <div class="bytype-card">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            abc
+                        </p>
+                        <p class="bytype-card-title">
+                            test
+                        </p>
+                        <p class="bytype-card-number">
+                            0/0
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+                    <p class="bytype-card-desc">
+                        test description 
+                    </p>
+                </div>
+                <div class="bytype-card">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            abc
+                        </p>
+                        <p class="bytype-card-title">
+                            test
+                        </p>
+                        <p class="bytype-card-number">
+                            0/0
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+                    <p class="bytype-card-desc">
+                        test description 
+                    </p>
+                </div>
+                <div class="bytype-card">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            abc
+                        </p>
+                        <p class="bytype-card-title">
+                            test
+                        </p>
+                        <p class="bytype-card-number">
+                            0/0
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+                    <p class="bytype-card-desc">
+                        test description 
+                    </p>
+                </div>
+                <div class="bytype-card">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            abc
+                        </p>
+                        <p class="bytype-card-title">
+                            test
+                        </p>
+                        <p class="bytype-card-number">
+                            0/0
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+                    <p class="bytype-card-desc">
+                        test description 
+                    </p>
+                </div>
+                <div class="bytype-card">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            abc
+                        </p>
+                        <p class="bytype-card-title">
+                            test
+                        </p>
+                        <p class="bytype-card-number">
+                            0/0
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+                    <p class="bytype-card-desc">
+                        test description 
+                    </p>
+                </div>
+                
+
+                <div class="divider bytype-divider-3">
+                    Newest by __________ (5)
+                </div>
+                
+                
+                <div class="bytype-card">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            abc
+                        </p>
+                        <p class="bytype-card-title">
+                            test
+                        </p>
+                        <p class="bytype-card-number">
+                            0/0
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+                    <p class="bytype-card-desc">
+                        test description 
+                    </p>
+                </div>
+                <div class="bytype-card">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            abc
+                        </p>
+                        <p class="bytype-card-title">
+                            test
+                        </p>
+                        <p class="bytype-card-number">
+                            0/0
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+                    <p class="bytype-card-desc">
+                        test description 
+                    </p>
+                </div>
+                <div class="bytype-card">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            abc
+                        </p>
+                        <p class="bytype-card-title">
+                            test
+                        </p>
+                        <p class="bytype-card-number">
+                            0/0
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+                    <p class="bytype-card-desc">
+                        test description 
+                    </p>
+                </div>
+                <div class="bytype-card">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            abc
+                        </p>
+                        <p class="bytype-card-title">
+                            test
+                        </p>
+                        <p class="bytype-card-number">
+                            0/0
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+                    <p class="bytype-card-desc">
+                        test description 
+                    </p>
+                </div>
+                <div class="bytype-card">
+                    <div class="bytype-card-top">
+                        <p class="bytype-card-type">
+                            abc
+                        </p>
+                        <p class="bytype-card-title">
+                            test
+                        </p>
+                        <p class="bytype-card-number">
+                            0/0
+                        </p>
+                    </div>
+                    <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+                    <p class="bytype-card-desc">
+                        test description 
+                    </p>
+                </div>
+                
+                
+            </div>
+            <div class="add">
+                <div class="divider add-divider-1">
+                    Make
+                </div>
+                <button class="add-button" type="button" data-toggle="modal" data-target="#myModal">
+                    +
+                </button>
+            </div>
         </div>
-        <!------------------>
-        <!--add card modal-->
-        <!------------------>
+        
+        
+        
+        
+        
+        
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
             <!-- Modal content-->
@@ -172,7 +454,16 @@
                 </div>
             </div>
         </div>
+        
+        
+        
+        
+        
+        
+        
     </div>
-
+    <footer>
+        ©cardtrader
+    </footer>
 </body>
 </html>

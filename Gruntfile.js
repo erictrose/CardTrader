@@ -8,7 +8,7 @@ module.exports = function(grunt){
         uglify:{
             my_target:{
                 files:{
-                    'public/<%= pkg.name %>.min.js' : ['public/<%= pkg.name %>.js']
+                    'public/app.min.js' : ['public/app.js']
                 }
             }
         }

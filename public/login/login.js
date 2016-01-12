@@ -11,6 +11,8 @@ angular.module('cardTrader.login', ['ngRoute'])
 
 .controller('LoginCtrl', ["$scope", function($scope){
 
-    $scope.test = 'login test';
+    $scope.fname = "";
+    $scope.email = "";
+    $scope.pword = "";
 
 }]);

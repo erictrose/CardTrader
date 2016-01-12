@@ -263,6 +263,32 @@ footer {
 
 
 
+/*login page*/
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-active {
+    pointer-events: none;
+    cursor: default;
+    color: lightgray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*utility classes*/
 

@@ -10,6 +10,13 @@ angular.module('cardTrader.login', ['ngRoute','firebase'])
 }])
 
 .controller('LoginCtrl', ['$scope', '$rootScope', '$firebaseAuth', function($scope, $rootScope, $firebaseAuth){
+    
+    
+    //set section buttons to disabled
+    $scope.disable = 'not-active';
+    
+    
+    
 
     var ref = new Firebase("https://cardtraderdb.firebaseio.com");
     

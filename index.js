@@ -1,13 +1,16 @@
-var express = require('express');
-var app = express();
+//app entry point
+
+//express
+var express = require('express'),
+    app = express();
 
 //set directories
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-//serve the index
-app.get('/', function(request, response) {
+//serve index ejs
+app.get('/', function(request, response){
   response.render('pages/index');
 });
 

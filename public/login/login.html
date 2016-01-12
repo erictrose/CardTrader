@@ -2,24 +2,22 @@
 <div ng-include="'../shared/sections.html'"></div>
 
 <div class="login-container">
-    <a href="#/make">bypass login</a> <br>
+    <a href="#/make">bypass login</a> <br><br>
+    <button type="submit" ng-click="github();">github</button>
     <p>login</p>
-    <input type="email" name="loginEmail" placeholder="email" ng-model="loginEmail"> <br>
-    <p>{{loginEmail}}</p> <br>
-    <input type="password" name="loginPassword" placeholder="password" ng-model="loginPassword"> <br>
-    <p>{{loginPassword}}</p> <br>
+    <input type="email" name="loginEmail" placeholder="email" ng-model="loginEmail">
+    <p>{{loginEmail}}</p>
+    <input type="password" name="loginPassword" placeholder="password" ng-model="loginPassword">
+    <p>{{loginPassword}}</p>
     <button type="submit" ng-click="login();">login</button>
-    <br>
-    <br>
-    <br>
     <p>signup</p>
-    <input type="text" name="signupName" placeholder="first name" ng-model="signupName"> <br>
-    <p>{{signupName}}</p> <br>
-    <input type="email" name="signupEmail" placeholder="email" ng-model="signupEmail"> <br>
-    <p>{{signupEmail}}</p> <br>
-    <input type="password" name="signupPassword" placeholder="password" ng-model="signupPassword"> <br>
-    <p>{{signupPassword}}</p> <br>
-    <button type="submit" ng-click="signup();">signup</button>
+    <input type="text" name="signupName" placeholder="first name" ng-model="signupName">
+    <p>{{signupName}}</p>
+    <input type="email" name="signupEmail" placeholder="email" ng-model="signupEmail">
+    <p>{{signupEmail}}</p>
+    <input type="password" name="signupPassword" placeholder="password" ng-model="signupPassword">
+    <p>{{signupPassword}}</p>
+    <button type="submit" ng-click="signup();">signup</button> <br><br>
 </div>
 
 <div ng-include="'../shared/footer.html'"></div>

@@ -17,6 +17,17 @@ angular.module('cardTrader.login', ['ngRoute','firebase'])
     
     
     
+    
+    
+    $scope.loginEmail = '';
+    $scope.loginPassword = '';
+    
+    $scope.signupName = '';
+    $scope.signupEmail = '';
+    $scope.signupPassword = '';
+    
+    
+    
 
     var ref = new Firebase("https://cardtraderdb.firebaseio.com");
     
@@ -26,26 +37,39 @@ angular.module('cardTrader.login', ['ngRoute','firebase'])
           email    : $scope.loginEmail,
           password : $scope.loginPassword
         }, function(error, authData){
-          if (error) {
-            console.log("Login Failed!", error);
-          } else {
-            console.log("Authenticated successfully with payload:", authData);
+          if(error){
+            console.log("email Login Failed!", error);
+          }else{
+            console.log("email Authenticated successfully with payload:", authData);
           }
         });
     };
 
     //create account
-    $scope.createAccount = function(){
+    $scope.signup = function(){
         ref.createUser({
-          email    : $scope.email,
-          password : $scope.password
+          email    : $scope.signupEmail,
+          password : $scope.signupPassword
         }, function(error, userData){
-          if (error) {
-            console.log("Error creating user:", error);
-          } else {
-            console.log("Successfully created user account with uid:", userData.uid);
+          if(error){
+            console.log("email Error creating user:", error);
+          }else{
+            console.log(" email Successfully created user account with uid:", userData.uid);
           }
         });
+    };
+    
+    //github login
+    $scope.github = function(){
+        ref.authWithOAuthPopup("github", function(error, authData){
+            if(error){
+                console.log("github Login Failed!", error);
+            }else{
+                console.log("github Authenticated successfully with payload:", authData);
+            }
+        });
+
+        
     };
     
 

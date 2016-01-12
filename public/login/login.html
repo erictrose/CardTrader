@@ -3,11 +3,28 @@
 
 <a href="#/make">login</a> <br>
 
-<input type="text" name="fname" placeholder="first name" ng-model="fname"> <br>
-<!--<p>{{fname}}</p>-->
-<input type="email" name="email" placeholder="email" ng-model="email"> <br>
-<!--<p>{{email}}</p>-->
-<input type="password" name="pword" placeholder="password" ng-model="pword"> <br>
-<!--<p>{{pword}}</p>-->
+<p>login</p>
+<input type="email" name="loginEmail" placeholder="email" ng-model="loginEmail"> <br>
+<p>{{loginEmail}}</p> <br>
+<input type="password" name="loginPassword" placeholder="password" ng-model="loginPassword"> <br>
+<p>{{loginPassword}}</p> <br>
+<button type="submit" ng-click="login();">login</button>
+
+<br>
+<br>
+<br>
+
+<p>signup</p>
+<input type="text" name="signupName" placeholder="first name" ng-model="signupName"> <br>
+<p>{{signupName}}</p> <br>
+<input type="email" name="signupEmail" placeholder="email" ng-model="signupEmail"> <br>
+<p>{{signupEmail}}</p> <br>
+<input type="password" name="signupPassword" placeholder="password" ng-model="signupPassword"> <br>
+<p>{{signupPassword}}</p> <br>
+<button type="submit" ng-click="signup();">signup</button>
+
+
+
+
 
 <div ng-include="'../shared/footer.html'"></div>

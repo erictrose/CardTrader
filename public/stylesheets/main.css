@@ -1,7 +1,7 @@
 /*font face*/
 @font-face {
     font-family: troika;
-    src: url(./fonts/troika.otf);
+    src: url(../misc/fonts/troika.otf);
 }
 
 body {
@@ -47,19 +47,21 @@ body {
     margin-top: 7px;
 }
 
-.section-text {
-    
-}
-
-.section-button {
+.section-anchor {
     width: 100%;
-    font-size: 38px;
-    font-family: troika;
     outline: 0;
     cursor: pointer;
     background: none;
     border: none;
+    color: black;
+    text-decoration: none; /* no underline */
 
+}
+
+.section-text {
+    font-size: 38px;
+/*    font-family: troika;*/
+    font-family: Helvetica, Arial, Sans-Serif;
 }
 
 .middle {

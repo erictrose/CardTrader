@@ -3,10 +3,18 @@
 angular.module('cardTrader.login', ['ngRoute','firebase'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/login', {
-    templateUrl: 'login/login.html',
-    controller: 'LoginCtrl'
-  });
+  $routeProvider
+    .when('/login', {
+        templateUrl: 'login/login.html',
+        controller: 'LoginCtrl'
+    })
+    .when('/logout', {
+        resolve: {redirect: function(Session){
+//            ref.unauth();
+            console.log('logged out');
+            return "/home";
+        }}
+    })
 }])
 
 .controller('LoginCtrl', ['$scope', '$rootScope', '$firebaseAuth', function($scope, $rootScope, $firebaseAuth){
@@ -73,4 +81,11 @@ angular.module('cardTrader.login', ['ngRoute','firebase'])
     };
     
 
-}]);
+}])
+.config(function config( $routeProvider, $stateProvider ) {
+
+    $routeProvider.
+        when('/logout', {resolve: {redirect: function(Session){
+            Session.clear();
+            return "/home";
+        }}});

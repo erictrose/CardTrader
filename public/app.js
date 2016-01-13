@@ -1,21 +1,12 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-var cardTrader = angular.module('cardTrader', [
-    'ngRoute',
-    'cardTrader.login',
-    'cardTrader.make',
-    'cardTrader.battle',
-    'cardTrader.bet',
-    'cardTrader.trade'
-])
+var cardTrader = angular.module("cardTrader",['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/login'});
+    $routeProvider
+    .when("/login",{templateUrl:"login/login.html",controller:"LoginCtrl"})
+    .when("/make",{templateUrl:"make/make.html",controller:"MakeCtrl"})
+    .when("/battle",{templateUrl:"battle/battle.html",controller:"BattleCtrl"})
+    .when("/bet",{templateUrl:"bet/bet.html",controller:"BetCtrl"})
+    .when("/trade",{templateUrl:"trade/trade.html",controller:"TradeCtrl"})
+    .otherwise({redirectTo:"/login"})
 }])
-
-.factory("Auth", ["$firebaseAuth",
-  function($firebaseAuth) {
-    var ref = new Firebase("https://cardtraderdb.firebaseio.com");
-    return $firebaseAuth(ref);
-  }
-]);

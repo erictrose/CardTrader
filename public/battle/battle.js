@@ -1,13 +1,6 @@
 'use strict';
 
-angular.module('cardTrader.battle', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/battle', {
-    templateUrl: 'battle/battle.html',
-    controller: 'BattleCtrl'
-  });
-}])
+cardTrader
 
 .controller('BattleCtrl', ["$scope", function($scope){
 

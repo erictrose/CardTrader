@@ -5,9 +5,40 @@
     <% include ../partials/header.ejs %>
 </head>
 <body>
-    <div ng-view>
-    <!--angular renders here-->
+    <!--TOP-->
+    <div class="top">
+        <div class="profile">
+            profile
+        </div>
+        <div class="logo">
+            <p class="nowrap">Card Trader</p>
+        </div>
+        <div class="logout">
+            <a href="#/logout">logout</a>
+    <!--    <button type="submit" ng-click="logout();">logout</button>-->
+        </div>
     </div>
+    <!--SECTIONS-->
+    <div class="sections">
+        <div class="section-text">
+                <a href="#/make" class="section-anchor {{disable}}"><span class="section-text">MAKE</span></a>
+        </div>
+        <div class="section-text">
+                <a class="section-anchor {{disable}}" href="#/battle"><span class="section-text">BATTLE</span></a>
+        </div>
+        <div class="section-text">
+                <a class="section-anchor {{disable}}" href="#/bet"><span class="section-text">BET</span></a>
+        </div>
+        <div class="section-text">
+                <a class="section-anchor {{disable}}" href="#/trade"><span class="section-text">TRADE</span></a>
+        </div>
+    </div>
+    <!--VIEW-->
+    <div ng-view></div>
+    <!--FOOTER-->
+    <footer>
+        ©cardtrader
+    </footer>
 </body>
     <!--inject script tags-->
     <% include ../partials/scripts.ejs %>

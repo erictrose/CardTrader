@@ -1,13 +1,6 @@
 'use strict';
 
-angular.module('cardTrader.trade', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/trade', {
-    templateUrl: 'trade/trade.html',
-    controller: 'TradeCtrl'
-  });
-}])
+cardTrader
 
 .controller('TradeCtrl', ["$scope", function($scope){
 

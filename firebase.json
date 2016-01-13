@@ -1,0 +1,9 @@
+{
+  "firebase": "cardtraderdb",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

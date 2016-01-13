@@ -8,7 +8,14 @@ var cardTrader = angular.module('cardTrader', [
     'cardTrader.battle',
     'cardTrader.bet',
     'cardTrader.trade'
-]).
-config(['$routeProvider', function($routeProvider) {
+])
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/login'});
-}]);
+}])
+
+.factory("Auth", ["$firebaseAuth",
+  function($firebaseAuth) {
+    var ref = new Firebase("https://cardtraderdb.firebaseio.com");
+    return $firebaseAuth(ref);
+  }
+]);

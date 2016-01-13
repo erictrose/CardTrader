@@ -2,7 +2,7 @@
 
 cardTrader
 
-.controller('MakeCtrl', ["$scope", function($scope){
+.controller('MakeCtrl', ["$scope", "currentAuth", function($scope, currentAuth){
 
     $scope.test = 'make test';
 

@@ -1,0 +1,20 @@
+{
+  "name": "card-trader",
+  "authors": [
+    "eric rose"
+  ],
+  "description": "",
+  "main": "js/app.js",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "https://card-trader.firebaseapp.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

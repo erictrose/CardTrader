@@ -47,7 +47,9 @@ $routeProvider
                 return Auth.$requireAuth();
             }]
         }
-    });    
+    })
+    //otherwise
+    .otherwise({redirectTo: '/login'});
 }]);
 
 //auth factory
@@ -65,6 +67,21 @@ app.run(["$rootScope", "$location", function($rootScope, $location){
         $location.path("/login");
       }
     });
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
 }]);
 
 //auth controller

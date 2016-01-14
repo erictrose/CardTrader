@@ -1,111 +1,70 @@
-<h1>MAKE PAGE</h1>
-<p>$scope.test = {{test}}</p>
-
-
 <div class="middle">
     <div class="new">
         <div class="divider new-divider-1">
-            Newest 20
+        Newest 20
         </div>
-
-
         <!--ng-repeat this for 20 cards-->
-        <div class="new-card">
+        <div class="new-card" ng-repeat="card in twentycards track by $index">
             <div class="new-card-top">
                 <p class="new-card-type">
-                    ABL
+                    TYP
                 </p>
                 <p class="new-card-title">
-                    My Card
+                    Card Title
                 </p>
                 <p class="new-card-number">
                     0/0
                 </p>
             </div>
-            <img class="new-card-image" src="images/placeholder.png" alt="card image">
+            <img class="new-card-image" src="img/placeholder.png" alt="card image">
             <p class="new-card-desc">
-                It's pretty neat.
+                The card description goes here
             </p>
         </div>
-
-
     </div>
     <div class="bytype">
         <div class="divider bytype-divider-1">
             Newest by rarity (4)
         </div>
-
-
         <!--ng-repeat this for 4 cards-->
-        <div class="bytype-card">
+        <div class="bytype-card" ng-repeat="card in fourcards track by $index">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
-                    ABC
+                    TYP
                 </p>
                 <p class="bytype-card-title">
-                    Super Ultra Mega Man
+                    Card Title
                 </p>
                 <p class="bytype-card-number">
-                    8/8
+                    0/0
                 </p>
             </div>
-            <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+            <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
             <p class="bytype-card-desc">
-                Check this out! 
+                The card description goes here
             </p>
         </div>
-
-
         <div class="divider bytype-divider-2">
             Newest by __________
         </div>
-
-
         <!--ng-repeat this for X cards-->
-        <div class="bytype-card">
+        <div class="bytype-card" ng-repeat="card in tencards track by $index">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
-                    -X-
+                    TYP
                 </p>
                 <p class="bytype-card-title">
-                    Hi
+                    Card Title
                 </p>
                 <p class="bytype-card-number">
-                    8/8
+                    0/0
                 </p>
             </div>
-            <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
+            <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
             <p class="bytype-card-desc">
-                Check this out! 
+            The card description goes here 
             </p>
-        </div>
-
-
-        <div class="divider bytype-divider-3">
-            Newest by __________ (5)
-        </div>
-
-
-        <!--ng-repeat this for X cards-->
-        <div class="bytype-card">
-            <div class="bytype-card-top">
-                <p class="bytype-card-type">
-                    X
-                </p>
-                <p class="bytype-card-title">
-                    dude dude dude dude dude dude dude dude dude dude dude dude 
-                </p>
-                <p class="bytype-card-number">
-                    1/1
-                </p>
-            </div>
-            <img class="bytype-card-image" src="images/placeholder.png" alt="card image">
-            <p class="bytype-card-desc">
-                Check this out! Check this out! Check this out! Check this out! Check this out! Check this out! Check this out! 
-            </p>
-        </div>
-
-
+        </div> 
     </div>
     <div class="add">
         <div class="divider add-divider-1">

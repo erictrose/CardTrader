@@ -171,6 +171,9 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", function(currentAuth, $scop
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
     $scope.test = 'make test';
+    $scope.twentycards = ['x','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x',];
+    $scope.tencards = ['x','x','x','x','x','x','x','x','x','x',];
+    $scope.fourcards = ['x','x','x','x',];
 }]);
 
 //battle controller

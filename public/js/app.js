@@ -22,7 +22,7 @@ $routeProvider
         return Auth.$requireAuth();
     }]
   }
-});
+})
     
         .when("/battle", {
   controller: "BattleCtrl",
@@ -33,7 +33,7 @@ $routeProvider
         return Auth.$requireAuth();
     }]
   }
-});
+})
     
         .when("/bet", {
   controller: "BetCtrl",
@@ -44,7 +44,7 @@ $routeProvider
         return Auth.$requireAuth();
     }]
   }
-});
+})
     
         .when("/trade", {
   controller: "TradeCtrl",
@@ -191,25 +191,25 @@ app.controller("NavCtrl", ["$scope","$location", function($scope,$location) {
 
 
 
-app.controller("MakeCtrl", ["currentAuth", function(currentAuth) {
+app.controller("MakeCtrl", ["currentAuth", "$scope", function(currentAuth, $scope) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
     $scope.test = 'make test';
 }]);
 
-app.controller("BattleCtrl", ["currentAuth", function(currentAuth) {
+app.controller("BattleCtrl", ["currentAuth", "$scope", function(currentAuth, $scope) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
     $scope.test = 'battle test';
 }]);
 
-app.controller("BetCtrl", ["currentAuth", function(currentAuth) {
+app.controller("BetCtrl", ["currentAuth", "$scope", function(currentAuth, $scope) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
     $scope.test = 'bet test';
 }]);
 
-app.controller("TradeCtrl", ["currentAuth", function(currentAuth) {
+app.controller("TradeCtrl", ["currentAuth", "$scope", function(currentAuth, $scope) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
     $scope.test = 'trade test';

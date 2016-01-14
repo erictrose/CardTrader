@@ -7,18 +7,18 @@
         <div class="new-card {{card.cardColor}}Card" ng-repeat="card in cards">
             <div class="new-card-top">
                 <p class="new-card-type">
-                    TYP
+                    {{card.cardType}}
                 </p>
                 <p class="new-card-title">
-                    Card Title
+                    {{card.cardName}}
                 </p>
                 <p class="new-card-number">
-                    0/0
+                    {{card.cardAttack}}/{{card.cardDefense}}
                 </p>
             </div>
             <img class="new-card-image" src="img/placeholder.png" alt="card image">
             <p class="new-card-desc">
-                The card description goes here
+                {{card.cardDesc}}
             </p>
         </div>
     </div>

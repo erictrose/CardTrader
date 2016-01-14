@@ -28,7 +28,7 @@
     -->
 </head>
 <body ng-controller="AuthCtrl">
-  
+
     <!--logged out-->
     <div ng-hide="authData">
         <p>login</p>
@@ -43,7 +43,7 @@
         <input type="password" name="" placeholder="password" ng-model="registerPassword">
         <button ng-click="register()">register</button>
     </div>
-  
+
     <!--logged in-->
     <div ng-show="authData">
         <!--top-->
@@ -61,31 +61,32 @@
             </div>
         </div>
         <!--sections-->
-        <div class="sections">
+        <div class="sections" ng-controller="NavCtrl">
             <div class="section-text">
-                <button class="section-button">
+                <button class="section-button" ng-click="goTo('make')">
                     MAKE
                 </button>
             </div>
             <div class="section-text">
-                <button class="section-button">
+                <button class="section-button" ng-click="goTo('battle')">
                     BATTLE
                 </button>
             </div>
             <div class="section-text">
-                <button class="section-button">
+                <button class="section-button" ng-click="goTo('bet')">
                     BET
                 </button>
             </div>
             <div class="section-text">
-                <button class="section-button">
+                <button class="section-button" ng-click="goTo('trade')">
                     TRADE
                 </button>
             </div>
         </div>
         
         <!--content-->
-        <h1>CONTENT</h1>
+<!--        <h1>CONTENT</h1>-->
+        <div ng-view></div>
         
         <!--footer-->
         <footer>

@@ -9,7 +9,11 @@ app.factory("Auth", function($firebaseAuth){
 
 //config
 app.config(["$routeProvider", function($routeProvider) {
-$routeProvider.when("/make", {
+$routeProvider
+    
+    
+    
+    .when("/make", {
   controller: "MakeCtrl",
   templateUrl: "views/make.html",
   resolve: {
@@ -18,15 +22,54 @@ $routeProvider.when("/make", {
         return Auth.$requireAuth();
     }]
   }
-}).when("/account", {
-  controller: "AccountCtrl",
-  templateUrl: "views/account.html",
+});
+    
+        .when("/battle", {
+  controller: "BattleCtrl",
+  templateUrl: "views/battle.html",
   resolve: {
     "currentAuth": ["Auth", function(Auth) {
-      return Auth.$requireAuth();
+      //return Auth.$waitForAuth();
+        return Auth.$requireAuth();
     }]
   }
 });
+    
+        .when("/bet", {
+  controller: "BetCtrl",
+  templateUrl: "views/bet.html",
+  resolve: {
+    "currentAuth": ["Auth", function(Auth) {
+      //return Auth.$waitForAuth();
+        return Auth.$requireAuth();
+    }]
+  }
+});
+    
+        .when("/trade", {
+  controller: "TradeCtrl",
+  templateUrl: "views/trade.html",
+  resolve: {
+    "currentAuth": ["Auth", function(Auth) {
+      //return Auth.$waitForAuth();
+        return Auth.$requireAuth();
+    }]
+  }
+});
+    
+//    .when("/account", {
+//  controller: "AccountCtrl",
+//  templateUrl: "views/account.html",
+//  resolve: {
+//    "currentAuth": ["Auth", function(Auth) {
+//      return Auth.$requireAuth();
+//    }]
+//  }
+//});
+    
+    
+    
+    
 }]);
 
 //runtime?
@@ -137,9 +180,13 @@ console.log('app.js loaded');
 
 
 
+app.controller("NavCtrl", ["$scope","$location", function($scope,$location) {
 
-
-
+    $scope.goTo = function(dest){
+        $location.path(dest);
+    };
+    
+}]);
 
 
 
@@ -149,7 +196,35 @@ app.controller("MakeCtrl", ["currentAuth", function(currentAuth) {
   // authenticated user or null if not logged in
     $scope.test = 'make test';
 }]);
-app.controller("AccountCtrl", ["currentAuth", function(currentAuth) {
+
+app.controller("BattleCtrl", ["currentAuth", function(currentAuth) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
+    $scope.test = 'battle test';
 }]);
+
+app.controller("BetCtrl", ["currentAuth", function(currentAuth) {
+  // currentAuth (provided by resolve) will contain the
+  // authenticated user or null if not logged in
+    $scope.test = 'bet test';
+}]);
+
+app.controller("TradeCtrl", ["currentAuth", function(currentAuth) {
+  // currentAuth (provided by resolve) will contain the
+  // authenticated user or null if not logged in
+    $scope.test = 'trade test';
+}]);
+
+
+
+
+
+//app.controller("MakeCtrl", ["currentAuth", function(currentAuth) {
+//  // currentAuth (provided by resolve) will contain the
+//  // authenticated user or null if not logged in
+//    $scope.test = 'make test';
+//}]);
+//app.controller("AccountCtrl", ["currentAuth", function(currentAuth) {
+//  // currentAuth (provided by resolve) will contain the
+//  // authenticated user or null if not logged in
+//}]);

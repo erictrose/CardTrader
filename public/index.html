@@ -28,23 +28,8 @@
     -->
 </head>
 <body ng-controller="AuthCtrl">
-   
-   
-    <div ng-show="authData">
-        <p>profile</p>
-        <p>logged in with: {{provider}}</p>
-        <img ng-src="{{profilePic}}" />
-        <p>{{profileName}}</p>
-<!--
-        <ul>
-            <li ng-repeat="repo in repos">{{repo.full_name}}</li>
-        </ul>
--->
-        <button ng-click="logout()">logout</button>
-    </div>
-   
-   
-   
+  
+    <!--logged out-->
     <div ng-hide="authData">
         <p>login</p>
         <button ng-click="githublogin()">login with github</button>
@@ -57,6 +42,55 @@
         <input type="email" name="" placeholder="email" ng-model="registerEmail">
         <input type="password" name="" placeholder="password" ng-model="registerPassword">
         <button ng-click="register()">register</button>
+    </div>
+  
+    <!--logged in-->
+    <div ng-show="authData">
+        <!--top-->
+        <div class="top">
+            <div class="profile">
+                <p class="profile-name">{{profileName}}</p>
+                <img class="profile-pic" ng-src="{{profilePic}}" />
+<!--                <p>{{provider}}</p>-->
+            </div>
+            <div class="logo">
+                <p class="nowrap">Card Trader</p>
+            </div>
+            <div class="logout">
+                <a ng-click="logout()">logout</a>
+            </div>
+        </div>
+        <!--sections-->
+        <div class="sections">
+            <div class="section-text">
+                <button class="section-button">
+                    MAKE
+                </button>
+            </div>
+            <div class="section-text">
+                <button class="section-button">
+                    BATTLE
+                </button>
+            </div>
+            <div class="section-text">
+                <button class="section-button">
+                    BET
+                </button>
+            </div>
+            <div class="section-text">
+                <button class="section-button">
+                    TRADE
+                </button>
+            </div>
+        </div>
+        
+        <!--content-->
+        <h1>CONTENT</h1>
+        
+        <!--footer-->
+        <footer>
+        ©cardtrader
+        </footer>
     </div>
 </body>
 </html>

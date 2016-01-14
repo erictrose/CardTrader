@@ -1,39 +1,35 @@
 var app = angular.module("app", ["firebase","ngRoute"]);
 
+
+//auth factory
 app.factory("Auth", function($firebaseAuth){
     var ref = new Firebase("https://card-trader.firebaseio.com");
     return $firebaseAuth(ref);
 });
 
+//config
 app.config(["$routeProvider", function($routeProvider) {
-$routeProvider.when("/home", {
-  // the rest is the same for ui-router and ngRoute...
-  controller: "HomeCtrl",
-  templateUrl: "views/home.html",
+$routeProvider.when("/make", {
+  controller: "MakeCtrl",
+  templateUrl: "views/make.html",
   resolve: {
-    // controller will not be loaded until $waitForAuth resolves
-    // Auth refers to our $firebaseAuth wrapper in the example above
     "currentAuth": ["Auth", function(Auth) {
-      // $waitForAuth returns a promise so the resolve waits for it to complete
-      return Auth.$waitForAuth();
+      //return Auth.$waitForAuth();
+        return Auth.$requireAuth();
     }]
   }
 }).when("/account", {
-  // the rest is the same for ui-router and ngRoute...
   controller: "AccountCtrl",
   templateUrl: "views/account.html",
   resolve: {
-    // controller will not be loaded until $requireAuth resolves
-    // Auth refers to our $firebaseAuth wrapper in the example above
     "currentAuth": ["Auth", function(Auth) {
-      // $requireAuth returns a promise so the resolve waits for it to complete
-      // If the promise is rejected, it will throw a $stateChangeError (see above)
       return Auth.$requireAuth();
     }]
   }
 });
 }]);
 
+//runtime?
 app.run(["$rootScope", "$location", function($rootScope, $location){
     $rootScope.$on("$routeChangeError", function(event, next, previous, error){
       // We can catch the error thrown when the $requireAuth promise is rejected
@@ -44,17 +40,16 @@ app.run(["$rootScope", "$location", function($rootScope, $location){
     });
 }]);
 
+//auth controller
 app.controller("AuthCtrl", function($scope,Auth,$http){
-    
     //on auth change
     Auth.$onAuth(function(authData){
         $scope.authData = authData;
         if(authData){
-//            getRepos();
+            //getRepos();
         };
         console.log(authData);
     });
-    
     //email login
     $scope.emaillogin = function(){
         Auth.$authWithPassword({
@@ -70,7 +65,6 @@ app.controller("AuthCtrl", function($scope,Auth,$http){
             console.log(error);
         });
     };
-    
     //github login
     $scope.githublogin = function(){
         Auth.$authWithOAuthPopup("github")
@@ -83,7 +77,6 @@ app.controller("AuthCtrl", function($scope,Auth,$http){
             console.log(error);
         });
     };
-    
     //twitter login
     $scope.twitterlogin = function(){
         Auth.$authWithOAuthPopup("twitter")
@@ -96,7 +89,6 @@ app.controller("AuthCtrl", function($scope,Auth,$http){
             console.log(error);
         });
     };
-    
     //google login
     $scope.googlelogin = function(){
         Auth.$authWithOAuthPopup("google")
@@ -109,7 +101,6 @@ app.controller("AuthCtrl", function($scope,Auth,$http){
             console.log(error);
         });
     };
-    
     //register
     $scope.register = function(){
 //        $scope.message = null;
@@ -125,7 +116,7 @@ app.controller("AuthCtrl", function($scope,Auth,$http){
             console.log(error);
         });
     };
-    
+    //logout
     $scope.logout = function(){
         Auth.$unauth();
     };
@@ -153,9 +144,10 @@ console.log('app.js loaded');
 
 
 
-app.controller("HomeCtrl", ["currentAuth", function(currentAuth) {
+app.controller("MakeCtrl", ["currentAuth", function(currentAuth) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
+    $scope.test = 'make test';
 }]);
 app.controller("AccountCtrl", ["currentAuth", function(currentAuth) {
   // currentAuth (provided by resolve) will contain the

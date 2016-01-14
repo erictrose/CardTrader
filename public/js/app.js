@@ -67,21 +67,6 @@ app.run(["$rootScope", "$location", function($rootScope, $location){
         $location.path("/login");
       }
     });
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
 }]);
 
 //auth controller

@@ -27,71 +27,74 @@
     https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-touch.min.js
     -->
 </head>
-<body ng-controller="AuthCtrl">
-
-    <!--logged out-->
-    <div ng-hide="authData">
-        <p>login</p>
-        <button ng-click="githublogin()">login with github</button>
-        <button ng-click="twitterlogin()">login with twitter</button>
-        <button ng-click="googlelogin()">login with google</button> <br>
-        <input type="email" name="" placeholder="email" ng-model="loginEmail">
-        <input type="password" name="" placeholder="password" ng-model="loginPassword">
-        <button ng-click="emaillogin()">login</button>
-        <p>register</p>
-        <input type="email" name="" placeholder="email" ng-model="registerEmail">
-        <input type="password" name="" placeholder="password" ng-model="registerPassword">
-        <button ng-click="register()">register</button>
-    </div>
-
-    <!--logged in-->
-    <div ng-show="authData">
-        <!--top-->
-        <div class="top">
-            <div class="profile">
-                <p class="profile-name">{{profileName}}</p>
-                <img class="profile-pic" ng-src="{{profilePic}}" />
-<!--                <p>{{provider}}</p>-->
-            </div>
-            <div class="logo">
-                <p class="nowrap">Card Trader</p>
-            </div>
-            <div class="logout">
-                <a ng-click="logout()">logout</a>
-            </div>
-        </div>
-        <!--sections-->
-        <div class="sections" ng-controller="NavCtrl">
-            <div class="section-text">
-                <button class="section-button" ng-click="goTo('make')">
-                    MAKE
-                </button>
-            </div>
-            <div class="section-text">
-                <button class="section-button" ng-click="goTo('battle')">
-                    BATTLE
-                </button>
-            </div>
-            <div class="section-text">
-                <button class="section-button" ng-click="goTo('bet')">
-                    BET
-                </button>
-            </div>
-            <div class="section-text">
-                <button class="section-button" ng-click="goTo('trade')">
-                    TRADE
-                </button>
-            </div>
+<body>
+   
+    <!--auth-->
+    <div class="auth" ng-controller="AuthCtrl">
+       
+        <!--when logged out-->
+        <div ng-hide="authData">
+            <p>login</p>
+            <button ng-click="githublogin()">login with github</button>
+            <button ng-click="twitterlogin()">login with twitter</button>
+            <button ng-click="googlelogin()">login with google</button> <br>
+            <input type="email" name="" placeholder="email" ng-model="loginEmail">
+            <input type="password" name="" placeholder="password" ng-model="loginPassword">
+            <button ng-click="emaillogin()">login</button>
+            <p>register</p>
+            <input type="email" name="" placeholder="email" ng-model="registerEmail">
+            <input type="password" name="" placeholder="password" ng-model="registerPassword">
+            <button ng-click="register()">register</button>
         </div>
         
-        <!--content-->
-<!--        <h1>CONTENT</h1>-->
-        <div ng-view></div>
-        
-        <!--footer-->
-        <footer>
-        ©cardtrader
-        </footer>
-    </div>
+        <!--when logged in-->
+        <div ng-show="authData">
+            <!--top-->
+            <div class="top">
+                <div class="profile">
+                    <p class="profile-name">{{profileName}}</p>
+                    <img class="profile-pic" ng-src="{{profilePic}}" />
+    <!--                <p>{{provider}}</p>-->
+                </div>
+                <div class="logo">
+                    <p class="nowrap">Card Trader</p>
+                </div>
+                <div class="logout">
+                    <a ng-click="logout()">logout</a>
+                </div>
+            </div>
+            <!--sections-->
+            <div class="sections" ng-controller="NavCtrl">
+                <div class="section-text">
+                    <button class="section-button" ng-click="goTo('make')">
+                        MAKE
+                    </button>
+                </div>
+                <div class="section-text">
+                    <button class="section-button" ng-click="goTo('battle')">
+                        BATTLE
+                    </button>
+                </div>
+                <div class="section-text">
+                    <button class="section-button" ng-click="goTo('bet')">
+                        BET
+                    </button>
+                </div>
+                <div class="section-text">
+                    <button class="section-button" ng-click="goTo('trade')">
+                        TRADE
+                    </button>
+                </div>
+            </div>
+
+            <!--content-->
+            <div ng-view></div>
+    
+        </div> <!--close logged in-->
+    </div> <!--close auth-->
+    <!--footer-->
+    <footer>
+    ©cardtrader
+    </footer>
 </body>
 </html>

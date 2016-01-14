@@ -1,5 +1,54 @@
+//main app
 var app = angular.module("app", ["firebase","ngRoute"]);
 
+//config
+app.config(["$routeProvider", function($routeProvider) {
+$routeProvider
+    //make
+    .when("/make",{
+        controller: "MakeCtrl",
+        templateUrl: "views/make.html",
+        resolve:{
+            "currentAuth": ["Auth", function(Auth){
+                //return Auth.$waitForAuth();
+                return Auth.$requireAuth();
+            }]
+        }
+    })
+    //battle
+    .when("/battle",{
+        controller: "BattleCtrl",
+        templateUrl: "views/battle.html",
+        resolve: {
+            "currentAuth": ["Auth", function(Auth){
+                //return Auth.$waitForAuth();
+                return Auth.$requireAuth();
+            }]
+        }
+    })
+    //bet
+    .when("/bet",{
+        controller: "BetCtrl",
+        templateUrl: "views/bet.html",
+        resolve: {
+            "currentAuth": ["Auth", function(Auth){
+                //return Auth.$waitForAuth();
+                return Auth.$requireAuth();
+            }]
+        }
+    })
+    //trade
+    .when("/trade",{
+        controller: "TradeCtrl",
+        templateUrl: "views/trade.html",
+        resolve: {
+            "currentAuth": ["Auth", function(Auth){
+                //return Auth.$waitForAuth();
+                return Auth.$requireAuth();
+            }]
+        }
+    });    
+}]);
 
 //auth factory
 app.factory("Auth", function($firebaseAuth){
@@ -7,78 +56,13 @@ app.factory("Auth", function($firebaseAuth){
     return $firebaseAuth(ref);
 });
 
-//config
-app.config(["$routeProvider", function($routeProvider) {
-$routeProvider
-    
-    
-    
-    .when("/make", {
-  controller: "MakeCtrl",
-  templateUrl: "views/make.html",
-  resolve: {
-    "currentAuth": ["Auth", function(Auth) {
-      //return Auth.$waitForAuth();
-        return Auth.$requireAuth();
-    }]
-  }
-})
-    
-        .when("/battle", {
-  controller: "BattleCtrl",
-  templateUrl: "views/battle.html",
-  resolve: {
-    "currentAuth": ["Auth", function(Auth) {
-      //return Auth.$waitForAuth();
-        return Auth.$requireAuth();
-    }]
-  }
-})
-    
-        .when("/bet", {
-  controller: "BetCtrl",
-  templateUrl: "views/bet.html",
-  resolve: {
-    "currentAuth": ["Auth", function(Auth) {
-      //return Auth.$waitForAuth();
-        return Auth.$requireAuth();
-    }]
-  }
-})
-    
-        .when("/trade", {
-  controller: "TradeCtrl",
-  templateUrl: "views/trade.html",
-  resolve: {
-    "currentAuth": ["Auth", function(Auth) {
-      //return Auth.$waitForAuth();
-        return Auth.$requireAuth();
-    }]
-  }
-});
-    
-//    .when("/account", {
-//  controller: "AccountCtrl",
-//  templateUrl: "views/account.html",
-//  resolve: {
-//    "currentAuth": ["Auth", function(Auth) {
-//      return Auth.$requireAuth();
-//    }]
-//  }
-//});
-    
-    
-    
-    
-}]);
-
 //runtime?
 app.run(["$rootScope", "$location", function($rootScope, $location){
     $rootScope.$on("$routeChangeError", function(event, next, previous, error){
       // We can catch the error thrown when the $requireAuth promise is rejected
       // and redirect the user back to the home page
       if (error === "AUTH_REQUIRED") {
-        $location.path("/home");
+        $location.path("/login");
       }
     });
 }]);
@@ -163,7 +147,7 @@ app.controller("AuthCtrl", function($scope,Auth,$http){
     $scope.logout = function(){
         Auth.$unauth();
     };
-    
+    //sample api function
 //    function getRepos(){
 //        $http.get($scope.authData.github.cachedUserProfile.repos_url)
 //        .success(function(repos){
@@ -175,40 +159,35 @@ app.controller("AuthCtrl", function($scope,Auth,$http){
 //    };
 });
 
-console.log('app.js loaded');
-
-
-
-
+//navigation controller
 app.controller("NavCtrl", ["$scope","$location", function($scope,$location) {
-
     $scope.goTo = function(dest){
         $location.path(dest);
     };
-    
 }]);
 
-
-
-
+//make controller
 app.controller("MakeCtrl", ["currentAuth", "$scope", function(currentAuth, $scope) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
     $scope.test = 'make test';
 }]);
 
+//battle controller
 app.controller("BattleCtrl", ["currentAuth", "$scope", function(currentAuth, $scope) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
     $scope.test = 'battle test';
 }]);
 
+//bet controller
 app.controller("BetCtrl", ["currentAuth", "$scope", function(currentAuth, $scope) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
     $scope.test = 'bet test';
 }]);
 
+//trade controller
 app.controller("TradeCtrl", ["currentAuth", "$scope", function(currentAuth, $scope) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
@@ -217,14 +196,4 @@ app.controller("TradeCtrl", ["currentAuth", "$scope", function(currentAuth, $sco
 
 
 
-
-
-//app.controller("MakeCtrl", ["currentAuth", function(currentAuth) {
-//  // currentAuth (provided by resolve) will contain the
-//  // authenticated user or null if not logged in
-//    $scope.test = 'make test';
-//}]);
-//app.controller("AccountCtrl", ["currentAuth", function(currentAuth) {
-//  // currentAuth (provided by resolve) will contain the
-//  // authenticated user or null if not logged in
-//}]);
+console.log('app.js loaded');

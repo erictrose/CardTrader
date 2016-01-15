@@ -1,0 +1,8 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /Users/erictrose/.nvm/versions/node/v4.2.1/bin/node /Users/erictrose/.nvm/versions/node/v4.2.1/bin/firebase serve
+[debug] Platform:     darwin
+[debug] Node Version: v4.2.1
+[debug] Time:         Fri Jan 15 2016 15:02:15 GMT-0500 (EST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Listening at http://localhost:5000

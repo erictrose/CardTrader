@@ -1,0 +1,224 @@
+{
+  "cards" : {
+    "-K3G2SeeUu3stSL-doXI" : {
+      "cardAttack" : "4",
+      "cardColor" : "blue",
+      "cardDefense" : "5",
+      "cardDesc" : "The domestic dog (Canis lupus familiaris or Canis familiaris) is a domesticated canid which has been selectively bred for millennia for various behaviors, sensory capabilities, and physical attributes.[2]  Although initially thought to have originated as a manmade variant of an extant canid species (variously supposed as being the dhole,[3] golden jackal,[4] or gray wolf[5]), extensive genetic studies undertaken during the 2010s indicate that dogs diverged from an extinct wolf-like canid in Eurasia 40,000 years ago.[6] Being the oldest domesticated animals, their long association with people has allowed dogs to be uniquely attuned to human behavior,[7] as well as thrive on a starch-rich diet which would be inadequate for other canid species.[8]  Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human society has given them the nickname \"man's best friend\" in the Western world. In some cultures, however, dogs are a source of meat.[9][10]",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "dog dude",
+      "cardTotal" : 9,
+      "cardType" : "ABC",
+      "createTime" : 1447690099193
+    },
+    "-K3G2btlNgwusrAQ1TyW" : {
+      "cardAttack" : "3",
+      "cardColor" : "blue",
+      "cardDefense" : "7",
+      "cardDesc" : "The domestic cat[1][2] (Felis catus or Felis silvestris catus)[2][4] is a small, typically furry, domesticated, and carnivorous mammal. They are often called house cats when kept as indoor pets or simply cats when there is no need to distinguish them from other felids and felines.[6] Cats are often valued by humans for companionship and their ability to hunt vermin.  Cats are similar in anatomy to the other felids, with strong, flexible bodies, quick reflexes, sharp retractable claws, and teeth adapted to killing small prey. Cat senses fit a crepuscular and predatory ecological niche. Cats can hear sounds too faint or too high in frequency for human ears, such as those made by mice and other small animals. They can see in near darkness. Like most other mammals, cats have poorer color vision and a better sense of smell than humans.  Despite being solitary hunters, cats are a social species and cat communication includes the use of a variety of vocalizations (mewing, purring, trilling, hissing, growling, and grunting), as well as cat pheromones and types of cat-specific body language.[7]  Cats have a high breeding rate. Under controlled breeding, they can be bred and shown as registered pedigree pets, a hobby known as cat fancy. Failure to control the breeding of pet cats by neutering and the abandonment of former household pets has resulted in large numbers of feral cats worldwide, requiring population control.[8] This has contributed, along with habitat destruction and other factors, to extinction of many bird species. Cats have been known to extirpate a bird species within a specific region and may have contributed to extinction of isolated island populations.[9] Cats are thought to be primarily, though not solely, responsible for the extinction of 33 species of birds, and the presence of feral and free ranging cats makes some locations unsuitable for attempted species reestablishment in otherwise suitable locations.[10]  Since cats were venerated in ancient Egypt, they were commonly believed to have been domesticated there,[11] but there may have been instances of domestication as early as the Neolithic from around 9,500 years ago (7,500 BC).[12] A genetic study in 2007 concluded that domestic cats are descended from African wildcats (Felis silvestris lybica), having diverged around 8,000 BC in West Asia.[11][13] Cats are the most popular pet in the world, and are now found in almost every place where humans live.[14]",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "cat",
+      "cardTotal" : 10,
+      "cardType" : "123",
+      "createTime" : 1447690141121
+    },
+    "-K3G2mvEy6eklsoMLm91" : {
+      "cardAttack" : "3",
+      "cardColor" : "purple",
+      "cardDefense" : "8",
+      "cardDesc" : "Snakes are elongated, legless, carnivorous reptiles of the suborder Serpentes[2] that can be distinguished from legless lizards by their lack of eyelids and external ears. Like all squamates, snakes are ectothermic, amniote vertebrates covered in overlapping scales. Many species of snakes have skulls with several more joints than their lizard ancestors, enabling them to swallow prey much larger than their heads with their highly mobile jaws. To accommodate their narrow bodies, snakes' paired organs (such as kidneys) appear one in front of the other instead of side by side, and most have only one functional lung. Some species retain a pelvic girdle with a pair of vestigial claws on either side of the cloaca.  Living snakes are found on every continent except Antarctica, and on most smaller land masses — exceptions include some large islands, such as Ireland and New Zealand, and many small islands of the Atlantic and central Pacific.[3] Additionally, sea snakes are widespread throughout the Indian and Pacific Oceans. More than 20 families are currently recognized, comprising about 500 genera and about 3,400 species.[4][5] They range in size from the tiny, 10 cm-long thread snake to the reticulated python of up to 6.95 meters (22.8 ft) in length.[6] The fossil species Titanoboa cerrejonensis was 13 meters (43 ft) long.[7] Snakes are thought to have evolved from either burrowing or aquatic lizards, perhaps during the Jurassic period, with the earliest known fossils dating to between 143 and 167 Ma ago.[8] The diversity of modern snakes appeared during the Paleocene period (c 66 to 56 Ma ago). The oldest preserved descriptions of snakes can be found in the Brooklyn Papyrus.  Most species are nonvenomous and those that have venom use it primarily to kill and subdue prey rather than for self-defense. Some possess venom potent enough to cause painful injury or death to humans. Nonvenomous snakes either swallow prey alive or kill by constriction.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "snake",
+      "cardTotal" : 11,
+      "cardType" : "abc",
+      "createTime" : 1447690186271
+    },
+    "-K3G2wvalrcIzVRIQ1Fy" : {
+      "cardAttack" : "8",
+      "cardColor" : "yellow",
+      "cardDefense" : "9",
+      "cardDesc" : "Bears are mammals of the family Ursidae. Bears are classified as caniforms, or doglike carnivorans, with the pinnipeds being their closest living relatives. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, South America, Europe, and Asia.  Common characteristics of modern bears include large bodies with stocky legs, long snouts, shaggy hair, plantigrade paws with five nonretractile claws, and short tails. While the polar bear is mostly carnivorous, and the giant panda feeds almost entirely on bamboo, the remaining six species are omnivorous with varied diets.  With the exception of courting individuals and mothers with their young, bears are typically solitary animals. They are generally diurnal, but may be active during the night (nocturnal) or twilight (crepuscular), particularly around humans. Bears possess an excellent sense of smell and, despite their heavy build and awkward gait, are adept runners, climbers, and swimmers. In autumn, some bear species forage large amounts of fermented fruits, which affects their behaviour.[1] Bears use shelters, such as caves and burrows, as their dens; most species occupy their dens during the winter for a long period (up to 100 days) of sleep similar to hibernation.[2]  Bears have been hunted since prehistoric times for their meat and fur. With their tremendous physical presence and charisma, they play a prominent role in the arts, mythology, and other cultural aspects of various human societies. In modern times, the bears' existence has been pressured through the encroachment on their habitats and the illegal trade of bears and bear parts, including the Asian bile bear market. The IUCN lists six bear species as vulnerable or endangered, and even least concern species, such as the brown bear, are at risk of extirpation in certain countries. The poaching and international trade of these most threatened populations are prohibited, but still ongoing.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "bear",
+      "cardTotal" : 17,
+      "cardType" : "gen",
+      "createTime" : 1447690227254
+    },
+    "-K3G35TmcTFe38MY1gKf" : {
+      "cardAttack" : "1",
+      "cardColor" : "lightgrey",
+      "cardDefense" : "2",
+      "cardDesc" : "A fish is any member of a paraphyletic group of organisms that consist of all gill-bearing aquatic craniate animals that lack limbs with digits. Included in this definition are the living hagfish, lampreys, and cartilaginous and bony fish, as well as various extinct related groups. Most fish are ectothermic (\"cold-blooded\"), allowing their body temperatures to vary as ambient temperatures change, though some of the large active swimmers like white shark and tuna can hold a higher core temperature.[1][2] Fish are abundant in most bodies of water. They can be found in nearly all aquatic environments, from high mountain streams (e.g., char and gudgeon) to the abyssal and even hadal depths of the deepest oceans (e.g., gulpers and anglerfish). With 33,100 described species, fish exhibit greater species diversity than any other group of vertebrates.[3]",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "fish",
+      "cardTotal" : 3,
+      "cardType" : "HEL",
+      "createTime" : 1447690266370
+    },
+    "-K3G3J-PQDaglqj1LRfz" : {
+      "cardAttack" : "2",
+      "cardColor" : "lightgrey",
+      "cardDefense" : "1",
+      "cardDesc" : "Squirrels are members of the family Sciuridae, consisting of small or medium-size rodents. The family includes tree squirrels, ground squirrels, chipmunks, marmots (including woodchucks), flying squirrels, and prairie dogs. Squirrels are indigenous to the Americas, Eurasia, and Africa, and have been introduced to Australia.[1] The earliest known squirrels date from the Eocene and are most closely related to the mountain beaver and to the dormouse among living rodent families.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "squirrel",
+      "cardTotal" : 3,
+      "cardType" : "3L3",
+      "createTime" : 1447690321770
+    },
+    "-K3G3pYkNL4EJQx5hC-s" : {
+      "cardAttack" : "3",
+      "cardColor" : "green",
+      "cardDefense" : "2",
+      "cardDesc" : "REEEK!",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "bat",
+      "cardTotal" : 5,
+      "cardType" : "888",
+      "createTime" : 1447690459200
+    },
+    "-K3GvSvA0NNOOcB6xgYD" : {
+      "cardAttack" : "2",
+      "cardColor" : "blue",
+      "cardDefense" : "2",
+      "cardDesc" : "an ostrich.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "ostrich",
+      "cardTotal" : 4,
+      "cardType" : "---",
+      "createTime" : 1447704780610
+    },
+    "-K3GwUrjR_TWtFEkgMxQ" : {
+      "cardAttack" : "2",
+      "cardColor" : "yellow",
+      "cardDefense" : "2",
+      "cardDesc" : "Whale is the common name for a widely distributed and diverse group of fully aquatic marine mammals. They are an informal grouping within the infraorder Cetacea, excluding dolphins and porpoises, so to zoologists the grouping is paraphyletic. The whales comprise the extant families Cetotheriidae (whose only living member is the pygmy right whale), Balaenopteridae (the rorquals), Balaenidae (right whales), Eschrichtiidae (the gray whale), Monodontidae (belugas and narwhals), Physeteridae (the sperm whale), Kogiidae (the dwarf and pygmy sperm whale), and Ziphiidae (the beaked whales). There are 40 extant species of whales. The two parvorders of whales, Mysticeti and Odontoceti, are thought to have split apart around 34 million years ago. Whales, dolphins and porpoises belong to the order Cetartiodactyla with even-toed ungulates and their closest living relatives are the hippopotamuses, having diverged about 40 million years ago.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "whale",
+      "cardTotal" : 4,
+      "cardType" : "XXX",
+      "createTime" : 1447705050728
+    },
+    "-K3H2LDjJWLauvbhU_lV" : {
+      "cardAttack" : "4",
+      "cardColor" : "yellow",
+      "cardDefense" : "2",
+      "cardDesc" : "asdfasdfasdff",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "seagull",
+      "cardTotal" : 6,
+      "cardType" : "m8m",
+      "createTime" : 1447706846157
+    },
+    "-K3MX7OfPd5BpV69Z77K" : {
+      "cardAttack" : "1",
+      "cardColor" : "lightgrey",
+      "cardDefense" : "1",
+      "cardDesc" : "Pizza is a flatbread generally topped with tomato sauce and cheese and baked in an oven. It is commonly topped with a selection of meats, vegetables and condiments. The term was first recorded in the 10th century, in a Latin manuscript from Gaeta in Central Italy.[1] The modern pizza was invented in Naples, Italy, and the dish and its variants have since become popular in many areas of the world.[2]\n\nIn 2009, upon Italy's request, Neapolitan pizza was safeguarded in the European Union as a Traditional Speciality Guaranteed dish.[3][4] The Associazione Verace Pizza Napoletana (the True Neapolitan Pizza Association) is a non-profit organization founded in 1984 with headquarters in Naples. It promotes and protects the \"true Neapolitan pizza\".[5]",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "Pizza",
+      "cardTotal" : 2,
+      "cardType" : "m8",
+      "createTime" : 1447798801265
+    },
+    "-K3MXN0fBXQNSBLSkB0D" : {
+      "cardAttack" : "1",
+      "cardColor" : "lightgrey",
+      "cardDefense" : "1",
+      "cardDesc" : "The banana is an edible fruit, botanically a berry,[2][3] produced by several kinds of large herbaceous flowering plants in the genus Musa.[4] In some countries, bananas used for cooking may be called plantains. The fruit is variable in size, color and firmness, but is usually elongated and curved, with soft flesh rich in starch covered with a rind which may be green, yellow, red, purple, or brown when ripe. The fruits grow in clusters hanging from the top of the plant. Almost all modern edible parthenocarpic (seedless) bananas come from two wild species – Musa acuminata and Musa balbisiana. The scientific names of most cultivated bananas are Musa acuminata, Musa balbisiana, and Musa × paradisiaca for the hybrid Musa acuminata × M. balbisiana, depending on their genomic constitution. The old scientific name Musa sapientum is no longer used.\n\nMusa species are native to tropical Indomalaya and Australia, and are likely to have been first domesticated in Papua New Guinea.[5][6] They are grown in at least 107 countries,[7] primarily for their fruit, and to a lesser extent to make fiber, banana wine and banana beer and as ornamental plants.\n\nWorldwide, there is no sharp distinction between \"bananas\" and \"plantains\". Especially in the Americas and Europe, \"banana\" usually refers to soft, sweet, dessert bananas, particularly those of the Cavendish group, which are the main exports from banana-growing countries. By contrast, Musa cultivars with firmer, starchier fruit are called \"plantains\". In other regions, such as Southeast Asia, many more kinds of banana are grown and eaten, so the simple twofold distinction is not useful and is not made in local languages.\n\nThe term \"banana\" is also used as the common name for the plants which produce the fruit.[4] This can extend to other members of the genus Musa like the scarlet banana (Musa coccinea), pink banana (Musa velutina) and the Fe'i bananas. It can also refer to members of the genus Ensete, like the snow banana (Ensete glaucum) and the economically important false banana (Ensete ventricosum). Both genera are classified under the banana family, Musaceae.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "Bananna",
+      "cardTotal" : 2,
+      "cardType" : "M*",
+      "createTime" : 1447798865265
+    },
+    "-K3Mdez97FhXp46X9DKw" : {
+      "cardAttack" : "1",
+      "cardColor" : "lightgrey",
+      "cardDefense" : "1",
+      "cardDesc" : "The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian traditions.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "Apple",
+      "cardTotal" : 2,
+      "cardType" : ".",
+      "createTime" : 1447800777930
+    },
+    "-K3MdzBxMvZwKERkTpz6" : {
+      "cardAttack" : "1",
+      "cardColor" : "lightgrey",
+      "cardDefense" : "1",
+      "cardDesc" : "The pineapple (Ananas comosus) is a tropical plant with edible multiple fruit consisting of coalesced berries, also called pineapples,[2][3] and the most economically significant plant in the Bromeliaceae family.[4]\n\nPineapples may be cultivated from a crown cutting of the fruit,[2][5] possibly flowering in 20–24 months and fruiting in the following six months.[5][6] Pineapple does not ripen significantly post-harvest.[7]\n\nPineapples can be consumed fresh, cooked, juiced, or preserved. They are found in a wide array of cuisines. In addition to consumption, the pineapple leaves are used to produce the textile fiber piña in the Philippines, commonly used as the material for the men's Barong Tagalog and women's Baro't saya formal wear in the country. The fiber is also used as a component for wallpaper and other furnishings.[8]",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "Pineapple",
+      "cardTotal" : 2,
+      "cardType" : "",
+      "createTime" : 1447800860733
+    },
+    "-K3MeLGMi-RTfiFWNdWN" : {
+      "cardAttack" : "1",
+      "cardColor" : "lightgrey",
+      "cardDefense" : "1",
+      "cardDesc" : "The kiwifruit or Chinese gooseberry (sometimes shortened to kiwi) is the edible berry of a woody vine in the genus Actinidia.[1][2] The most common cultivar group of kiwifruit ('Hayward')[3] is oval, about the size of a large hen's egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm (1.8–2.2 in) in diameter). It has a fibrous, dull greenish-brown skin and bright green or golden flesh with rows of tiny, black, edible seeds. The fruit has a soft texture and a sweet but unique flavor, It is a commercial crop in several countries, such as New Zealand, Chile, Italy, Greece, and France.[4]",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "Kiwi",
+      "cardTotal" : 2,
+      "cardType" : "",
+      "createTime" : 1447800955214
+    },
+    "-K3MeXFpVJUEa2Wyd-HH" : {
+      "cardAttack" : "1",
+      "cardColor" : "lightgrey",
+      "cardDefense" : "1",
+      "cardDesc" : "A pitaya /pɨˈtaɪ.ə/ or pitahaya /ˌpɪtəˈhaɪ.ə/ is the fruit of several cactus species.\n\n\"Pitaya\" usually refers to fruit of the genus Stenocereus, while \"pitahaya\" or \"dragon fruit\" always refers to fruit of the genus Hylocereus.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "dragonfruit",
+      "cardTotal" : 2,
+      "cardType" : "",
+      "createTime" : 1447801004332
+    },
+    "-K3MesMad5xwY7e2Ir2I" : {
+      "cardAttack" : "3",
+      "cardColor" : "purple",
+      "cardDefense" : "4",
+      "cardDesc" : "The Chevrolet Corvette, known colloquially as the Vette, is a sports car manufactured by Chevrolet. The car has been produced through seven generations.[1][2] The first model, a convertible, was designed by Harley Earl and introduced at the GM Motorama in 1953 as a concept show car. Myron Scott is credited for naming the car after the type of small, maneuverable warship called a corvette.[3] Originally built in Flint, Michigan and St. Louis, Missouri, the Corvette is currently manufactured in Bowling Green, Kentucky and is the official sports car of the Commonwealth of Kentucky.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "Corvette",
+      "cardTotal" : 7,
+      "cardType" : "zZz",
+      "createTime" : 1447801094877
+    },
+    "-K3Mf517f73_6q-CExTL" : {
+      "cardAttack" : "6",
+      "cardColor" : "green",
+      "cardDefense" : "2",
+      "cardDesc" : "The Chevrolet Chevelle was a mid-sized automobile produced by General Motors from 1963 through 1977.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "Chevelle",
+      "cardTotal" : 8,
+      "cardType" : "ZzZ",
+      "createTime" : 1447801150847
+    },
+    "-K3MfH3LSf_GDnnrcdhX" : {
+      "cardAttack" : "7",
+      "cardColor" : "yellow",
+      "cardDefense" : "8",
+      "cardDesc" : "The Ford Mustang is an American automobile manufactured by Ford. It was originally based on the platform of the second generation North American Ford Falcon, a compact car.[1] The original Ford Mustang I four-seater concept car had evolved into the 1962 Mustang II two-seater prototype, which Ford used to pretest how the public would take interest in the first production Mustang which was released as the 1964 1/2, with a slight variation on the frontend and a top that was 2.7 inches shorter than the 1963 Mustang II.[2] Introduced early on April 17, 1964,[3] and thus dubbed as a \"1964½\" model by Mustang fans, the 1965 Mustang was the automaker's most successful launch since the Model A.[4] The Mustang has undergone several transformations to its current sixth generation.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "Mustang",
+      "cardTotal" : 15,
+      "cardType" : "555",
+      "createTime" : 1447801200141
+    },
+    "-K3MfTe8ePCtxpQHIZOA" : {
+      "cardAttack" : "8",
+      "cardColor" : "blue",
+      "cardDefense" : "8",
+      "cardDesc" : "The Dodge Viper SRT (formerly the SRT Viper, between 2012 and 2014) is a sports car, manufactured by the Dodge (SRT for 2013 and 2014) division of Chrysler. Production of the two-seat sports car began at New Mack Assembly in 1991 and moved to its current home at Conner Avenue Assembly in October 1995.",
+      "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+      "cardName" : "Viper",
+      "cardTotal" : 16,
+      "cardType" : "o0O",
+      "createTime" : 1447801251712
+    }
+  }
+}

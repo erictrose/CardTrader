@@ -204,30 +204,42 @@ body {
 .bytype-card-top {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+/*    background-color: red;*/
 }
 
 .bytype-card-type {
-    font-size: 13px;
+    font-size: 6px;
 /*    background-color: blue;*/
-    margin-left: 5px;
+    margin-left: 1px;
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 15%;
 }
 
 .bytype-card-title {
     margin: 10px 0;
-    font-size: 19px;
+    font-size: 8px;
     text-align: center;
     white-space: nowrap; 
     text-overflow: ellipsis;
-    width: 120px;
+    width: 52%;
     overflow: hidden;
-/*    background-color: red;*/
+/*    background-color: yellow;*/
 }
 
 .bytype-card-number {
-    font-size: 13px;
-/*    background-color: yellow;*/
-    margin-right: 5px;
+    font-size: 6px;
+/*    background-color: green;*/
+    margin-right: 1px;
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    overflow: hidden;
+    width: 15%;
 }
 
 .bytype-card-image {
@@ -244,6 +256,7 @@ body {
     max-height: 52px;
     overflow: hidden;
     text-overflow: ellipsis;
+    background-color: pink;
 }
 
 .add {

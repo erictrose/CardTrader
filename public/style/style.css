@@ -1,3 +1,14 @@
+/*
+COLORS
+light grey: #c2c1c1
+medium grey: #606060
+dark grey: #3c3c3c
+green: #59b947
+blue: #5784c3
+purple: #8955a2
+yellow: #fcb315
+*/
+
 /*font face*/
 @font-face {
     font-family: troika;
@@ -257,6 +268,38 @@ footer {
     bottom: 0;
     text-align: center;
 /*    background-color: orange;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*card colors*/
+.greenCard {
+    background-color: #59b947;
+}
+
+.blueCard {
+    background-color: #5784c3;
+}
+
+.purpleCard {
+    background-color: #8955a2;
+}
+
+.yellowCard {
+    background-color: #fcb315;
+}
+
+.lightgreyCard {
+    background-color: #c2c1c1;
 }
 
 

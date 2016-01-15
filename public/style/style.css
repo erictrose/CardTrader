@@ -199,6 +199,7 @@ body {
     align-items: center;
     border: 1px solid black;
     word-break: break-word;
+    justify-content: space-between;
 }
 
 .bytype-card-top {
@@ -206,6 +207,8 @@ body {
     width: 100%;
     justify-content: center;
 /*    background-color: red;*/
+    height: 10%;
+    margin-top: 3px;
 }
 
 .bytype-card-type {
@@ -221,7 +224,6 @@ body {
 }
 
 .bytype-card-title {
-    margin: 10px 0;
     font-size: 8px;
     text-align: center;
     white-space: nowrap; 
@@ -243,20 +245,24 @@ body {
 }
 
 .bytype-card-image {
-    max-width: 80%;
-    max-height: 100%;
+    max-width: 64px;
+    max-height: 64px;
 /*    align-self: center;*/
 }
 
 .bytype-card-desc {
-    font-size: 16px;
+    font-size: 6px;
+/*
     margin: 5px 0;
     padding: 5px;
-    height: 52px;
-    max-height: 52px;
+*/
+    height: 22%;
+/*    max-height: 52px;*/
     overflow: hidden;
-    text-overflow: ellipsis;
-    background-color: pink;
+
+/*    background-color: pink;*/
+    line-height: 7px;
+    width: 79%;
 }
 
 .add {

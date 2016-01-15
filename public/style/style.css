@@ -112,6 +112,7 @@ body {
     border: 1px solid black;
     word-break: break-word;
     max-height: 200px;
+    padding-bottom: 6px;
 }
 
 .new-card-top {
@@ -168,14 +169,14 @@ body {
     margin: 5px 0;
     padding: 5px;
 */
-    height: 15%;
+    height: 20%;
 /*    max-height: 52px;*/
     overflow: hidden;
 
 /*    background-color: pink;*/
     line-height: 5px;
     width: 79%;
-    margin-top: 3px;
+    margin-top: 2px;
 }
 
 .bytype {
@@ -218,6 +219,7 @@ body {
     border: 1px solid black;
     word-break: break-word;
     justify-content: center;
+    padding-bottom: 10px;
 }
 
 .bytype-card-top {
@@ -281,6 +283,7 @@ body {
 /*    background-color: pink;*/
     line-height: 7px;
     width: 79%;
+    margin-top: 3px;
 }
 
 .add {

@@ -1,0 +1,14 @@
+[
+  '{{repeat(10)}}',
+  {
+    "cardName" : '{{firstName()}} {{surname()}}',
+    "cardAttack" : '{{integer(0, 9)}}',
+    "cardDefense" : '{{integer(0, 9)}}',
+    "cardTotal" : '{{integer(0, 18)}}',
+    "cardColor" : '{{random("blue", "green", "yellow", "purple", "lightgrey")}}',
+    "cardType" : '{{random("RL#","72J","AF1","829","QLR","5L5","LW7","FFF")}}',
+    "cardImg" : "https://cardtrader.herokuapp.com/images/placeholder.png",
+    "cardDesc" : '{{lorem(1, "paragraphs")}}',
+    "createTime" : '{{floating(1447690000000, 1447689500000, 0, "0000000000000")}}'
+  }
+]

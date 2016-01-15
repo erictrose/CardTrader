@@ -26,24 +26,88 @@
         <div class="divider bytype-divider-1">
             Newest by rarity (4)
         </div>
-        <!--ng-repeat this for 4 cards-->
-        <div class="bytype-card" ng-repeat="card in fourcards track by $index">
+        <!--newest green-->
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'green'} | orderBy:'createTime':true | limitTo:1">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
-                    TYP
+                    {{card.cardType}}
                 </p>
                 <p class="bytype-card-title">
-                    Card Title
+                    {{card.cardName}}
                 </p>
                 <p class="bytype-card-number">
-                    0/0
+                    {{card.cardAttack}}/{{card.cardDefense}}
                 </p>
             </div>
             <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
             <p class="bytype-card-desc">
-                The card description goes here
+                {{card.cardDesc}}
             </p>
         </div>
+        <!--newest blue-->
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'blue'} | orderBy:'createTime':true | limitTo:1">
+            <div class="bytype-card-top">
+                <p class="bytype-card-type">
+                    {{card.cardType}}
+                </p>
+                <p class="bytype-card-title">
+                    {{card.cardName}}
+                </p>
+                <p class="bytype-card-number">
+                    {{card.cardAttack}}/{{card.cardDefense}}
+                </p>
+            </div>
+            <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
+            <p class="bytype-card-desc">
+                {{card.cardDesc}}
+            </p>
+        </div>
+        <!--newest yellow-->
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'yellow'} | orderBy:'createTime':true | limitTo:1">
+            <div class="bytype-card-top">
+                <p class="bytype-card-type">
+                    {{card.cardType}}
+                </p>
+                <p class="bytype-card-title">
+                    {{card.cardName}}
+                </p>
+                <p class="bytype-card-number">
+                    {{card.cardAttack}}/{{card.cardDefense}}
+                </p>
+            </div>
+            <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
+            <p class="bytype-card-desc">
+                {{card.cardDesc}}
+            </p>
+        </div>
+        <!--newest purple-->
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'purple'} | orderBy:'createTime':true | limitTo:1">
+            <div class="bytype-card-top">
+                <p class="bytype-card-type">
+                    {{card.cardType}}
+                </p>
+                <p class="bytype-card-title">
+                    {{card.cardName}}
+                </p>
+                <p class="bytype-card-number">
+                    {{card.cardAttack}}/{{card.cardDefense}}
+                </p>
+            </div>
+            <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
+            <p class="bytype-card-desc">
+                {{card.cardDesc}}
+            </p>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <div class="divider bytype-divider-2">
             Newest by __________
         </div>

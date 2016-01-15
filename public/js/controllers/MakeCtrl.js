@@ -5,4 +5,6 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", function(currentAu
  
     //
     $scope.newAmount = '20';
+    
+
 }]);

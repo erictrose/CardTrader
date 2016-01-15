@@ -106,57 +106,75 @@ body {
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    width: 60px;
+    width: 70px;
     height: 80px;
     align-items: center;
     border: 1px solid black;
-    word-break: break-word;
+/*    word-break: break-word;*/
     max-height: 200px;
 }
 
 .new-card-top {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+/*    background-color: red;*/
+    height: 10%;
+    margin-top: 3px;
 }
 
 .new-card-type {
-    font-size: 8px;
+    font-size: 4px;
 /*    background-color: blue;*/
-    margin-left: 5px;
+    margin-left: 1px;
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 15%;
 }
 
 .new-card-title {
-    margin: 5px 0;
-    font-size: 12px;
+    font-size: 6px;
     text-align: center;
     white-space: nowrap; 
     text-overflow: ellipsis;
-    width: 72px;
+    width: 52%;
     overflow: hidden;
-/*    background-color: red;*/
+/*    background-color: yellow;*/
 }
 
 .new-card-number {
-    font-size: 8px;
-/*    background-color: yellow;*/
-    margin-right: 5px;
+    font-size: 4px;
+/*    background-color: purple;*/
+    margin-right: 1px;
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    overflow: hidden;
+    width: 15%;
 }
 
 .new-card-image {
-    max-width: 80%;
-    max-height: 100%;
+    max-width: 50px;
+    max-height: 50px;
 /*    align-self: center;*/
 }
 
 .new-card-desc {
-    font-size: 12px;
+    font-size: 4px;
+/*
     margin: 5px 0;
     padding: 5px;
-    height: 50px;
-    max-height: 50px;
+*/
+    height: 25%;
+/*    max-height: 52px;*/
     overflow: hidden;
-    text-overflow: ellipsis;
+
+/*    background-color: pink;*/
+    line-height: 5px;
+    width: 79%;
 }
 
 .bytype {

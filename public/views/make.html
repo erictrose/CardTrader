@@ -4,7 +4,7 @@
         Newest 20
         </div>
         <!--ng-repeat this for 20 cards-->
-        <div class="new-card {{card.cardColor}}Card" ng-repeat="card in cards">
+        <div class="new-card {{card.cardColor}}Card" ng-repeat="card in cards | limitTo:newAmount">
             <div class="new-card-top">
                 <p class="new-card-type">
                     {{card.cardType}}

@@ -3,4 +3,6 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", function(currentAu
     //get cards from factory
     $scope.cards = Cards;
  
+    //
+    $scope.newAmount = '20';
 }]);

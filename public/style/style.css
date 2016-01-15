@@ -106,11 +106,11 @@ body {
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    width: 70px;
+    width: 60px;
     height: 80px;
     align-items: center;
     border: 1px solid black;
-/*    word-break: break-word;*/
+    word-break: break-word;
     max-height: 200px;
 }
 
@@ -168,13 +168,14 @@ body {
     margin: 5px 0;
     padding: 5px;
 */
-    height: 25%;
+    height: 15%;
 /*    max-height: 52px;*/
     overflow: hidden;
 
 /*    background-color: pink;*/
     line-height: 5px;
     width: 79%;
+    margin-top: 3px;
 }
 
 .bytype {
@@ -211,13 +212,12 @@ body {
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    max-height: 267px;
-    width: 80px;
+    width: 75px;
     height: 100px;
     align-items: center;
     border: 1px solid black;
     word-break: break-word;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .bytype-card-top {
@@ -274,7 +274,7 @@ body {
     margin: 5px 0;
     padding: 5px;
 */
-    height: 22%;
+    height: 20%;
 /*    max-height: 52px;*/
     overflow: hidden;
 

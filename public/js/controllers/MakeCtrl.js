@@ -15,7 +15,7 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", function(currentAu
     $scope.myTitle = 'My Card Dude!';
     $scope.myAttack = 0;
     $scope.myDefense = 0;
-    $scope.myDesc = 'This is my card!, it is super awesome and cool, dont you like it?';
+    $scope.myDesc = 'Irure occaecat nulla reprehenderit est exercitation sit. Et tempor quis anim officia aute ex sint proident laborum aute non. Labore ipsum eu adipisicing in amet eu adipisicing ipsum Lorem ex. Dolor sint cillum reprehenderit tempor ea deserunt excepteur elit. Nostrud ipsum Lorem veniam ea nulla tempor proident reprehenderit minim ut consequat.';
     
     //add card function
     $scope.switchModal = function(){

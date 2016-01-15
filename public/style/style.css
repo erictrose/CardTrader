@@ -121,7 +121,6 @@ body {
     justify-content: center;
 /*    background-color: red;*/
     height: 10%;
-    margin-top: 3px;
 }
 
 .new-card-type {
@@ -177,6 +176,8 @@ body {
     line-height: 5px;
     width: 79%;
     margin-top: 2px;
+    
+    text-align: center;
 }
 
 .bytype {
@@ -284,6 +285,8 @@ body {
     line-height: 7px;
     width: 79%;
     margin-top: 3px;
+    
+    text-align: center;
 }
 
 .add {
@@ -344,8 +347,7 @@ body {
     justify-content: space-between;
     width: 100%;
 /*    background-color: orange;*/
-    margin-top: 10px;
-    margin-bottom: 4px;
+    margin-top: 29px;
 }
 
 .add-card-type {
@@ -390,19 +392,28 @@ body {
     width: 20%;
 }
 
-.add-card-image {
+.add-card-image-container {
+    margin-top: 26px;
     width: 80%;
+}
+
+.add-card-image {
+    width: 100%;
 }
 
 .add-card-desc {
     font-size: 4vw;
     width: 75%;
-    margin-top: 10px;
+    margin-top: 18px;
 /*    background-color: purple;*/
+/*    text-align: center;*/
 }
 
 .add-card-submit {
-    
+    width: 80%;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 footer {
@@ -530,6 +541,17 @@ html, body {
     .top {
         justify-content: center;
     }
+    
+    .add-card-top {
+        margin-top: 15px;
+    }
+    .add-card-image-container {
+        margin-top: 11px;
+    }
+    .add-card-desc {
+        margin-top: 10px;
+    }
+    
 }
 
 

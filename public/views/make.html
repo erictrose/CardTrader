@@ -1,3 +1,32 @@
+<div class="add-modal-container" ng-show="modalOpen">
+    <div class="add-card {{myColor}}Card">
+       
+       
+        <div class="add-card-close" ng-click="switchModal()">
+            <img class="add-card-close-img" src="img/close.png">
+        </div>
+        
+        
+        <div class="add-card-top">
+            <p class="add-card-type">
+                {{myType}}
+            </p>
+            <p class="add-card-title">
+                {{myTitle}}
+            </p>
+            <p class="add-card-number">
+                {{myAttack}}/{{myDefense}}
+            </p>
+        </div>
+        <img class="add-card-image" src="img/placeholder.png" alt="card image">
+        <p class="add-card-desc">
+            {{myDesc}}
+        </p>
+        <button class="add-card-submit" ng-click="saveCard()">Save</button>
+    </div>
+</div>
+   
+
 <div class="middle">
     <div class="new">
         <div class="divider new-divider-1">
@@ -124,8 +153,8 @@
         <div class="divider add-divider-1">
             Make
         </div>
-        <button class="add-button" ng-click="addCard()">
+        <button class="add-button" ng-click="switchModal()">
             +
         </button>
-    </div>
+    </div>    
 </div>

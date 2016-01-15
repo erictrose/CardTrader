@@ -91,7 +91,7 @@ body {
 .new {
     flex-basis: 43%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 /*    background-color: aqua;*/
     align-content: flex-start;
@@ -106,7 +106,8 @@ body {
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    width: 125px;
+    width: 80px;
+    height: 100px;
     align-items: center;
     border: 1px solid black;
     word-break: break-word;
@@ -193,7 +194,8 @@ body {
     display: flex;
     flex-direction: column;
     max-height: 267px;
-    width: 180px;
+    width: 160px;
+    height: 200px;
     align-items: center;
     border: 1px solid black;
     word-break: break-word;

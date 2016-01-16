@@ -1,4 +1,4 @@
-app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", function(currentAuth, $scope, Cards, Upload) {
+app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootScope", "$routeParams", "$location", "cloudinary",  function(currentAuth, $scope, Cards, $upload, $rootScope, $routeParams, $location, cloudinary) {
 
     //get cards from factory
     $scope.cards = Cards;

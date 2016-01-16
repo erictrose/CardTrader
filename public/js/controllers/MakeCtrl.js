@@ -50,7 +50,11 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
 //    #############
     
     var d = new Date();
-    $scope.title = "Image (" + d.getDate() + " - " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ")";
+    
+    
+//    $scope.title = "Image (" + d.getDate() + " - " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ")";
+    
+    
     //$scope.$watch('files', function() {
     $scope.uploadFiles = function(files){
       $scope.files = files;
@@ -81,22 +85,7 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
     };
     //});
 
-    /* Modify the look and fill of the dropzone when files are being dragged over it */
-    $scope.dragOverClass = function($event) {
-      var items = $event.dataTransfer.items;
-      var hasFile = false;
-      if (items != null) {
-        for (var i = 0 ; i < items.length; i++) {
-          if (items[i].kind == 'file') {
-            hasFile = true;
-            break;
-          }
-        }
-      } else {
-        hasFile = true;
-      }
-      return hasFile ? "dragover" : "dragover-err";
-    };
+
     
 //    #############
     

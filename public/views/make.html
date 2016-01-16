@@ -1,32 +1,30 @@
 <div class="add-modal-container" ng-show="modalOpen">
     <div class="add-card {{myColor}}Card">
-       
-       
         <div class="add-card-close" ng-click="switchModal()">
             <img class="add-card-close-img" src="img/close.png">
         </div>
-        
-        
         <div class="add-card-top">
-            <p class="add-card-type">
-                {{myType}}
-            </p>
-            <p class="add-card-title">
-                {{myTitle}}
-            </p>
+            <input class="add-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">
+            <input class="add-card-title black-placeholders" type="text" placeholder="new" ng-model="myTitle">
             <p class="add-card-number">
-                {{myAttack}}/{{myDefense}}
+                <input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack">/<input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense">
             </p>
         </div>
         <div class="add-card-image-container">
             <img class="add-card-image" src="img/placeholder.png" alt="card image">
         </div>
+<!--
         <p class="add-card-desc">
             {{myDesc}}
         </p>
+-->
+        <textarea class="add-card-desc black-placeholders" name="" maxlength="140" rows="5" cols="1" placeholder="description" ng-model="myDesc" required></textarea>
         <button class="add-card-submit" ng-click="saveCard()">Save</button>
     </div>
 </div>
+  
+  
+  
    
 
 <div class="middle">

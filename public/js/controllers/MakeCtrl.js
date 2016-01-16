@@ -11,10 +11,10 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", function(currentAu
     $scope.modalOpen = false;
     
     //bound card values
-    $scope.myType = 'ABC';
-    $scope.myTitle = 'My Card Dude!';
-    $scope.myAttack = 0;
-    $scope.myDefense = 0;
+    $scope.myType = 'abc';
+    $scope.myTitle = 'dudeman';
+    $scope.myAttack = 5;
+    $scope.myDefense = 7;
     $scope.myDesc = 'Irure occaecat nulla reprehenderit est exercitation sit. Et tempor quis anim officia aute ex sint proident laborum aute non. Labore ipsum eu adipisicing in amet eu adipisicing ipsum Lorem ex. Dolor sint cillum reprehenderit tempor ea deserunt excepteur elit. Nostrud ipsum Lorem veniam ea nulla tempor proident reprehenderit minim ut consequat.';
     
     //add card function

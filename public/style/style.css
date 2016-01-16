@@ -342,6 +342,15 @@ body {
     background-color: lightgrey;
 }
 
+.add-card-colorselect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    max-width: 160px;
+    height: 45px;
+}
+
 .add-card-top {
     display: flex;
     justify-content: space-between;
@@ -592,6 +601,9 @@ html, body {
 @media only screen and (max-width : 350px){
     .logo {
 /*        font-size: 28px;*/
+    }
+    .add-card-colorselect {
+        width: 80px;
     }
 }
 

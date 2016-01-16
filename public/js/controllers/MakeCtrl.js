@@ -10,39 +10,45 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", function(currentAu
     //modal switch
     $scope.modalOpen = false;
     
-    //bound card values
-    $scope.myType = 'abc';
-    $scope.myTitle = 'dudeman';
-    $scope.myAttack = 5;
-    $scope.myDefense = 7;
-    $scope.myDesc = 'Irure occaecat nulla reprehenderit est exercitation sit. Et tempor quis anim officia aute ex sint proident laborum aute non. Labore ipsum eu adipisicing in amet eu adipisicing ipsum Lorem ex. Dolor sint cillum reprehenderit tempor ea deserunt excepteur elit. Nostrud ipsum Lorem veniam ea nulla tempor proident reprehenderit minim ut consequat.';
-    
     //add card function
     $scope.switchModal = function(){
         //if modal is open, close it, vice verca
         if(!$scope.modalOpen){$scope.modalOpen=true}
         else{$scope.modalOpen=false};
-        console.log($scope.modalOpen);
+        console.log('toggled modal');
     };
+    
+//    //color options
+//    $scope.colors = [{
+//      id: 1,
+//      label: 'aLabel',
+//      subItem: { name: 'aSubItem' }
+//    }, {
+//      id: 2,
+//      label: 'bLabel',
+//      subItem: { name: 'bSubItem' }
+//    }];
     
     //save card function
     $scope.saveCard = function(){
+        
+
+//        $scope.cards.$add({
+//        cardName: $scope.myTitle,
+//        cardAttack: $scope.myAttack,
+//        cardDefense: $scope.myDefense,
+//        cardTotal: total(),
+//        cardColor: $scope.myColor,
+//        cardType: $scope.myType,
+//        cardImg: '',
+//        cardDesc: $scope.myDesc
+//        });
+        
+        
+        
+        
         console.log('card saved');
+        //close modal
         $scope.switchModal();
-    };
-    
-    //        $scope.cards.$add({
-//            cardName: pushArray[i].cardName,
-//            cardAttack: pushArray[i].cardAttack,
-//            cardDefense: pushArray[i].cardDefense,
-//            cardTotal: pushArray[i].cardTotal,
-//            cardColor: pushArray[i].cardColor,
-//            cardType: pushArray[i].cardType,
-//            cardImg: pushArray[i].cardImg,
-//            cardDesc: pushArray[i].cardDesc,
-//            createTime: pushArray[i].createTime
-//            });
-    
-    
-    
+    };    
 }]);

@@ -1,5 +1,5 @@
 //main app
-var app = angular.module("app", ["firebase","ngRoute"]);
+var app = angular.module("app", ["firebase","ngRoute","cloudinary","ngFileUpload"]);
 
 //all components loaded in html header
 

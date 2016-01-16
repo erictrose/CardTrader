@@ -1,4 +1,4 @@
-app.config(["$routeProvider", function($routeProvider) {
+app.config(["$routeProvider", "cloudinaryProvider",function($routeProvider,cloudinaryProvider) {
 $routeProvider
     //make
     .when("/make",{
@@ -46,4 +46,7 @@ $routeProvider
     })
     //otherwise
     .otherwise({redirectTo: '/login'});
+cloudinaryProvider
+    .set("cloud_name", "dgs2b0bpa")
+    .set("upload_preset", "alqlnivc");
 }]);

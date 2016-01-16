@@ -18,20 +18,14 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", function(currentAu
         console.log('toggled modal');
     };
     
-//    //color options
-//    $scope.colors = [{
-//      id: 1,
-//      label: 'aLabel',
-//      subItem: { name: 'aSubItem' }
-//    }, {
-//      id: 2,
-//      label: 'bLabel',
-//      subItem: { name: 'bSubItem' }
-//    }];
+    //default card color
+    $scope.myColor = 'grey';
+    
     
     //save card function
     $scope.saveCard = function(){
-        
+        //test for validation
+            //get user data
 
 //        $scope.cards.$add({
 //        cardName: $scope.myTitle,
@@ -46,7 +40,7 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", function(currentAu
         
         
         
-        
+        console.log(currentAuth);
         console.log('card saved');
         //close modal
         $scope.switchModal();

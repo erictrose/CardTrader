@@ -3,12 +3,12 @@
         <div class="add-card-close" ng-click="switchModal()">
             <img class="add-card-close-img" src="img/close.png">
         </div>
-        <select class="add-card-colorselect">
+        <select class="add-card-colorselect" ng-model="myColor">
             <option value="grey">Grey</option>
             <option value="green">Green</option>
             <option value="blue">Blue</option>
             <option value="purple">Purple</option>
-            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
         </select>
         <div class="add-card-top">
             <input class="add-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">

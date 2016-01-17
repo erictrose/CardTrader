@@ -30,6 +30,7 @@ body {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-top: 13px;
 }
 
 .profile {
@@ -50,7 +51,12 @@ body {
     align-items: center;
 /*    background-color: blue;*/
     font-size: 52px;
+    width: 322px;
     
+}
+
+.logo-img {
+    width: 100%;
 }
 
 .logout {

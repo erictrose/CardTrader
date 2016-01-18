@@ -24,7 +24,7 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
         $scope.myType = '';
         $scope.myDesc = '';
         $scope.myImg = '';
-        $scope.notify = 'select and image';
+        $scope.notify = 'click';
         //reset image
         $scope.files = '';
     };

@@ -25,6 +25,8 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
         $scope.myDesc = '';
         $scope.myImg = '';
         $scope.notify = 'select and image';
+        //reset image
+        $scope.files = '';
     };
     
     
@@ -62,10 +64,12 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
             $rootScope.photos = $rootScope.photos || [];
             data.context = {custom: {photo: $scope.title}};
             file.result = data;
-              $scope.notify= 'saved';
-              $scope.myImg = file.result.secure_url;
-              $scope.myImgSmall = file.result.eager[0].secure_url;
-              console.log(file);
+            //notify user
+            $scope.notify= 'saved';
+            //set scope
+            $scope.myImg = file.result.secure_url;
+            $scope.myImgSmall = file.result.eager[0].secure_url;
+            console.log(file);
             $rootScope.photos.push(data);
           }).error(function (data, status, headers, config) {
             file.result = data;

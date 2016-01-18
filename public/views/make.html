@@ -1,6 +1,33 @@
-<div class="add-modal-container" ng-show="modalOpen">
+<!--view card modal-->
+<div class="view-modal-container" ng-show="viewModalOpen">
+    <div class="view-card {{myColor}}Card">
+        <div class="view-card-close" ng-click="switchViewModal()">
+            <img class="view-card-close-img" src="img/close.png">
+        </div>
+        <div class="view-card-top">
+            <p class="view-card-type">{{viewType}}</p>
+            <p class="view-card-title">{{viewTitle}}</p>
+            <p class="view-card-number">
+            {{viewAttack}}/{{viewDefense}}
+            </p>
+        </div>
+        <div class="textcenter view-card-image-container">
+            <img ng-src="{{viewImg}}" class="view-card-image">
+        </div>
+        <p class="view-card-desc">{{viewDesc}}</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!--add card modal-->
+<div class="add-modal-container" ng-show="addModalOpen">
     <div class="add-card {{myColor}}Card">
-        <div class="add-card-close" ng-click="switchModal()">
+        <div class="add-card-close" ng-click="switchAddModal()">
             <img class="add-card-close-img" src="img/close.png">
         </div>
         <select class="add-card-colorselect" ng-model="myColor">
@@ -14,24 +41,16 @@
             <input class="add-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">
             <input class="add-card-title black-placeholders" type="text" placeholder="new" ng-model="myTitle">
             <p class="add-card-number">
-                <input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack">/<input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense">
+            <input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack">/<input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense">
             </p>
         </div>
-        
-        
         <div class="textcenter add-card-image-container" href="#" ngf-select="uploadFiles($files)" title="upload" resetOnClick="true" >
             <div class="file" ng-repeat="file in files">
-                
                 <img class="add-card-image" ngf-src="file.result.url || file">
             </div>
-            
-                <img class="add-card-image" src="../img/placeholder.png" ng-hide="files">
-            
+            <img class="add-card-image" src="../img/placeholder.png" ng-hide="files">
         </div>
-        
-        <p>{{notify}}</p>
-        
-        
+        <span>{{notify}}</span>
         <textarea class="add-card-desc black-placeholders" name="" maxlength="140" rows="5" cols="1" placeholder="description" ng-model="myDesc" required></textarea>
         <button class="add-card-submit" ng-click="saveCard()">Save</button>
     </div>
@@ -47,7 +66,7 @@
         Newest
         </div>
         <!--ng-repeat this for 20 cards-->
-        <div class="new-card {{card.cardColor}}Card" ng-repeat="card in cards | limitTo:newAmount">
+        <div class="new-card {{card.cardColor}}Card" ng-repeat="card in cards | limitTo:newAmount" ng-click="switchViewModal(card)">
             <div class="new-card-top">
                 <p class="new-card-type">
                     {{card.cardType}}
@@ -167,7 +186,7 @@
         <div class="divider add-divider-1">
             Make
         </div>
-        <button class="add-button" ng-click="switchModal()">
+        <button class="add-button" ng-click="switchAddModal()">
             +
         </button>
     </div>    

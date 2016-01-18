@@ -1,6 +1,6 @@
 <!--view card modal-->
 <div class="view-modal-container" ng-show="viewModalOpen">
-    <div class="view-card {{myColor}}Card">
+    <div class="view-card {{viewColor}}Card">
         <div class="view-card-close" ng-click="switchViewModal()">
             <img class="view-card-close-img" src="img/close.png">
         </div>
@@ -89,7 +89,7 @@
             Newest by rarity
         </div>
         <!--newest green-->
-        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'green'} | orderBy:'createTime':true | limitTo:1">
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'green'} | orderBy:'createTime':true | limitTo:1" ng-click="switchViewModal(card)">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
                     {{card.cardType}}
@@ -107,7 +107,7 @@
             </p>
         </div>
         <!--newest blue-->
-        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'blue'} | orderBy:'createTime':true | limitTo:1">
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'blue'} | orderBy:'createTime':true | limitTo:1" ng-click="switchViewModal(card)">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
                     {{card.cardType}}
@@ -125,7 +125,7 @@
             </p>
         </div>
         <!--newest yellow-->
-        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'yellow'} | orderBy:'createTime':true | limitTo:1">
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'yellow'} | orderBy:'createTime':true | limitTo:1" ng-click="switchViewModal(card)">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
                     {{card.cardType}}
@@ -143,7 +143,7 @@
             </p>
         </div>
         <!--newest purple-->
-        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'purple'} | orderBy:'createTime':true | limitTo:1">
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'purple'} | orderBy:'createTime':true | limitTo:1" ng-click="switchViewModal(card)">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
                     {{card.cardType}}
@@ -164,7 +164,7 @@
             Highest Rated
         </div>
         <!--ng-repeat this for X cards-->
-        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | orderBy:'-cardTotal' | limitTo:ratedAmount">
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | orderBy:'-cardTotal' | limitTo:ratedAmount" ng-click="switchViewModal(card)">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
                     {{card.cardType}}

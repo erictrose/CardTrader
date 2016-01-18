@@ -110,3 +110,30 @@
     text-align: center;
     resize: none;
 }
+
+
+
+
+
+
+
+/*card colors*/
+.view-card.greenCard {
+    background-color: #59b947;
+}
+
+.view-card.blueCard {
+    background-color: #5784c3;
+}
+
+.view-card.purpleCard {
+    background-color: #8955a2;
+}
+
+.view-card.yellowCard {
+    background-color: #fcb315;
+}
+
+.view-card.lightgreyCard {
+    background-color: #c2c1c1;
+}

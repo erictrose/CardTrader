@@ -1,0 +1,11 @@
+"unique id" : {
+  "cardAttack" : 0, //0-9
+  "cardColor" : "", //"lightgrey","green","blue","yellow","purple"
+  "cardDefense" : 0, //0-9
+  "cardDesc" : "", //text
+  "cardImg" : "", //url
+  "cardName" : "", //text
+  "cardTotal" : 0, //total of cardAttack and cardDefense
+  "cardType" : "", //3 alphanumerics
+  "createTime" : 0000000000000 //timestamp
+}

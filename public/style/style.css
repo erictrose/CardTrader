@@ -1,3 +1,14 @@
+/*
+COLORS
+light grey: #c2c1c1
+medium grey: #606060
+dark grey: #3c3c3c
+green: #59b947
+blue: #5784c3
+purple: #8955a2
+yellow: #fcb315
+*/
+
 /*font face*/
 @font-face {
     font-family: troika;
@@ -19,6 +30,7 @@ body {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-top: 13px;
 }
 
 .profile {
@@ -39,7 +51,12 @@ body {
     align-items: center;
 /*    background-color: blue;*/
     font-size: 52px;
+    width: 322px;
     
+}
+
+.logo-img {
+    width: 100%;
 }
 
 .logout {
@@ -95,56 +112,78 @@ body {
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    width: 125px;
+    width: 60px;
+    height: 80px;
     align-items: center;
     border: 1px solid black;
     word-break: break-word;
     max-height: 200px;
+    padding-bottom: 6px;
 }
 
 .new-card-top {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+/*    background-color: red;*/
+    height: 10%;
 }
 
 .new-card-type {
-    font-size: 8px;
+    font-size: 4px;
 /*    background-color: blue;*/
-    margin-left: 5px;
+    margin-left: 1px;
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 15%;
 }
 
 .new-card-title {
-    margin: 5px 0;
-    font-size: 12px;
+    font-size: 6px;
     text-align: center;
     white-space: nowrap; 
     text-overflow: ellipsis;
-    width: 72px;
+    width: 52%;
     overflow: hidden;
-/*    background-color: red;*/
+/*    background-color: yellow;*/
 }
 
 .new-card-number {
-    font-size: 8px;
-/*    background-color: yellow;*/
-    margin-right: 5px;
+    font-size: 4px;
+/*    background-color: purple;*/
+    margin-right: 1px;
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    overflow: hidden;
+    width: 15%;
 }
 
 .new-card-image {
-    max-width: 80%;
-    max-height: 100%;
+    max-width: 50px;
+    max-height: 50px;
 /*    align-self: center;*/
 }
 
 .new-card-desc {
-    font-size: 12px;
+    font-size: 4px;
+/*
     margin: 5px 0;
     padding: 5px;
-    height: 50px;
-    max-height: 50px;
+*/
+    height: 20%;
+/*    max-height: 52px;*/
     overflow: hidden;
-    text-overflow: ellipsis;
+
+/*    background-color: pink;*/
+    line-height: 5px;
+    width: 79%;
+    margin-top: 2px;
+    
+    text-align: center;
 }
 
 .bytype {
@@ -181,56 +220,79 @@ body {
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    max-height: 267px;
-    width: 180px;
+    width: 75px;
+    height: 100px;
     align-items: center;
     border: 1px solid black;
     word-break: break-word;
+    justify-content: center;
+    padding-bottom: 10px;
 }
 
 .bytype-card-top {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+/*    background-color: red;*/
+    height: 10%;
+    margin-top: 3px;
 }
 
 .bytype-card-type {
-    font-size: 13px;
+    font-size: 6px;
 /*    background-color: blue;*/
-    margin-left: 5px;
+    margin-left: 1px;
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 15%;
 }
 
 .bytype-card-title {
-    margin: 10px 0;
-    font-size: 19px;
+    font-size: 8px;
     text-align: center;
     white-space: nowrap; 
     text-overflow: ellipsis;
-    width: 120px;
+    width: 52%;
     overflow: hidden;
-/*    background-color: red;*/
+/*    background-color: yellow;*/
 }
 
 .bytype-card-number {
-    font-size: 13px;
-/*    background-color: yellow;*/
-    margin-right: 5px;
+    font-size: 6px;
+/*    background-color: green;*/
+    margin-right: 1px;
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    overflow: hidden;
+    width: 15%;
 }
 
 .bytype-card-image {
-    max-width: 80%;
-    max-height: 100%;
+    max-width: 64px;
+    max-height: 64px;
 /*    align-self: center;*/
 }
 
 .bytype-card-desc {
-    font-size: 16px;
+    font-size: 6px;
+/*
     margin: 5px 0;
     padding: 5px;
-    height: 52px;
-    max-height: 52px;
+*/
+    height: 20%;
+/*    max-height: 52px;*/
     overflow: hidden;
-    text-overflow: ellipsis;
+
+/*    background-color: pink;*/
+    line-height: 7px;
+    width: 79%;
+    margin-top: 3px;
+    
+    text-align: center;
 }
 
 .add {
@@ -247,9 +309,141 @@ body {
 
 .add-button {
     margin-top: 5px;
+/*
     width: 100%;
     height: 200px;
+*/
     font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.add-card-close {
+    position: absolute;
+    width: 45px;
+    top: 0;
+    right: 0;
+}
+
+.add-card-close-img {
+    width: 100%;
+}
+
+.add-modal-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+/*    height: 100%;*/
+/*    background-color: rgba(0, 0, 0, 0.25);*/
+}
+
+.add-card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+/*    height: 500px;*/
+    align-items: center;
+    border: 5px solid black;
+    word-break: break-word;
+    justify-content: flex-start;
+    margin-top: 50px;
+    background-color: lightgrey;
+}
+
+.add-card-colorselect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    max-width: 160px;
+    height: 45px;
+}
+
+.add-card-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+/*    background-color: orange;*/
+    margin-top: 29px;
+}
+
+.add-card-type {
+    font-size: 4vw;
+/*    background-color: yellow;*/
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 20%;
+    
+    padding: 0px 0px;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border: none;
+}
+
+.add-card-title {
+    font-size: 6vw;
+/*    background-color: green;*/
+    text-align: center;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    width: 60%;
+    overflow: hidden;
+    
+    padding: 0px 0px;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border: none;
+}
+
+.add-card-number {
+    font-size: 4vw;
+/*    background-color: blue;*/
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 20%;
+    
+    padding: 0px 0px;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border: none;
+}
+
+.add-card-image-container {
+    margin-top: 26px;
+    width: 80%;
+}
+
+.add-card-image {
+    width: 100%;
+}
+
+.add-card-desc {
+    font-size: 4vw;
+    width: 75%;
+    margin-top: 18px;
+/*    background-color: purple;*/
+/*    text-align: center;*/
+    
+    padding: 0px 0px;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border: none;
+    text-align: center;
+    resize: none;
+}
+
+.add-card-submit {
+    width: 80%;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 footer {
@@ -257,6 +451,58 @@ footer {
     bottom: 0;
     text-align: center;
 /*    background-color: orange;*/
+}
+
+
+
+
+/*
+
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+
+*/
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -20px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+	height: 20px; /* .push must be the same height as .footer */
+}
+
+
+
+
+
+
+
+/*card colors*/
+.greenCard {
+    background-color: #59b947;
+}
+
+.blueCard {
+    background-color: #5784c3;
+}
+
+.purpleCard {
+    background-color: #8955a2;
+}
+
+.yellowCard {
+    background-color: #fcb315;
+}
+
+.lightgreyCard {
+    background-color: #c2c1c1;
 }
 
 
@@ -276,8 +522,31 @@ footer {
     white-space: nowrap;
 }
 
+.textcenter {
+    text-align: center;
+}
 
-
+.black-placeholders:placeholder-shown {
+  color: black;
+}
+.black-placeholders::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: black;
+}
+.black-placeholders:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+.black-placeholders::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+.black-placeholders:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+.black-placeholders::-ms-input-placeholder { /* Edge */
+  color: black;
+}
+.black-placeholders:placeholder-shown { /* Standard one last! */
+  color: black;
+}
 
 
 
@@ -311,7 +580,7 @@ footer {
         flex-flow: column nowrap;
     }
     .middle {
-        flex-flow: column nowrap;
+        flex-flow: column-reverse nowrap;
     }
     .profile {
         display: none;
@@ -322,6 +591,20 @@ footer {
     .top {
         justify-content: center;
     }
+    
+    .add-card-top {
+        margin-top: 15px;
+    }
+    .add-card-image-container {
+        margin-top: 11px;
+    }
+    .add-card-desc {
+        margin-top: 10px;
+    }
+    .middle {
+        
+    }
+    
 }
 
 
@@ -330,6 +613,9 @@ footer {
 @media only screen and (max-width : 350px){
     .logo {
 /*        font-size: 28px;*/
+    }
+    .add-card-colorselect {
+        width: 80px;
     }
 }
 

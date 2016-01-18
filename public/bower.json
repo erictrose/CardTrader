@@ -4,7 +4,7 @@
     "eric rose"
   ],
   "description": "",
-  "main": "js/app.js",
+  "main": "index.html",
   "moduleType": [
     "globals"
   ],

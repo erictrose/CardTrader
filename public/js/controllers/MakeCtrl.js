@@ -18,44 +18,24 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
         console.log('toggled modal');
     };
     
-    //default card color
+    
+    
+    
+    //new card variables
     $scope.myColor = 'grey';
+    $scope.myTitle = '';
+    $scope.myAttack = 0;
+    $scope.myDefense = 0;
+    $scope.myType = '';
+    $scope.myDesc = '';
+    $scope.myImg = '';
+    $scope.notify = 'select and image';
     
     
-    //save card function
-    $scope.saveCard = function(){
-        //test for validation
-            //get user data
-
-//        $scope.cards.$add({
-//        cardName: $scope.myTitle,
-//        cardAttack: $scope.myAttack,
-//        cardDefense: $scope.myDefense,
-//        cardTotal: total(),
-//        cardColor: $scope.myColor,
-//        cardType: $scope.myType,
-//        cardImg: '',
-//        cardDesc: $scope.myDesc
-//        });
-        
-        
-        
-        console.log(currentAuth);
-        console.log('card saved');
-        //close modal
-        $scope.switchModal();
-    };
     
     
-//    #############
     
-    var d = new Date();
-    
-    
-//    $scope.title = "Image (" + d.getDate() + " - " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ")";
-    
-    
-    //$scope.$watch('files', function() {
+    //upload file
     $scope.uploadFiles = function(files){
       $scope.files = files;
       if (!$scope.files) return;
@@ -69,13 +49,14 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
               context: 'photo=' + $scope.title,
               file: file
             }
-          }).progress(function (e) {
-            file.progress = Math.round((e.loaded * 100.0) / e.total);
-            file.status = "Uploading... " + file.progress + "%";
           }).success(function (data, status, headers, config) {
             $rootScope.photos = $rootScope.photos || [];
             data.context = {custom: {photo: $scope.title}};
             file.result = data;
+              $scope.notify= 'saved';
+              $scope.myImg = file.result.secure_url;
+              $scope.myImgSmall = file.result.eager[0].secure_url;
+              console.log(file);
             $rootScope.photos.push(data);
           }).error(function (data, status, headers, config) {
             file.result = data;
@@ -83,16 +64,39 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
         }
       });
     };
-    //});
-
 
     
-//    #############
+
     
     
+    //save card
+    $scope.saveCard = function(){
+        if($scope.myTitle && $scope.myDesc && $scope.myImg){
+            
+            //add numbers
+            var total = parseInt($scope.myAttack) + parseInt($scope.myDefense);
+            
+            //add to firebase
+            $scope.cards.$add({
+                cardCreator: currentAuth,
+                cardName: $scope.myTitle,
+                cardAttack: $scope.myAttack,
+                cardDefense: $scope.myDefense,
+                cardTotal: total,
+                cardColor: $scope.myColor,
+                cardType: $scope.myType,
+                cardImg: $scope.myImg,
+                cardImgSmall: $scope.myImgSmall,
+                cardDesc: $scope.myDesc
+            });
+            
+            //log
+            console.log('card saved');
+            //close modal
+            $scope.switchModal();
+        };
+    };
     
     
-    
-    
-    
+
 }]);

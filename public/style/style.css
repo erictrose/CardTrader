@@ -309,9 +309,12 @@ body {
 
 .add-button {
     margin-top: 5px;
+/*
     width: 100%;
     height: 200px;
+*/
     font-size: 52px;
+    margin-bottom: 20px;
 }
 
 .add-card-close {
@@ -433,7 +436,7 @@ body {
     background-color: rgba(255,255,255,0);
     border: none;
     text-align: center;
-    resize: vertical;
+    resize: none;
 }
 
 .add-card-submit {
@@ -577,7 +580,7 @@ html, body {
         flex-flow: column nowrap;
     }
     .middle {
-        flex-flow: column nowrap;
+        flex-flow: column-reverse nowrap;
     }
     .profile {
         display: none;
@@ -597,6 +600,9 @@ html, body {
     }
     .add-card-desc {
         margin-top: 10px;
+    }
+    .middle {
+        
     }
     
 }

@@ -12,48 +12,26 @@
         </select>
         <div class="add-card-top">
             <input class="add-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">
-            <input class="add-card-title black-placeholders" type="text" placeholder="new" ng-model="title">
+            <input class="add-card-title black-placeholders" type="text" placeholder="new" ng-model="myTitle">
             <p class="add-card-number">
                 <input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack">/<input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense">
             </p>
         </div>
-        <div class="add-card-image-container">
-<!--            <img class="add-card-image" src="img/placeholder.png" alt="card image">-->
-       
-       
-
-    <div class="file" ng-repeat="file in files">
-<!--        <h3>{{file.name}} {{f.$error}} {{f.$errorParam}}</h3>-->
-<!--        <div class="status">{{file.status}}</div>-->
-        <div class="progress-bar">
-          <div class="progress" style="width: {{file.progress}}%" ng-init="progress=0"></div>
+        
+        
+                    <div class="textcenter add-card-image-container" href="#" ngf-select="uploadFiles($files)" title="upload" resetOnClick="true" >
+            <div class="file" ng-repeat="file in files">
+                
+                <img class="add-card-image" ngf-src="file.result.url || file">
+            </div>
+            
+                <img class="add-card-image" src="../img/placeholder.png" ng-hide="files">
+            
         </div>
-
-                    <img class="add-card-image" ngf-src="file.result.url || file">
-<!--
-        <div class="info">
-          <table>
-            <tr ng-repeat="(key, value) in file.result">
-              <td> {{key}} </td> <td> {{ value }} </td>
-            </tr>
-          </table>
-        </div>
--->
-    </div>
-      
-      
-      
-       <div class="textcenter" href="#" class="upload_button" ngf-select="uploadFiles($files)" multiple title="upload" resetOnClick="true" >
-           <img class="add-card-image" src="../img/placeholder.png">
-       </div>
-       
-       
-        </div>
-<!--
-        <p class="add-card-desc">
-            {{myDesc}}
-        </p>
--->
+        
+        <p>{{notify}}</p>
+        
+        
         <textarea class="add-card-desc black-placeholders" name="" maxlength="140" rows="5" cols="1" placeholder="description" ng-model="myDesc" required></textarea>
         <button class="add-card-submit" ng-click="saveCard()">Save</button>
     </div>
@@ -66,7 +44,7 @@
 <div class="middle">
     <div class="new">
         <div class="divider new-divider-1">
-        Newest 20
+        Newest
         </div>
         <!--ng-repeat this for 20 cards-->
         <div class="new-card {{card.cardColor}}Card" ng-repeat="card in cards | limitTo:newAmount">
@@ -81,7 +59,7 @@
                     {{card.cardAttack}}/{{card.cardDefense}}
                 </p>
             </div>
-            <img class="new-card-image" src="img/placeholder.png" alt="card image">
+            <img class="new-card-image" ng-src="{{card.cardImgSmall}}">
             <p class="new-card-desc">
                 {{card.cardDesc}}
             </p>
@@ -89,7 +67,7 @@
     </div>
     <div class="bytype">
         <div class="divider bytype-divider-1">
-            Newest by rarity (4)
+            Newest by rarity
         </div>
         <!--newest green-->
         <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'green'} | orderBy:'createTime':true | limitTo:1">
@@ -104,7 +82,7 @@
                     {{card.cardAttack}}/{{card.cardDefense}}
                 </p>
             </div>
-            <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
+            <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
             <p class="bytype-card-desc">
                 {{card.cardDesc}}
             </p>
@@ -122,7 +100,7 @@
                     {{card.cardAttack}}/{{card.cardDefense}}
                 </p>
             </div>
-            <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
+            <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
             <p class="bytype-card-desc">
                 {{card.cardDesc}}
             </p>
@@ -140,7 +118,7 @@
                     {{card.cardAttack}}/{{card.cardDefense}}
                 </p>
             </div>
-            <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
+            <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
             <p class="bytype-card-desc">
                 {{card.cardDesc}}
             </p>
@@ -158,7 +136,7 @@
                     {{card.cardAttack}}/{{card.cardDefense}}
                 </p>
             </div>
-            <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
+            <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
             <p class="bytype-card-desc">
                 {{card.cardDesc}}
             </p>
@@ -179,7 +157,7 @@
                     {{card.cardAttack}}/{{card.cardDefense}}
                 </p>
             </div>
-            <img class="bytype-card-image" src="img/placeholder.png" alt="card image">
+            <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
             <p class="bytype-card-desc">
                 {{card.cardDesc}} 
             </p>

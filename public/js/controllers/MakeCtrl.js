@@ -13,6 +13,16 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
     //view modal switch
     $scope.viewModalOpen = false;
     
+    //set new card defaults
+    $scope.myColor = 'grey';
+    $scope.myTitle = '';
+    $scope.myAttack = '';
+    $scope.myDefense = '';
+    $scope.myType = '';
+    $scope.myDesc = '';
+    $scope.myImg = '';
+    $scope.notify = 'select and image';
+    
     //add card function
     $scope.switchAddModal = function(){
         //if modal is open, close it, vice verca
@@ -37,7 +47,6 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
         //if modal is open, close it, vice verca
         if(!$scope.viewModalOpen){$scope.viewModalOpen=true}
         else{$scope.viewModalOpen=false};
-        
         $scope.viewColor = card.cardColor;
         $scope.viewTitle = card.cardName;
         $scope.viewType = card.cardType;
@@ -45,28 +54,9 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
         $scope.viewDefense = card.cardDefense;
         $scope.viewImg = card.cardImg;
         $scope.viewDesc = card.cardDesc;
-        
         console.log(card);
         console.log('toggled view modal');
-        
     };
-    
-    
-    
-    
-    //set new card defaults
-    $scope.myColor = 'grey';
-    $scope.myTitle = '';
-    $scope.myAttack = '';
-    $scope.myDefense = '';
-    $scope.myType = '';
-    $scope.myDesc = '';
-    $scope.myImg = '';
-    $scope.notify = 'select and image';
-    
-    
-    
-    
     
     //upload file
     $scope.uploadFiles = function(files){
@@ -99,18 +89,12 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
         }
       });
     };
-
-    
-
-    
     
     //save card
     $scope.saveCard = function(){
         if($scope.myTitle && $scope.myDesc && $scope.myImg){
-            
             //add numbers
             var total = parseInt($scope.myAttack) + parseInt($scope.myDefense);
-            
             //add to firebase
             $scope.cards.$add({
                 cardCreator: currentAuth,
@@ -124,14 +108,10 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
                 cardImgSmall: $scope.myImgSmall,
                 cardDesc: $scope.myDesc
             });
-            
             //log
             console.log('card saved');
             //close modal
             $scope.switchAddModal();
         };
     };
-    
-    
-
 }]);

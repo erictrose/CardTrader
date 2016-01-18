@@ -8,6 +8,14 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <!--style-->
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/add-card.css">
+    <link rel="stylesheet" type="text/css" href="style/bytype-card.css">
+    <link rel="stylesheet" type="text/css" href="style/card-colors.css">
+    <link rel="stylesheet" type="text/css" href="style/font-face.css">
+    <link rel="stylesheet" type="text/css" href="style/footer.css">
+    <link rel="stylesheet" type="text/css" href="style/media-queries.css">
+    <link rel="stylesheet" type="text/css" href="style/new-card.css">
+    <link rel="stylesheet" type="text/css" href="style/utility-classes.css">
     <link rel="stylesheet" type="text/css" href="style/view-card-modal.css">
     <!--misc-->
     <script src="./js/bower/lodash/lodash.js"></script>
@@ -25,14 +33,6 @@
     <!-- angular file upload -->
     <script src="./js/bower/ng-file-upload/ng-file-upload.js"></script>
     <script src="./js/bower/ng-file-upload/ng-file-upload-shim.js"></script>
-
-  
-
-    
-    
-    
-    
-    
     <!--app-->
     <script src="js/app.js"></script>
     <script src="js/config.js"></script>
@@ -56,13 +56,10 @@
     -->
 </head>
 <body>
-
     <!--sticky footer wrapper-->
     <div class="wrapper">
-   
     <!--auth-->
     <div class="auth" ng-controller="AuthCtrl">
-       
         <!--when logged out-->
         <div ng-hide="authData">
             <p>login</p>
@@ -77,7 +74,6 @@
             <input type="password" name="" placeholder="password" ng-model="registerPassword">
             <button ng-click="register()">register</button>
         </div>
-        
         <!--when logged in-->
         <div ng-show="authData">
             <!--top-->
@@ -118,17 +114,13 @@
                     </button>
                 </div>
             </div>
-
             <!--content-->
             <div ng-view></div>
-    
         </div> <!--close logged in-->
     </div> <!--close auth-->
-    
     <!--sticky wrapper push-->
     <div class="push"></div>
     </div> <!--close sticky footer wrapper-->
-    
     <!--footer-->
     <footer>
         ©cardtrader

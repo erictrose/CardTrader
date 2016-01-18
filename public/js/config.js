@@ -44,6 +44,17 @@ $routeProvider
             }]
         }
     })
+    //profile
+    .when("/profile",{
+        controller: "ProfileCtrl",
+        templateUrl: "views/profile.html",
+        resolve: {
+            "currentAuth": ["Auth", function(Auth){
+                //return Auth.$waitForAuth();
+                return Auth.$requireAuth();
+            }]
+        }
+    })
     //otherwise
     .otherwise({redirectTo: '/login'});
 cloudinaryProvider

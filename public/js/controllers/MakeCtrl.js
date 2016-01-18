@@ -16,16 +16,25 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootSc
         if(!$scope.modalOpen){$scope.modalOpen=true}
         else{$scope.modalOpen=false};
         console.log('toggled modal');
+        //reset inputs
+        $scope.myColor = 'grey';
+        $scope.myTitle = '';
+        $scope.myAttack = '';
+        $scope.myDefense = '';
+        $scope.myType = '';
+        $scope.myDesc = '';
+        $scope.myImg = '';
+        $scope.notify = 'select and image';
     };
     
     
     
     
-    //new card variables
+    //set new card defaults
     $scope.myColor = 'grey';
     $scope.myTitle = '';
-    $scope.myAttack = 0;
-    $scope.myDefense = 0;
+    $scope.myAttack = '';
+    $scope.myDefense = '';
     $scope.myType = '';
     $scope.myDesc = '';
     $scope.myImg = '';

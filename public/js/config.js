@@ -44,6 +44,17 @@ $routeProvider
             }]
         }
     })
+    //my cards
+    .when("/mycards",{
+        controller: "MyCardsCtrl",
+        templateUrl: "views/mycards.html",
+        resolve: {
+            "currentAuth": ["Auth", function(Auth){
+                //return Auth.$waitForAuth();
+                return Auth.$requireAuth();
+            }]
+        }
+    })
     //profile
     .when("/profile",{
         controller: "ProfileCtrl",

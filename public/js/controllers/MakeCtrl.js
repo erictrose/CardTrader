@@ -8,6 +8,8 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
     var newestPurpleRef = new Firebase("https://card-trader.firebaseio.com/cards/newestPurple");
     var newestYellowRef = new Firebase("https://card-trader.firebaseio.com/cards/newestYellow");
     var byNumbersCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/bynumbers").orderByChild("cardTotal");
+    
+//    console.log(currentAuth);
 
     //link to variables
     var myCards = $firebaseArray(myCardsRef);

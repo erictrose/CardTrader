@@ -79,6 +79,9 @@ app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http){
     $scope.logout = function(){
         Auth.$unauth();
     };
+    
+//    $scope.profileName = $rootScope.currentUser || 'test';
+    
     //sample api function
 //    function getRepos(){
 //        $http.get($scope.authData.github.cachedUserProfile.repos_url)

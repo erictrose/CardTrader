@@ -66,7 +66,7 @@
         Newest
         </div>
         <!--ng-repeat this for 20 cards-->
-        <div class="new-card {{card.cardColor}}Card" ng-repeat="card in cards | limitTo:newAmount" ng-click="switchViewModal(card)">
+        <div class="new-card {{card.cardColor}}Card" ng-repeat="card in newest | reverse" ng-click="switchViewModal(card)">
             <div class="new-card-top">
                 <p class="new-card-type">
                     {{card.cardType}}
@@ -89,82 +89,82 @@
             Newest by rarity
         </div>
         <!--newest green-->
-        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'green'} | orderBy:'createTime':true | limitTo:1" ng-click="switchViewModal(card)">
+        <div class="bytype-card {{newestGreen.cardColor}}Card" ng-click="switchViewModal(card)">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
-                    {{card.cardType}}
+                    {{newestGreen.cardType}}
                 </p>
                 <p class="bytype-card-title">
-                    {{card.cardName}}
+                    {{newestGreen.cardName}}
                 </p>
                 <p class="bytype-card-number">
-                    {{card.cardAttack}}/{{card.cardDefense}}
+                    {{newestGreen.cardAttack}}/{{newestGreen.cardDefense}}
                 </p>
             </div>
-            <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
+            <img class="bytype-card-image" ng-src="{{newestGreen.cardImgSmall}}" alt="card image">
             <p class="bytype-card-desc">
-                {{card.cardDesc}}
+                {{newestGreen.cardDesc}}
             </p>
         </div>
         <!--newest blue-->
-        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'blue'} | orderBy:'createTime':true | limitTo:1" ng-click="switchViewModal(card)">
+        <div class="bytype-card {{newestBlue.cardColor}}Card" ng-click="switchViewModal(card)">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
-                    {{card.cardType}}
+                    {{newestBlue.cardType}}
                 </p>
                 <p class="bytype-card-title">
-                    {{card.cardName}}
+                    {{newestBlue.cardName}}
                 </p>
                 <p class="bytype-card-number">
-                    {{card.cardAttack}}/{{card.cardDefense}}
+                    {{newestBlue.cardAttack}}/{{newestBlue.cardDefense}}
                 </p>
             </div>
-            <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
+            <img class="bytype-card-image" ng-src="{{newestBlue.cardImgSmall}}" alt="card image">
             <p class="bytype-card-desc">
-                {{card.cardDesc}}
-            </p>
-        </div>
-        <!--newest yellow-->
-        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'yellow'} | orderBy:'createTime':true | limitTo:1" ng-click="switchViewModal(card)">
-            <div class="bytype-card-top">
-                <p class="bytype-card-type">
-                    {{card.cardType}}
-                </p>
-                <p class="bytype-card-title">
-                    {{card.cardName}}
-                </p>
-                <p class="bytype-card-number">
-                    {{card.cardAttack}}/{{card.cardDefense}}
-                </p>
-            </div>
-            <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
-            <p class="bytype-card-desc">
-                {{card.cardDesc}}
+                {{newestBlue.cardDesc}}
             </p>
         </div>
         <!--newest purple-->
-        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | filter:{cardColor: 'purple'} | orderBy:'createTime':true | limitTo:1" ng-click="switchViewModal(card)">
+        <div class="bytype-card {{newestPurple.cardColor}}Card" ng-click="switchViewModal(card)">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
-                    {{card.cardType}}
+                    {{newestPurple.cardType}}
                 </p>
                 <p class="bytype-card-title">
-                    {{card.cardName}}
+                    {{newestPurple.cardName}}
                 </p>
                 <p class="bytype-card-number">
-                    {{card.cardAttack}}/{{card.cardDefense}}
+                    {{newestPurple.cardAttack}}/{{newestPurple.cardDefense}}
                 </p>
             </div>
-            <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
+            <img class="bytype-card-image" ng-src="{{newestPurple.cardImgSmall}}" alt="card image">
             <p class="bytype-card-desc">
-                {{card.cardDesc}}
+                {{newestPurple.cardDesc}}
+            </p>
+        </div>
+        <!--newest yellow-->
+        <div class="bytype-card {{newestYellow.cardColor}}Card" ng-click="switchViewModal(card)">
+            <div class="bytype-card-top">
+                <p class="bytype-card-type">
+                    {{newestYellow.cardType}}
+                </p>
+                <p class="bytype-card-title">
+                    {{newestYellow.cardName}}
+                </p>
+                <p class="bytype-card-number">
+                    {{newestYellow.cardAttack}}/{{newestYellow.cardDefense}}
+                </p>
+            </div>
+            <img class="bytype-card-image" ng-src="{{newestYellow.cardImgSmall}}" alt="card image">
+            <p class="bytype-card-desc">
+                {{newestYellow.cardDesc}}
             </p>
         </div>
         <div class="divider bytype-divider-2">
             Highest Rated
         </div>
         <!--ng-repeat this for X cards-->
-        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in cards | orderBy:'-cardTotal' | limitTo:ratedAmount" ng-click="switchViewModal(card)">
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in byNumbers | orderBy:'-cardTotal' | limitTo:ratedAmount" ng-click="switchViewModal(card)">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
                     {{card.cardType}}

@@ -38,9 +38,9 @@
 -->
         <div class="add-card-top">
             <input class="add-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">
-            <input class="add-card-title black-placeholders" type="text" placeholder="new" ng-model="myTitle">
-            <p class="add-card-number">
-            <input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack">/<input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense">
+            <p class="view-card-title">{{myTitle}}</p>
+            <p class="view-card-number">
+            {{myAttack}}/{{myDefense}}
             </p>
         </div>
         <div class="textcenter add-card-image-container">

@@ -82,6 +82,29 @@ app.controller("MyCardsCtrl", ["currentAuth", "$scope", "$firebaseArray", functi
         });
     };
     
+    //delete function
+    $scope.deleteCard = function(){
+        //searh for record to update
+        var thisCard = $scope.myCards.$getRecord($scope.currentCard.$id);
+        
+//        //set record to update to scope
+//        thisCard.cardColor = $scope.myColor;
+//        thisCard.cardName = $scope.myTitle;
+//        thisCard.cardAttack = $scope.myAttack;
+//        thisCard.cardDefense = $scope.myDefense;
+//        thisCard.cardType = $scope.myType;
+//        thisCard.cardDesc = $scope.myDesc;
+//        thisCard.cardImg = $scope.myImg;
+
+        //save
+        $scope.myCards.$remove(thisCard)
+            .then(function(){
+                console.log('DELETED!');
+                //close modal
+                $scope.switchAddModal();
+        });
+    };
+    
     
     
     

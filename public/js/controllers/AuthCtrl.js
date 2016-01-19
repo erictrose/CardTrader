@@ -1,11 +1,13 @@
-app.controller("AuthCtrl", function($scope,Auth,$http){
+app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http){
     //on auth change
     Auth.$onAuth(function(authData){
         $scope.authData = authData;
+        
         if(authData){
-            //getRepos();
+            $rootScope.currentUser = authData;
+            console.log("On Login- ", $rootScope.currentUser.uid);
         };
-        console.log(authData);
+        
     });
     //email login
     $scope.emaillogin = function(){

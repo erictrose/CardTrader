@@ -28,8 +28,8 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
     $scope.byNumbers = byNumbers;
  
     //amount of new cards to show
-    var newAmount = '3';
-    var byNumberAmount = '3';
+    var newAmount = '50';
+    var byNumberAmount = '20';
         
     //add modal switch
     $scope.addModalOpen = false;

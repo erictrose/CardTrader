@@ -1,10 +1,6 @@
 app.controller("MyCardsCtrl", ["currentAuth", "$scope", "$firebaseArray", function(currentAuth, $scope, $firebaseArray) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
-
-    
-//    //define auth
-//    $scope.auth = currentAuth;
     
     //
     $scope.notify = "";
@@ -81,6 +77,8 @@ app.controller("MyCardsCtrl", ["currentAuth", "$scope", "$firebaseArray", functi
         $scope.myCards.$save(thisCard)
             .then(function(){
                 console.log('SAVED!');
+                //close modal
+                $scope.switchAddModal();
         });
     };
     

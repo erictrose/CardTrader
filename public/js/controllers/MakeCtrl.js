@@ -7,7 +7,7 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
     var newestBlueRef = new Firebase("https://card-trader.firebaseio.com/cards/newestBlue");
     var newestPurpleRef = new Firebase("https://card-trader.firebaseio.com/cards/newestPurple");
     var newestYellowRef = new Firebase("https://card-trader.firebaseio.com/cards/newestYellow");
-    var byNumbersCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/bynumbers");
+    var byNumbersCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/bynumbers").orderByChild("cardTotal");
 
     //link to variables
     var myCards = $firebaseArray(myCardsRef);
@@ -28,8 +28,8 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
     $scope.byNumbers = byNumbers;
  
     //amount of new cards to show
-    $scope.newAmount = '20';
-    $scope.byNumberAmount = '8';
+    var newAmount = '3';
+    var byNumberAmount = '3';
         
     //add modal switch
     $scope.addModalOpen = false;
@@ -142,7 +142,7 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
             });
             
             //add to newest cards
-            if($scope.newest.length <= 9){
+            if($scope.newest.length <= newAmount){
                 console.log('newest not full yet, adding');
                 newest.$add({
                     cardCreator: currentAuth,
@@ -252,18 +252,39 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
             
             
             //add to bynumbers db
-            byNumbers.$add({
-                cardCreator: currentAuth,
-                cardName: $scope.myTitle,
-                cardAttack: $scope.myAttack,
-                cardDefense: $scope.myDefense,
-                cardTotal: total,
-                cardColor: $scope.myColor,
-                cardType: $scope.myType,
-                cardImg: $scope.myImg,
-                cardImgSmall: $scope.myImgSmall,
-                cardDesc: $scope.myDesc
-            });
+            if($scope.byNumbers.length <= byNumberAmount){
+                console.log('byNumbers not full yet, adding');
+                byNumbers.$add({
+                    cardCreator: currentAuth,
+                    cardName: $scope.myTitle,
+                    cardAttack: $scope.myAttack,
+                    cardDefense: $scope.myDefense,
+                    cardTotal: total,
+                    cardColor: $scope.myColor,
+                    cardType: $scope.myType,
+                    cardImg: $scope.myImg,
+                    cardImgSmall: $scope.myImgSmall,
+                    cardDesc: $scope.myDesc
+                }); 
+            }else{
+                console.log('byNumbers full, removoing then adding'); 
+                var oneToDelete = byNumbers[0];
+                byNumbers.$remove(oneToDelete)
+                    .then(
+                        byNumbers.$add({
+                            cardCreator: currentAuth,
+                            cardName: $scope.myTitle,
+                            cardAttack: $scope.myAttack,
+                            cardDefense: $scope.myDefense,
+                            cardTotal: total,
+                            cardColor: $scope.myColor,
+                            cardType: $scope.myType,
+                            cardImg: $scope.myImg,
+                            cardImgSmall: $scope.myImgSmall,
+                            cardDesc: $scope.myDesc
+                        })
+                    );   
+            };
             
             
             

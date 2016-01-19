@@ -1,9 +1,14 @@
 
 
-<div class="">
+<div class="mycards-container">
+
 
     <h1>my cards</h1>
+    <button ng-click="goBack()">back</button>
 
+
+   <div class="mycards-card-container">
+   
     <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in myCards" ng-click="switchViewModal(card)">
         <div class="bytype-card-top">
             <p class="bytype-card-type">
@@ -20,7 +25,9 @@
         <p class="bytype-card-desc">
             {{card.cardDesc}} 
         </p>
-    </div> 
+    </div>
+    
+     </div> 
 
 
 

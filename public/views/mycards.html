@@ -43,15 +43,17 @@
             <input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack">/<input class="add-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense">
             </p>
         </div>
-        <div class="textcenter add-card-image-container" href="#" ngf-select="uploadFiles($files)" title="upload" resetOnClick="true" >
+        <div class="textcenter add-card-image-container">
+<!--
             <div class="file" ng-repeat="file in files">
                 <img class="add-card-image" ngf-src="file.result.url || file">
             </div>
-            <img class="add-card-image" src="../img/placeholder.png" ng-hide="files">
+-->
+            <img class="add-card-image" ng-src="{{myImg}}">
         </div>
-<!--        <span>{{notify}}</span>-->
+        <span>{{notify}}</span>
         <textarea class="add-card-desc black-placeholders" name="" maxlength="140" rows="5" cols="1" placeholder="description" ng-model="myDesc" required></textarea>
-        <button class="add-card-submit" ng-click="saveCard()">Save</button>
+        <button class="add-card-submit" ng-click="updateCard()">Update</button>
     </div>
 </div>
 

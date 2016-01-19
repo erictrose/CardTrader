@@ -1,7 +1,12 @@
-app.controller("MakeCtrl", ["currentAuth", "$scope", "Cards", "Upload", "$rootScope", "$routeParams", "$location", "cloudinary",  function(currentAuth, $scope, Cards, $upload, $rootScope, $routeParams, $location, cloudinary) {
+app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$routeParams", "$location", "cloudinary", "$firebaseArray",  function(currentAuth, $scope, $upload, $rootScope, $routeParams, $location, cloudinary, $firebaseArray) {
+    
+    //
+    var ref = new Firebase("https://card-trader.firebaseio.com/cards" + currentAuth.uid);
+    var myCards = $firebaseArray(ref);
+    console.log(myCards);
 
     //get cards from factory
-    $scope.cards = Cards;
+    $scope.cards = myCards;
  
     //amount of new cards to show
     $scope.newAmount = '20';

@@ -1,26 +1,35 @@
-app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$routeParams", "$location", "cloudinary", "$firebaseArray",  function(currentAuth, $scope, $upload, $rootScope, $routeParams, $location, cloudinary, $firebaseArray) {
+app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$routeParams", "$location", "cloudinary", "$firebaseArray", "$firebaseObject",  function(currentAuth, $scope, $upload, $rootScope, $routeParams, $location, cloudinary, $firebaseArray, $firebaseObject) {
     
     //connect to firebase directories
     var myCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/" + currentAuth.uid);
     var newestCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/newest");
-    var byTypeCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/bytype");
+    var newestGreenRef = new Firebase("https://card-trader.firebaseio.com/cards/newestGreen");
+    var newestBlueRef = new Firebase("https://card-trader.firebaseio.com/cards/newestBlue");
+    var newestPurpleRef = new Firebase("https://card-trader.firebaseio.com/cards/newestPurple");
+    var newestYellowRef = new Firebase("https://card-trader.firebaseio.com/cards/newestYellow");
     var byNumbersCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/bynumbers");
 
     //link to variables
     var myCards = $firebaseArray(myCardsRef);
     var newest = $firebaseArray(newestCardsRef);
-    var byType = $firebaseArray(byTypeCardsRef);
+    var newestGreen = $firebaseObject(newestGreenRef);
+    var newestBlue = $firebaseObject(newestBlueRef);
+    var newestPurple = $firebaseObject(newestPurpleRef);
+    var newestYellow = $firebaseObject(newestYellowRef);
     var byNumbers = $firebaseArray(byNumbersCardsRef);
     
     //link to scope
     $scope.myCards = myCards;
     $scope.newest = newest;
-    $scope.byType = byType;
+    $scope.newestGreen = newestGreen;
+    $scope.newestBlue = newestBlue;
+    $scope.newestPurple = newestPurple;
+    $scope.newestYellow = newestYellow;
     $scope.byNumbers = byNumbers;
  
     //amount of new cards to show
     $scope.newAmount = '20';
-    $scope.ratedAmount = '8';
+    $scope.byNumberAmount = '8';
         
     //add modal switch
     $scope.addModalOpen = false;
@@ -133,60 +142,115 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
             });
             
             //add to newest cards
-            
             if($scope.newest.length <= 9){
-            
-            newest.$add({
-                cardCreator: currentAuth,
-                cardName: $scope.myTitle,
-                cardAttack: $scope.myAttack,
-                cardDefense: $scope.myDefense,
-                cardTotal: total,
-                cardColor: $scope.myColor,
-                cardType: $scope.myType,
-                cardImg: $scope.myImg,
-                cardImgSmall: $scope.myImgSmall,
-                cardDesc: $scope.myDesc
-            });
-               console.log('newest not full yet, adding'); 
-            } else {
-            console.log('newest full, removoing then adding'); 
-                
+                console.log('newest not full yet, adding');
+                newest.$add({
+                    cardCreator: currentAuth,
+                    cardName: $scope.myTitle,
+                    cardAttack: $scope.myAttack,
+                    cardDefense: $scope.myDefense,
+                    cardTotal: total,
+                    cardColor: $scope.myColor,
+                    cardType: $scope.myType,
+                    cardImg: $scope.myImg,
+                    cardImgSmall: $scope.myImgSmall,
+                    cardDesc: $scope.myDesc
+                }); 
+            }else{
+                console.log('newest full, removoing then adding'); 
                 var oneToDelete = newest[0];
                 newest.$remove(oneToDelete)
-                
-            
-
-            
-                .then(
-                    newest.$add({
-                        cardCreator: currentAuth,
-                        cardName: $scope.myTitle,
-                        cardAttack: $scope.myAttack,
-                        cardDefense: $scope.myDefense,
-                        cardTotal: total,
-                        cardColor: $scope.myColor,
-                        cardType: $scope.myType,
-                        cardImg: $scope.myImg,
-                        cardImgSmall: $scope.myImgSmall,
-                        cardDesc: $scope.myDesc
-                    })
-                );   
+                    .then(
+                        newest.$add({
+                            cardCreator: currentAuth,
+                            cardName: $scope.myTitle,
+                            cardAttack: $scope.myAttack,
+                            cardDefense: $scope.myDefense,
+                            cardTotal: total,
+                            cardColor: $scope.myColor,
+                            cardType: $scope.myType,
+                            cardImg: $scope.myImg,
+                            cardImgSmall: $scope.myImgSmall,
+                            cardDesc: $scope.myDesc
+                        })
+                    );   
             };
             
             //add to bytype db
-            byType.$add({
-                cardCreator: currentAuth,
-                cardName: $scope.myTitle,
-                cardAttack: $scope.myAttack,
-                cardDefense: $scope.myDefense,
-                cardTotal: total,
-                cardColor: $scope.myColor,
-                cardType: $scope.myType,
-                cardImg: $scope.myImg,
-                cardImgSmall: $scope.myImgSmall,
-                cardDesc: $scope.myDesc
-            });
+            
+            if($scope.myColor === 'green'){   
+                
+                newestGreen.cardCreator = currentAuth;
+                newestGreen.cardName = $scope.myTitle;
+                newestGreen.cardAttack = $scope.myAttack;
+                newestGreen.cardDefense = $scope.myDefense;
+                newestGreen.cardTotal = total;
+                newestGreen.cardColor = $scope.myColor;
+                newestGreen.cardType = $scope.myType;
+                newestGreen.cardImg = $scope.myImg;
+                newestGreen.cardImgSmall = $scope.myImgSmall;
+                newestGreen.cardDesc = $scope.myDesc;
+                
+                newestGreen.$save();
+                
+            }
+            else if($scope.myColor === 'blue'){
+                                newestBlue.cardCreator = currentAuth;
+                newestBlue.cardName = $scope.myTitle;
+                newestBlue.cardAttack = $scope.myAttack;
+                newestBlue.cardDefense = $scope.myDefense;
+                newestBlue.cardTotal = total;
+                newestBlue.cardColor = $scope.myColor;
+                newestBlue.cardType = $scope.myType;
+                newestBlue.cardImg = $scope.myImg;
+                newestBlue.cardImgSmall = $scope.myImgSmall;
+                newestBlue.cardDesc = $scope.myDesc;
+                
+                newestBlue.$save();
+            }
+            else if($scope.myColor === 'purple'){
+                newestPurple.cardCreator = currentAuth;
+                newestPurple.cardName = $scope.myTitle;
+                newestPurple.cardAttack = $scope.myAttack;
+                newestPurple.cardDefense = $scope.myDefense;
+                newestPurple.cardTotal = total;
+                newestPurple.cardColor = $scope.myColor;
+                newestPurple.cardType = $scope.myType;
+                newestPurple.cardImg = $scope.myImg;
+                newestPurple.cardImgSmall = $scope.myImgSmall;
+                newestPurple.cardDesc = $scope.myDesc;
+                
+                newestPurple.$save();
+            }
+            else {
+                                newestYellow.cardCreator = currentAuth;
+                newestYellow.cardName = $scope.myTitle;
+                newestYellow.cardAttack = $scope.myAttack;
+                newestYellow.cardDefense = $scope.myDefense;
+                newestYellow.cardTotal = total;
+                newestYellow.cardColor = $scope.myColor;
+                newestYellow.cardType = $scope.myType;
+                newestYellow.cardImg = $scope.myImg;
+                newestYellow.cardImgSmall = $scope.myImgSmall;
+                newestYellow.cardDesc = $scope.myDesc;
+                
+                newestYellow.$save();
+            };
+            
+//            newestGreen.$save({
+//                cardCreator: currentAuth,
+//                cardName: $scope.myTitle,
+//                cardAttack: $scope.myAttack,
+//                cardDefense: $scope.myDefense,
+//                cardTotal: total,
+//                cardColor: $scope.myColor,
+//                cardType: $scope.myType,
+//                cardImg: $scope.myImg,
+//                cardImgSmall: $scope.myImgSmall,
+//                cardDesc: $scope.myDesc
+//            });
+            
+            
             //add to bynumbers db
             byNumbers.$add({
                 cardCreator: currentAuth,

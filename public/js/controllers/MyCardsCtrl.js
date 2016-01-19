@@ -45,31 +45,31 @@ app.controller("MyCardsCtrl", ["currentAuth", "$scope", "$firebaseArray", functi
             console.log('toggled modal on');
             $scope.addModalOpen=true;
             
-            console.log(
-            
-            $scope.myColor,
-            $scope.myTitle,
-            $scope.myAttack,
-            $scope.myDefense,
-            $scope.myType,
-            $scope.myDesc,
-            $scope.myImg,
-            $scope.currentCard
-            
-            );
-            
-            console.log(
-            
-            card.cardColor,
-            card.cardName,
-            card.cardAttack,
-            card.cardDefense,
-            card.cardType,
-            card.cardDesc,
-            card.cardImg,
-            card
-            
-            );
+//            console.log(
+//            
+//            $scope.myColor,
+//            $scope.myTitle,
+//            $scope.myAttack,
+//            $scope.myDefense,
+//            $scope.myType,
+//            $scope.myDesc,
+//            $scope.myImg,
+//            $scope.currentCard
+//            
+//            );
+//            
+//            console.log(
+//            
+//            card.cardColor,
+//            card.cardName,
+//            card.cardAttack,
+//            card.cardDefense,
+//            card.cardType,
+//            card.cardDesc,
+//            card.cardImg,
+//            card
+//            
+//            );
             
 
             
@@ -100,14 +100,50 @@ app.controller("MyCardsCtrl", ["currentAuth", "$scope", "$firebaseArray", functi
     
     
     //update function
-    $scope.updateCard = function(card){
+    $scope.updateCard = function(){
+        
+//        console.log('$scope.currentCard.$id ' + $scope.currentCard.$id);
+//        console.log('$scope.myTitle ' + $scope.myTitle);
+//        console.log('$scope.myCards ' + $scope.myCards);
+//        console.log('$scope.currentCard ' + $scope.currentCard);
+
         
         
-        console.log($scope.myTitle);
-        console.log($scope.myCards);
-        console.log($scope.currentCard);
+        var thisCard = $scope.myCards.$getRecord($scope.currentCard.$id);
         
-//        myCards.$save($scope.currentCard);
+        
+        console.log(thisCard);
+        
+        
+            thisCard.cardColor = $scope.myColor;
+            thisCard.cardName = $scope.myTitle;
+            thisCard.cardAttack = $scope.myAttack;
+            thisCard.cardDefense = $scope.myDefense;
+            thisCard.cardType = $scope.myType;
+            thisCard.cardDesc = $scope.myDesc;
+            thisCard.cardImg = $scope.myImg;
+                
+                //            $scope.myColor = '';
+//            $scope.myTitle = '';
+//            $scope.myAttack = '';
+//            $scope.myDefense = '';
+//            $scope.myType = '';
+//            $scope.myDesc = '';
+//            $scope.myImg = '';
+//            $scope.currentCard = '';
+        
+                
+                
+            $scope.myCards.$save(thisCard)
+                .then(function(){
+                    console.log('SAVED!');
+            });
+        
+ 
+        
+        
+        
+        
         
     };
     

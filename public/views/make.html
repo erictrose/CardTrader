@@ -66,7 +66,7 @@
         Newest
         </div>
         <!--ng-repeat this for 20 cards-->
-        <div class="new-card {{card.cardColor}}Card" ng-repeat="card in newest | limitTo:newAmount" ng-click="switchViewModal(card)">
+        <div class="new-card {{card.cardColor}}Card" ng-repeat="card in newest | reverse" ng-click="switchViewModal(card)">
             <div class="new-card-top">
                 <p class="new-card-type">
                     {{card.cardType}}

@@ -1,29 +1,22 @@
 app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$routeParams", "$location", "cloudinary", "$firebaseArray",  function(currentAuth, $scope, $upload, $rootScope, $routeParams, $location, cloudinary, $firebaseArray) {
     
-    //
-    var myCardsRef = new Firebase("https://card-trader.firebaseio.com/cards" + currentAuth.uid);
+    //connect to firebase directories
+    var myCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/" + currentAuth.uid);
     var newestCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/newest");
     var byTypeCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/bytype");
     var byNumbersCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/bynumbers");
 
-    //
+    //link to variables
     var myCards = $firebaseArray(myCardsRef);
-    console.log(myCards);
     var newest = $firebaseArray(newestCardsRef);
-    console.log(newest);
     var byType = $firebaseArray(byTypeCardsRef);
-    console.log(byType);
     var byNumbers = $firebaseArray(byNumbersCardsRef);
-    console.log(byNumbers);
     
-    //
+    //link to scope
     $scope.myCards = myCards;
     $scope.newest = newest;
     $scope.byType = byType;
     $scope.byNumbers = byNumbers;
-
-//    //get cards from factory
-//    $scope.cards = myCards;
  
     //amount of new cards to show
     $scope.newAmount = '20';
@@ -112,13 +105,18 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
       });
     };
     
+    
+    
     //save card
     $scope.saveCard = function(){
+        
+        
+        
         if($scope.myTitle && $scope.myDesc && $scope.myImg){
-            //add numbers
+            //total of attack and defense
             var total = parseInt($scope.myAttack) + parseInt($scope.myDefense);
-            
-            
+
+            //ADD TO VARIOUS FIREBASE DIRECTORIES
             
             //add to my cards
             myCards.$add({
@@ -135,6 +133,9 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
             });
             
             //add to newest cards
+            
+            if($scope.newest.length <= 9){
+            
             newest.$add({
                 cardCreator: currentAuth,
                 cardName: $scope.myTitle,
@@ -147,6 +148,31 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
                 cardImgSmall: $scope.myImgSmall,
                 cardDesc: $scope.myDesc
             });
+               console.log('newest not full yet, adding'); 
+            } else {
+            console.log('newest full, removoing then adding'); 
+                
+                var oneToDelete = newest[0];
+                newest.$remove(oneToDelete)
+                
+            
+
+            
+                .then(
+                    newest.$add({
+                        cardCreator: currentAuth,
+                        cardName: $scope.myTitle,
+                        cardAttack: $scope.myAttack,
+                        cardDefense: $scope.myDefense,
+                        cardTotal: total,
+                        cardColor: $scope.myColor,
+                        cardType: $scope.myType,
+                        cardImg: $scope.myImg,
+                        cardImgSmall: $scope.myImgSmall,
+                        cardDesc: $scope.myDesc
+                    })
+                );   
+            };
             
             //add to bytype db
             byType.$add({

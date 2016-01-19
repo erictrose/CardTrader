@@ -1,12 +1,29 @@
 app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$routeParams", "$location", "cloudinary", "$firebaseArray",  function(currentAuth, $scope, $upload, $rootScope, $routeParams, $location, cloudinary, $firebaseArray) {
     
     //
-    var ref = new Firebase("https://card-trader.firebaseio.com/cards" + currentAuth.uid);
-    var myCards = $firebaseArray(ref);
-    console.log(myCards);
+    var myCardsRef = new Firebase("https://card-trader.firebaseio.com/cards" + currentAuth.uid);
+    var newestCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/newest");
+    var byTypeCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/bytype");
+    var byNumbersCardsRef = new Firebase("https://card-trader.firebaseio.com/cards/bynumbers");
 
-    //get cards from factory
-    $scope.cards = myCards;
+    //
+    var myCards = $firebaseArray(myCardsRef);
+    console.log(myCards);
+    var newest = $firebaseArray(newestCardsRef);
+    console.log(newest);
+    var byType = $firebaseArray(byTypeCardsRef);
+    console.log(byType);
+    var byNumbers = $firebaseArray(byNumbersCardsRef);
+    console.log(byNumbers);
+    
+    //
+    $scope.myCards = myCards;
+    $scope.newest = newest;
+    $scope.byType = byType;
+    $scope.byNumbers = byNumbers;
+
+//    //get cards from factory
+//    $scope.cards = myCards;
  
     //amount of new cards to show
     $scope.newAmount = '20';
@@ -28,7 +45,7 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
     $scope.myImg = '';
     $scope.notify = 'select and image';
     
-    //add card function
+    //switch add modal function
     $scope.switchAddModal = function(){
         //if modal is open, close it, vice verca
         if(!$scope.addModalOpen){$scope.addModalOpen=true}
@@ -47,7 +64,7 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
         $scope.files = '';
     };
     
-    //view card function
+    //switch view modal function
     $scope.switchViewModal = function(card){
         //if modal is open, close it, vice verca
         if(!$scope.viewModalOpen){$scope.viewModalOpen=true}
@@ -63,7 +80,7 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
         console.log('toggled view modal');
     };
     
-    //upload file
+    //upload file (cloudinary)
     $scope.uploadFiles = function(files){
       $scope.files = files;
       if (!$scope.files) return;
@@ -100,8 +117,11 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
         if($scope.myTitle && $scope.myDesc && $scope.myImg){
             //add numbers
             var total = parseInt($scope.myAttack) + parseInt($scope.myDefense);
-            //add to firebase
-            $scope.cards.$add({
+            
+            
+            
+            //add to my cards
+            myCards.$add({
                 cardCreator: currentAuth,
                 cardName: $scope.myTitle,
                 cardAttack: $scope.myAttack,
@@ -113,6 +133,50 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
                 cardImgSmall: $scope.myImgSmall,
                 cardDesc: $scope.myDesc
             });
+            
+            //add to newest cards
+            newest.$add({
+                cardCreator: currentAuth,
+                cardName: $scope.myTitle,
+                cardAttack: $scope.myAttack,
+                cardDefense: $scope.myDefense,
+                cardTotal: total,
+                cardColor: $scope.myColor,
+                cardType: $scope.myType,
+                cardImg: $scope.myImg,
+                cardImgSmall: $scope.myImgSmall,
+                cardDesc: $scope.myDesc
+            });
+            
+            //add to bytype db
+            byType.$add({
+                cardCreator: currentAuth,
+                cardName: $scope.myTitle,
+                cardAttack: $scope.myAttack,
+                cardDefense: $scope.myDefense,
+                cardTotal: total,
+                cardColor: $scope.myColor,
+                cardType: $scope.myType,
+                cardImg: $scope.myImg,
+                cardImgSmall: $scope.myImgSmall,
+                cardDesc: $scope.myDesc
+            });
+            //add to bynumbers db
+            byNumbers.$add({
+                cardCreator: currentAuth,
+                cardName: $scope.myTitle,
+                cardAttack: $scope.myAttack,
+                cardDefense: $scope.myDefense,
+                cardTotal: total,
+                cardColor: $scope.myColor,
+                cardType: $scope.myType,
+                cardImg: $scope.myImg,
+                cardImgSmall: $scope.myImgSmall,
+                cardDesc: $scope.myDesc
+            });
+            
+            
+            
             //log
             console.log('card saved');
             //close modal

@@ -19,7 +19,7 @@ app.controller("MyCardsCtrl", ["currentAuth", "$scope", "$firebaseArray", functi
     $scope.myCards = myCards;
     
     //go back, needs to be a factory or service or something
-    $scope.goBack = function goBack(){
+    $scope.goBack = function(){
         window.history.back();
     }
     

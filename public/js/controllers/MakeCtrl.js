@@ -26,16 +26,6 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
     $scope.newestPurple = newestPurple;
     $scope.newestYellow = newestYellow;
     $scope.byNumbers = byNumbers;
- 
-    //amount of new cards to show
-    var newAmount = '50';
-    var byNumberAmount = '20';
-        
-    //add modal switch
-    $scope.addModalOpen = false;
-    
-    //view modal switch
-    $scope.viewModalOpen = false;
     
     //set new card defaults
     $scope.myColor = 'grey';
@@ -46,6 +36,16 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
     $scope.myDesc = '';
     $scope.myImg = '';
     $scope.notify = 'select and image';
+ 
+    //amount of new cards to show
+    var newAmount = '50';
+    var byNumberAmount = '20';
+        
+    //add modal switch
+    $scope.addModalOpen = false;
+    
+    //view modal switch
+    $scope.viewModalOpen = false;
     
     //switch add modal function
     $scope.switchAddModal = function(){

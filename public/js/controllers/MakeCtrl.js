@@ -163,9 +163,6 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
     
     //save card
     $scope.saveCard = function(){
-        
-        
-        
         if($scope.myTitle && $scope.myDesc && $scope.myImg){
             //total of attack and defense
             var total = parseInt($scope.myAttack) + parseInt($scope.myDefense);
@@ -222,8 +219,12 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
             };
             
             //add to bytype db
-            
-            if($scope.myColor === 'green'){   
+            if($scope.myColor === 'grey'){   
+                
+                console.log('not adding to new cards by rarity');
+                
+            }
+            else if($scope.myColor === 'green'){   
                 
                 newestGreen.cardCreator = currentAuth;
                 newestGreen.cardName = $scope.myTitle;

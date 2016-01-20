@@ -61,13 +61,52 @@
         width: 50px;
     }
 }
+/* Small Devices, Tablets */
+@media only screen and (max-width : 555px){
+    .modal-card {
+        width: 60%;
+    }
+    .modal-card-title {
+        font-size: 6vw;
+    }
+    .modal-card-type {
+        font-size: 4vw;
+    }
+    .modal-card-number {
+        font-size: 4vw;
+    }
+    .modal-card-desc {
+        font-size: 4vw;
+    }
+    .modal-card-close {
+        width: 50px;
+    }
+    body .login-options-container {
+        flex-direction: column;
+    }
+    body .login-provider-button {
+        width: 220px;
+        height: 28px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    body .login-text {
+        font-size: 21px;
+    }
+    body .section-button {
+        font-size: 7vw;
+    }
+    body .ui-button {
+        font-size: 5vw;
+    }
+}
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
     .sections {
         align-items: center;
         flex-flow: column nowrap;
     }
-    .middle {
+    body .middle {
         flex-flow: column-reverse nowrap;
     }
     .profile {
@@ -76,7 +115,7 @@
     .logout {
         display: none;
     }
-    .top {
+    body .top {
         justify-content: center;
     }
     

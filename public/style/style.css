@@ -340,13 +340,50 @@ html, body {
 
   .modal-card-close {
     width: 50px; } }
+/* Small Devices, Tablets */
+@media only screen and (max-width: 555px) {
+  .modal-card {
+    width: 60%; }
+
+  .modal-card-title {
+    font-size: 6vw; }
+
+  .modal-card-type {
+    font-size: 4vw; }
+
+  .modal-card-number {
+    font-size: 4vw; }
+
+  .modal-card-desc {
+    font-size: 4vw; }
+
+  .modal-card-close {
+    width: 50px; }
+
+  body .login-options-container {
+    flex-direction: column; }
+
+  body .login-provider-button {
+    width: 220px;
+    height: 28px;
+    margin-top: 0px;
+    margin-right: 0px; }
+
+  body .login-text {
+    font-size: 21px; }
+
+  body .section-button {
+    font-size: 7vw; }
+
+  body .ui-button {
+    font-size: 5vw; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .sections {
     align-items: center;
     flex-flow: column nowrap; }
 
-  .middle {
+  body .middle {
     flex-flow: column-reverse nowrap; }
 
   .profile {
@@ -355,7 +392,7 @@ html, body {
   .logout {
     display: none; }
 
-  .top {
+  body .top {
     justify-content: center; }
 
   .add-card-top {
@@ -769,11 +806,11 @@ footer {
 
 .login-container-vertical {
   display: flex;
-  position: fixed;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  margin-top: 15px; }
 
 .login-container-horizontal {
   display: flex;
@@ -783,6 +820,7 @@ footer {
 
 .login-img {
   width: 322px;
+  height: 111px;
   padding-bottom: 25px; }
 
 .login-options-container {
@@ -797,7 +835,6 @@ footer {
 .login-provider-button {
   width: 220px;
   height: 88px;
-  margin-bottom: 10px;
   margin-top: 10px;
   margin-right: 40px;
   font-size: 16px; }

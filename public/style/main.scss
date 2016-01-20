@@ -1,0 +1,136 @@
+body {
+/*    background-color: lightblue;*/
+}
+.container {
+/*    background-color: lightcoral;*/
+}
+.top {
+    height: 120px;
+/*    background-color: lightgoldenrodyellow;*/
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 13px;
+}
+.profile {
+/*    background-color: red;*/
+}
+.profile-name {
+    
+}
+.profile-pic {
+    width: 50px;
+}
+.logo {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+/*    background-color: blue;*/
+    font-size: 52px;
+    width: 322px;   
+}
+.logo-img {
+    width: 100%;
+}
+.logout {
+/*    background-color: green;*/
+}
+.sections {
+    display: flex;
+/*    background-color: lightgreen;*/
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    margin-bottom: 12px;
+    margin-top: 7px;
+}
+.section-text {
+    
+}
+.section-button {
+    width: 100%;
+    font-size: 38px;
+    font-family: troika;
+    outline: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+
+}
+.middle {
+/*    height: 500px;*/
+    display: flex;
+/*    background-color: lightpink;*/
+    flex-flow: row nowrap;
+}
+.new {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+/*    background-color: aqua;*/
+    align-content: flex-start;
+}
+.new-divider-1 {
+    padding-bottom: 8px;
+}
+.bytype {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: flex-start;
+/*    background-color: aqua;*/
+}
+.divider {
+    width: 100%;
+/*    background-color: green;*/
+    text-align: center;
+    font-size: 21px;
+/*    max-height: 10px;*/
+}
+.bytype-divider-1 {
+    padding-bottom: 8px;
+}
+.bytype-divider-2 {
+    padding: 21px;
+}
+.bytype-divider-3 {
+    padding: 21px;
+}
+.add {
+    display: flex;
+/*    height: 100%;*/
+/*    flex-basis: 15%;*/
+    flex-direction: row;
+/*    background-color: brown;*/
+    margin-bottom: 30px;
+    justify-content: center;
+}
+.add-divider-1 {
+    padding-bottom: 8px;
+}
+.ui-button {
+	background-color: lightgray;
+	display:inline-block;
+	cursor:pointer;
+	color: black;
+	font-size: 24px;
+	padding: 10px 10px;
+	text-decoration: none;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 5px;
+
+    font-family: troika;
+    outline: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+footer {
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+/*    background-color: orange;*/
+}

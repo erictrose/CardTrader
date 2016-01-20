@@ -10,6 +10,9 @@
     word-break: break-word;
     max-height: 200px;
     padding-bottom: 6px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
 }
 .new-card-top {
     display: flex;

@@ -31,6 +31,9 @@
     justify-content: flex-start;
 /*    margin-top: 50px;*/
     background-color: lightgrey;
+    -moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
 }
 .modal-card-close {
 /*    margin-top: 35px;*/

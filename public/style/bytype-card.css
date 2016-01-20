@@ -10,6 +10,9 @@
     word-break: break-word;
     justify-content: center;
     padding-bottom: 10px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
 }
 
 .bytype-card-top {

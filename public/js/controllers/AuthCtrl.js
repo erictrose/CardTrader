@@ -1,10 +1,11 @@
-app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http){
+app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http,$location){
     //on auth change
     Auth.$onAuth(function(authData){
         $scope.authData = authData;
         
         if(authData){
             $rootScope.currentUser = authData;
+            $location.path('/make');
             console.log("On Login- ", $rootScope.currentUser.uid);
         };
         

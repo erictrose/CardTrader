@@ -74,17 +74,57 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
     //switch view modal function
     $scope.switchViewModal = function(card){
         //if modal is open, close it, vice verca
-        if(!$scope.viewModalOpen){$scope.viewModalOpen=true}
-        else{$scope.viewModalOpen=false};
-        $scope.viewColor = card.cardColor;
-        $scope.viewTitle = card.cardName;
-        $scope.viewType = card.cardType;
-        $scope.viewAttack = card.cardAttack;
-        $scope.viewDefense = card.cardDefense;
-        $scope.viewImg = card.cardImg;
-        $scope.viewDesc = card.cardDesc;
-        console.log(card);
-        console.log('toggled view modal');
+        if(!$scope.viewModalOpen){
+            $scope.viewModalOpen=true;
+            
+            if(card === 'green'){
+                $scope.viewColor = $scope.newestGreen.cardColor;
+                $scope.viewTitle = $scope.newestGreen.cardName;
+                $scope.viewType = $scope.newestGreen.cardType;
+                $scope.viewAttack = $scope.newestGreen.cardAttack;
+                $scope.viewDefense = $scope.newestGreen.cardDefense;
+                $scope.viewImg = $scope.newestGreen.cardImg;
+                $scope.viewDesc = $scope.newestGreen.cardDesc;
+            } else if(card === 'blue'){
+                $scope.viewColor = $scope.newestBlue.cardColor;
+                $scope.viewTitle = $scope.newestBlue.cardName;
+                $scope.viewType = $scope.newestBlue.cardType;
+                $scope.viewAttack = $scope.newestBlue.cardAttack;
+                $scope.viewDefense = $scope.newestBlue.cardDefense;
+                $scope.viewImg = $scope.newestBlue.cardImg;
+                $scope.viewDesc = $scope.newestBlue.cardDesc;
+            } else if(card === 'purple'){
+                $scope.viewColor = $scope.newestPurple.cardColor;
+                $scope.viewTitle = $scope.newestPurple.cardName;
+                $scope.viewType = $scope.newestPurple.cardType;
+                $scope.viewAttack = $scope.newestPurple.cardAttack;
+                $scope.viewDefense = $scope.newestPurple.cardDefense;
+                $scope.viewImg = $scope.newestPurple.cardImg;
+                $scope.viewDesc = $scope.newestPurple.cardDesc;
+            } else if(card === 'yellow'){
+                $scope.viewColor = $scope.newestYellow.cardColor;
+                $scope.viewTitle = $scope.newestYellow.cardName;
+                $scope.viewType = $scope.newestYellow.cardType;
+                $scope.viewAttack = $scope.newestYellow.cardAttack;
+                $scope.viewDefense = $scope.newestYellow.cardDefense;
+                $scope.viewImg = $scope.newestYellow.cardImg;
+                $scope.viewDesc = $scope.newestYellow.cardDesc;
+            } else {
+                $scope.viewColor = card.cardColor;
+                $scope.viewTitle = card.cardName;
+                $scope.viewType = card.cardType;
+                $scope.viewAttack = card.cardAttack;
+                $scope.viewDefense = card.cardDefense;
+                $scope.viewImg = card.cardImg;
+                $scope.viewDesc = card.cardDesc;
+            }
+            
+            console.log('toggled view modal open');
+        }
+        else{
+            $scope.viewModalOpen=false;
+            console.log('toggled view modal closed');
+        };   
     };
     
     //upload file (cloudinary)

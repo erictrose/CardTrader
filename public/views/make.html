@@ -65,7 +65,7 @@
         <div class="divider new-divider-1">
         Newest
         </div>
-        <!--ng-repeat this for 20 cards-->
+        <!--newest cards-->
         <div class="new-card {{card.cardColor}}Card" ng-repeat="card in newest | reverse" ng-click="switchViewModal(card)">
             <div class="new-card-top">
                 <p class="new-card-type">
@@ -89,7 +89,7 @@
             Newest by rarity
         </div>
         <!--newest green-->
-        <div class="bytype-card {{newestGreen.cardColor}}Card" ng-click="switchViewModal(card)">
+        <div class="bytype-card {{newestGreen.cardColor}}Card" ng-click="switchViewModal('green')">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
                     {{newestGreen.cardType}}
@@ -107,7 +107,7 @@
             </p>
         </div>
         <!--newest blue-->
-        <div class="bytype-card {{newestBlue.cardColor}}Card" ng-click="switchViewModal(card)">
+        <div class="bytype-card {{newestBlue.cardColor}}Card" ng-click="switchViewModal('blue')">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
                     {{newestBlue.cardType}}
@@ -125,7 +125,7 @@
             </p>
         </div>
         <!--newest purple-->
-        <div class="bytype-card {{newestPurple.cardColor}}Card" ng-click="switchViewModal(card)">
+        <div class="bytype-card {{newestPurple.cardColor}}Card" ng-click="switchViewModal('purple')">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
                     {{newestPurple.cardType}}
@@ -143,7 +143,7 @@
             </p>
         </div>
         <!--newest yellow-->
-        <div class="bytype-card {{newestYellow.cardColor}}Card" ng-click="switchViewModal(card)">
+        <div class="bytype-card {{newestYellow.cardColor}}Card" ng-click="switchViewModal('yellow')">
             <div class="bytype-card-top">
                 <p class="bytype-card-type">
                     {{newestYellow.cardType}}

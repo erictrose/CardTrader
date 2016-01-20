@@ -119,7 +119,7 @@ app.controller("MyCardsCtrl", ["currentAuth", "$scope", "$firebaseArray", functi
         });
         
         //remove from cloudinary
-        //NEEDS TO BE FROM A BACKEND
+        //NEEDS TO BE FROM BACKEND
         
     };
     

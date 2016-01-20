@@ -136,8 +136,8 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
           file.upload = $upload.upload({
             url: "https://api.cloudinary.com/v1_1/" + cloudinary.config().cloud_name + "/upload",
             data: {
-              upload_preset: cloudinary.config().upload_preset,
-              tags: 'myphotoalbum',
+              upload_preset: 'cardtrader',
+              tags: 'cardtrader',
               context: 'photo=' + $scope.title,
               file: file
             }

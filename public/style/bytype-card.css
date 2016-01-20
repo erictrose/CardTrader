@@ -1,0 +1,82 @@
+.bytype-card {
+    margin: 5px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    width: 75px;
+    height: 100px;
+    align-items: center;
+    border: 1px solid black;
+    word-break: break-word;
+    justify-content: center;
+    padding-bottom: 10px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+
+.bytype-card-top {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+/*    background-color: red;*/
+    height: 10%;
+    margin-top: 3px;
+}
+
+.bytype-card-type {
+    font-size: 6px;
+/*    background-color: blue;*/
+    margin-left: 1px;
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 15%;
+}
+
+.bytype-card-title {
+    font-size: 8px;
+    text-align: center;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    width: 52%;
+    overflow: hidden;
+/*    background-color: yellow;*/
+}
+
+.bytype-card-number {
+    font-size: 6px;
+/*    background-color: green;*/
+    margin-right: 1px;
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    overflow: hidden;
+    width: 15%;
+}
+
+.bytype-card-image {
+    max-width: 64px;
+    max-height: 64px;
+/*    align-self: center;*/
+}
+
+.bytype-card-desc {
+    font-size: 6px;
+/*
+    margin: 5px 0;
+    padding: 5px;
+*/
+    height: 20%;
+/*    max-height: 52px;*/
+    overflow: hidden;
+
+/*    background-color: pink;*/
+    line-height: 7px;
+    width: 79%;
+    margin-top: 3px;
+    
+    text-align: center;
+}

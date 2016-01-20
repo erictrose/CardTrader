@@ -1,0 +1,130 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 4000px){
+    .modal-card {
+        width: 36%;
+    }
+    .modal-card-title {
+        font-size: 4vw;
+    }
+    .modal-card-type {
+        font-size: 2vw;
+    }
+    .modal-card-number {
+        font-size: 2vw;
+    }
+    .modal-card-desc {
+        font-size: 2vw;
+    }
+    .modal-card-close {
+        width: 65px;
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px){
+    .modal-card {
+        width: 48%;
+    }
+    .modal-card-title {
+        font-size: 5vw;
+    }
+    .modal-card-type {
+        font-size: 3vw;
+    }
+    .modal-card-number {
+        font-size: 3vw;
+    }
+    .modal-card-desc {
+        font-size: 3vw;
+    }
+    .modal-card-close {
+        width: 60px;
+    }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px){
+    .modal-card {
+        width: 60%;
+    }
+    .modal-card-title {
+        font-size: 6vw;
+    }
+    .modal-card-type {
+        font-size: 4vw;
+    }
+    .modal-card-number {
+        font-size: 4vw;
+    }
+    .modal-card-desc {
+        font-size: 4vw;
+    }
+    .modal-card-close {
+        width: 50px;
+    }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px){
+    .sections {
+        align-items: center;
+        flex-flow: column nowrap;
+    }
+    .middle {
+        flex-flow: column-reverse nowrap;
+    }
+    .profile {
+        display: none;
+    }
+    .logout {
+        display: none;
+    }
+    .top {
+        justify-content: center;
+    }
+    
+    .add-card-top {
+        margin-top: 15px;
+    }
+    .add-card-image-container {
+        margin-top: 11px;
+    }
+    .add-card-desc {
+        margin-top: 10px;
+    }
+    .middle {
+        
+    }
+    .modal-card {
+        width: 80%;
+    }
+    .modal-card-title {
+        font-size: 8vw;
+    }
+    .modal-card-type {
+        font-size: 6vw;
+    }
+    .modal-card-number {
+        font-size: 6vw;
+    }
+    .modal-card-desc {
+        font-size: 6vw;
+    }
+    .modal-card-close {
+        width: 30px;
+    }
+}
+/* really small screens */
+@media only screen and (max-width : 350px){
+    .logo {
+/*        font-size: 28px;*/
+    }
+    .add-card-colorselect {
+        width: 80px;
+    }
+}
+@media only screen and (max-width : 280px){
+    .logo {
+        font-size: 30px;
+    }
+    .section-button {
+        font-size: 30px;
+    }
+}

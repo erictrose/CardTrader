@@ -1,0 +1,54 @@
+<!--edit modal-->
+<div class="modal-bg" ng-show="addModalOpen">
+<div class="modal-container">
+    <div class="modal-card {{myColor}}Card">
+        <div class="modal-card-top">
+            <input class="modal-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">
+            <p class="modal-card-title">{{myTitle}}</p>
+            <p class="modal-card-number">
+            {{myAttack}}/{{myDefense}}
+            </p>
+        </div>
+        <div class="textcenter modal-card-image-container">
+            <img class="modal-card-image" ng-src="{{myImg}}">
+        </div>
+        <span>{{notify}}</span>
+        <textarea class="modal-card-desc black-placeholders" name="" maxlength="140" placeholder="description" ng-model="myDesc" required></textarea>
+        <button class="modal-card-submit" ng-click="updateCard()">Update</button>
+        <button class="modal-card-submit" ng-click="deleteCard()">delete</button>
+    </div>
+        <div class="modal-card-close" ng-click="switchAddModal()">
+            <img class="modal-card-close-img" src="img/close.png">
+        </div>
+</div>
+</div>
+
+<!--my cards-->
+<div class="mycards-container">
+<!--
+    <h1>my cards</h1>
+    <button class="ui-button" ng-click="goBack()">back</button>
+-->
+  <div class="add">
+        <button class="ui-button" ng-click="goBack()">back</button>
+</div>  
+   <div class="mycards-card-container">
+           <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in myCards" ng-click="switchAddModal(card)">
+        <div class="bytype-card-top">
+            <p class="bytype-card-type">
+                {{card.cardType}}
+            </p>
+            <p class="bytype-card-title">
+                {{card.cardName}}
+            </p>
+            <p class="bytype-card-number">
+                {{card.cardAttack}}/{{card.cardDefense}}
+            </p>
+        </div>
+        <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
+        <p class="bytype-card-desc">
+            {{card.cardDesc}} 
+        </p>
+    </div>
+     </div>
+</div>

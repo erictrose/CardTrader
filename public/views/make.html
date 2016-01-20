@@ -1,0 +1,184 @@
+<!--view modal-->
+<div class="modal-bg" ng-show="viewModalOpen">
+<div class="modal-container">
+    <div class="modal-card {{viewColor}}Card">
+        <div class="modal-card-top">
+            <p class="modal-card-type">{{viewType}}</p>
+            <p class="modal-card-title">{{viewTitle}}</p>
+            <p class="modal-card-number">
+            {{viewAttack}}/{{viewDefense}}
+            </p>
+        </div>
+        <div class="textcenter modal-card-image-container">
+            <img ng-src="{{viewImg}}" class="modal-card-image">
+        </div>
+        <p class="modal-card-desc">{{viewDesc}}</p>
+    </div>
+    <div class="modal-card-close" ng-click="switchViewModal()">
+        <img class="modal-card-close-img" src="img/close.png">
+    </div>
+</div>
+</div>
+
+<!--add modal-->
+<div class="modal-bg" ng-show="addModalOpen">
+<div class="modal-container">
+    <div class="modal-card {{myColor}}Card">
+        <select class="modal-card-colorselect" ng-model="myColor">
+            <option value="grey">Grey</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="yellow">Yellow</option>
+        </select>
+        <div class="modal-card-top">
+            <input class="modal-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">
+            <input class="modal-card-title black-placeholders" type="text" placeholder="new" ng-model="myTitle">
+            <p class="modal-card-number">
+            <input class="modal-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack">/<input class="modal-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense">
+            </p>
+        </div>
+        <div class="textcenter modal-card-image-container" href="#" ngf-select="uploadFiles($files)" title="upload" resetOnClick="true" >
+            <div class="file" ng-repeat="file in files">
+                <img class="modal-card-image" ngf-src="file.result.url || file">
+            </div>
+            <img class="modal-card-image" src="../img/placeholder.png" ng-hide="files">
+        </div>
+        <span>{{notify}}</span>
+        <textarea class="modal-card-desc black-placeholders" name="" maxlength="140" placeholder="description" ng-model="myDesc" required></textarea>
+        <button class="modal-card-submit" ng-click="saveCard()">Save</button>
+    </div>
+        <div class="modal-card-close" ng-click="switchAddModal()">
+            <img class="modal-card-close-img" src="img/close.png">
+        </div>
+</div>
+</div>
+ 
+<!--body-->
+<div class="add">
+        <button class="ui-button" ng-click="goTo('/mycards')">my cards</button>
+        <button class="ui-button" ng-click="switchAddModal()">add card</button>
+</div>  
+<div class="middle">
+    <div class="new">
+        <div class="divider new-divider-1">
+        Newest
+        </div>
+        <!--newest cards-->
+        <div class="new-card {{card.cardColor}}Card" ng-repeat="card in newest | reverse" ng-click="switchViewModal(card)">
+            <div class="new-card-top">
+                <p class="new-card-type">
+                    {{card.cardType}}
+                </p>
+                <p class="new-card-title">
+                    {{card.cardName}}
+                </p>
+                <p class="new-card-number">
+                    {{card.cardAttack}}/{{card.cardDefense}}
+                </p>
+            </div>
+            <img class="new-card-image" ng-src="{{card.cardImgSmall}}">
+            <p class="new-card-desc">
+                {{card.cardDesc}}
+            </p>
+        </div>
+    </div>
+    <div class="bytype">
+        <div class="divider bytype-divider-1">
+            Newest by rarity
+        </div>
+        <!--newest green-->
+        <div class="bytype-card {{newestGreen.cardColor}}Card" ng-click="switchViewModal('green')">
+            <div class="bytype-card-top">
+                <p class="bytype-card-type">
+                    {{newestGreen.cardType}}
+                </p>
+                <p class="bytype-card-title">
+                    {{newestGreen.cardName}}
+                </p>
+                <p class="bytype-card-number">
+                    {{newestGreen.cardAttack}}/{{newestGreen.cardDefense}}
+                </p>
+            </div>
+            <img class="bytype-card-image" ng-src="{{newestGreen.cardImgSmall}}" alt="card image">
+            <p class="bytype-card-desc">
+                {{newestGreen.cardDesc}}
+            </p>
+        </div>
+        <!--newest blue-->
+        <div class="bytype-card {{newestBlue.cardColor}}Card" ng-click="switchViewModal('blue')">
+            <div class="bytype-card-top">
+                <p class="bytype-card-type">
+                    {{newestBlue.cardType}}
+                </p>
+                <p class="bytype-card-title">
+                    {{newestBlue.cardName}}
+                </p>
+                <p class="bytype-card-number">
+                    {{newestBlue.cardAttack}}/{{newestBlue.cardDefense}}
+                </p>
+            </div>
+            <img class="bytype-card-image" ng-src="{{newestBlue.cardImgSmall}}" alt="card image">
+            <p class="bytype-card-desc">
+                {{newestBlue.cardDesc}}
+            </p>
+        </div>
+        <!--newest purple-->
+        <div class="bytype-card {{newestPurple.cardColor}}Card" ng-click="switchViewModal('purple')">
+            <div class="bytype-card-top">
+                <p class="bytype-card-type">
+                    {{newestPurple.cardType}}
+                </p>
+                <p class="bytype-card-title">
+                    {{newestPurple.cardName}}
+                </p>
+                <p class="bytype-card-number">
+                    {{newestPurple.cardAttack}}/{{newestPurple.cardDefense}}
+                </p>
+            </div>
+            <img class="bytype-card-image" ng-src="{{newestPurple.cardImgSmall}}" alt="card image">
+            <p class="bytype-card-desc">
+                {{newestPurple.cardDesc}}
+            </p>
+        </div>
+        <!--newest yellow-->
+        <div class="bytype-card {{newestYellow.cardColor}}Card" ng-click="switchViewModal('yellow')">
+            <div class="bytype-card-top">
+                <p class="bytype-card-type">
+                    {{newestYellow.cardType}}
+                </p>
+                <p class="bytype-card-title">
+                    {{newestYellow.cardName}}
+                </p>
+                <p class="bytype-card-number">
+                    {{newestYellow.cardAttack}}/{{newestYellow.cardDefense}}
+                </p>
+            </div>
+            <img class="bytype-card-image" ng-src="{{newestYellow.cardImgSmall}}" alt="card image">
+            <p class="bytype-card-desc">
+                {{newestYellow.cardDesc}}
+            </p>
+        </div>
+        <div class="divider bytype-divider-2">
+            Highest Rated
+        </div>
+        <!--ng-repeat this for X cards-->
+        <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in byNumbers | orderBy:'-cardTotal' | limitTo:ratedAmount" ng-click="switchViewModal(card)">
+            <div class="bytype-card-top">
+                <p class="bytype-card-type">
+                    {{card.cardType}}
+                </p>
+                <p class="bytype-card-title">
+                    {{card.cardName}}
+                </p>
+                <p class="bytype-card-number">
+                    {{card.cardAttack}}/{{card.cardDefense}}
+                </p>
+            </div>
+            <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
+            <p class="bytype-card-desc">
+                {{card.cardDesc}} 
+            </p>
+        </div> 
+    </div>  
+</div>

@@ -1,0 +1,27 @@
+.nowrap {
+    white-space: nowrap;
+}
+.textcenter {
+    text-align: center;
+}
+.black-placeholders:placeholder-shown {
+  color: black;
+}
+.black-placeholders::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: black;
+}
+.black-placeholders:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+.black-placeholders::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+.black-placeholders:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+.black-placeholders::-ms-input-placeholder { /* Edge */
+  color: black;
+}
+.black-placeholders:placeholder-shown { /* Standard one last! */
+  color: black;
+}

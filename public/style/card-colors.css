@@ -1,0 +1,75 @@
+/*
+COLORS
+light grey: #c2c1c1
+medium grey: #606060
+dark grey: #3c3c3c
+green: #59b947
+blue: #5784c3
+purple: #8955a2
+yellow: #fcb315
+*/
+.greenCard {
+    background-color: #59b947;
+}
+.blueCard {
+    background-color: #5784c3;
+}
+.purpleCard {
+    background-color: #8955a2;
+}
+.yellowCard {
+    background-color: #fcb315;
+}
+.lightgreyCard {
+    background-color: #c2c1c1;
+}
+.modal-card.greenCard {
+    background-color: #59b947;
+}
+.modal-card.blueCard {
+    background-color: #5784c3;
+}
+.modal-card.purpleCard {
+    background-color: #8955a2;
+}
+.modal-card.yellowCard {
+    background-color: #fcb315;
+}
+.modal-card.lightgreyCard {
+    background-color: #c2c1c1;
+}
+.new-card.greenCard {
+    background-color: #59b947;
+}
+.new-card.blueCard {
+    background-color: #5784c3;
+}
+.new-card.purpleCard {
+    background-color: #8955a2;
+}
+.new-card.yellowCard {
+    background-color: #fcb315;
+}
+.new-card.lightgreyCard {
+    background-color: #c2c1c1;
+}
+
+
+
+
+/*
+.bytype-card.greenCard {
+    background-color: #59b947;
+}
+.bytype-card.blueCard {
+    background-color: #5784c3;
+}
+.bytype-card.purpleCard {
+    background-color: #8955a2;
+}
+.bytype-card.yellowCard {
+    background-color: #fcb315;
+}
+.bytype-card.lightgreyCard {
+    background-color: #c2c1c1;
+}*/

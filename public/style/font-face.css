@@ -1,0 +1,5 @@
+/*font face*/
+@font-face {
+    font-family: troika;
+    src: url(./fonts/troika.otf);
+}

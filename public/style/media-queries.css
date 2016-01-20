@@ -1,5 +1,5 @@
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px){
+@media only screen and (max-width : 4000px){
     .modal-card {
         width: 36%;
     }
@@ -14,6 +14,9 @@
     }
     .modal-card-desc {
         font-size: 2vw;
+    }
+    .modal-card-close {
+        width: 65px;
     }
 }
 /* Medium Devices, Desktops */
@@ -33,6 +36,9 @@
     .modal-card-desc {
         font-size: 3vw;
     }
+    .modal-card-close {
+        width: 60px;
+    }
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px){
@@ -50,6 +56,9 @@
     }
     .modal-card-desc {
         font-size: 4vw;
+    }
+    .modal-card-close {
+        width: 50px;
     }
 }
 /* Extra Small Devices, Phones */
@@ -97,6 +106,9 @@
     }
     .modal-card-desc {
         font-size: 6vw;
+    }
+    .modal-card-close {
+        width: 30px;
     }
 }
 /* really small screens */

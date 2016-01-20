@@ -1,9 +1,7 @@
 <!--view modal-->
-<div class="modal-container" ng-show="viewModalOpen">
+<div class="modal-bg" ng-show="viewModalOpen">
+<div class="modal-container">
     <div class="modal-card {{viewColor}}Card">
-        <div class="modal-card-close" ng-click="switchViewModal()">
-            <img class="modal-card-close-img" src="img/close.png">
-        </div>
         <div class="modal-card-top">
             <p class="modal-card-type">{{viewType}}</p>
             <p class="modal-card-title">{{viewTitle}}</p>
@@ -16,14 +14,16 @@
         </div>
         <p class="modal-card-desc">{{viewDesc}}</p>
     </div>
+    <div class="modal-card-close" ng-click="switchViewModal()">
+        <img class="modal-card-close-img" src="img/close.png">
+    </div>
+</div>
 </div>
 
 <!--add modal-->
-<div class="modal-container" ng-show="addModalOpen">
+<div class="modal-bg" ng-show="addModalOpen">
+<div class="modal-container">
     <div class="modal-card {{myColor}}Card">
-        <div class="modal-card-close" ng-click="switchAddModal()">
-            <img class="modal-card-close-img" src="img/close.png">
-        </div>
         <select class="modal-card-colorselect" ng-model="myColor">
             <option value="grey">Grey</option>
             <option value="green">Green</option>
@@ -45,9 +45,13 @@
             <img class="modal-card-image" src="../img/placeholder.png" ng-hide="files">
         </div>
         <span>{{notify}}</span>
-        <textarea class="modal-card-desc black-placeholders" name="" maxlength="140" rows="5" cols="1" placeholder="description" ng-model="myDesc" required></textarea>
+        <textarea class="modal-card-desc black-placeholders" name="" maxlength="140" placeholder="description" ng-model="myDesc" required></textarea>
         <button class="modal-card-submit" ng-click="saveCard()">Save</button>
     </div>
+        <div class="modal-card-close" ng-click="switchAddModal()">
+            <img class="modal-card-close-img" src="img/close.png">
+        </div>
+</div>
 </div>
  
 <!--body-->

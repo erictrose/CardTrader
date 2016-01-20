@@ -25,8 +25,13 @@
 
 <!--my cards-->
 <div class="mycards-container">
+<!--
     <h1>my cards</h1>
     <button class="ui-button" ng-click="goBack()">back</button>
+-->
+  <div class="add">
+        <button class="ui-button" ng-click="goBack()">back</button>
+</div>  
    <div class="mycards-card-container">
            <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in myCards" ng-click="switchAddModal(card)">
         <div class="bytype-card-top">

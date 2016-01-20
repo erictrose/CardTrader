@@ -41,7 +41,7 @@ body {
 /*    background-color: lightgreen;*/
     justify-content: space-around;
     flex-flow: row nowrap;
-    margin-bottom: 33px;
+    margin-bottom: 12px;
     margin-top: 7px;
 }
 .section-text {
@@ -64,7 +64,7 @@ body {
     flex-flow: row nowrap;
 }
 .new {
-    flex-basis: 43%;
+    flex-basis: 60%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -75,7 +75,7 @@ body {
     padding-bottom: 8px;
 }
 .bytype {
-    flex-basis: 42%;
+    flex-basis: 40%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -101,9 +101,11 @@ body {
 .add {
     display: flex;
     height: 100%;
-    flex-basis: 15%;
-    flex-direction: column;
+/*    flex-basis: 15%;*/
+    flex-direction: row;
 /*    background-color: brown;*/
+    margin-bottom: 30px;
+    justify-content: center;
 }
 .add-divider-1 {
     padding-bottom: 8px;
@@ -113,13 +115,18 @@ body {
 	display:inline-block;
 	cursor:pointer;
 	color: black;
-	font-family: Arial;
 	font-size: 24px;
 	padding: 10px 10px;
 	text-decoration: none;
     width: 100%;
     max-width: 300px;
     margin-top: 5px;
+
+    font-family: troika;
+    outline: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 footer {
     width: 100%;

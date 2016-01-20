@@ -1,14 +1,56 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px){
-    
+    .modal-card {
+        width: 36%;
+    }
+    .modal-card-title {
+        font-size: 4vw;
+    }
+    .modal-card-type {
+        font-size: 2vw;
+    }
+    .modal-card-number {
+        font-size: 2vw;
+    }
+    .modal-card-desc {
+        font-size: 2vw;
+    }
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px){
-    
+    .modal-card {
+        width: 48%;
+    }
+    .modal-card-title {
+        font-size: 5vw;
+    }
+    .modal-card-type {
+        font-size: 3vw;
+    }
+    .modal-card-number {
+        font-size: 3vw;
+    }
+    .modal-card-desc {
+        font-size: 3vw;
+    }
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px){
-    
+    .modal-card {
+        width: 60%;
+    }
+    .modal-card-title {
+        font-size: 6vw;
+    }
+    .modal-card-type {
+        font-size: 4vw;
+    }
+    .modal-card-number {
+        font-size: 4vw;
+    }
+    .modal-card-desc {
+        font-size: 4vw;
+    }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
@@ -41,7 +83,21 @@
     .middle {
         
     }
-    
+    .modal-card {
+        width: 80%;
+    }
+    .modal-card-title {
+        font-size: 8vw;
+    }
+    .modal-card-type {
+        font-size: 6vw;
+    }
+    .modal-card-number {
+        font-size: 6vw;
+    }
+    .modal-card-desc {
+        font-size: 6vw;
+    }
 }
 /* really small screens */
 @media only screen and (max-width : 350px){

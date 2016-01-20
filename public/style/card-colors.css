@@ -23,19 +23,19 @@ yellow: #fcb315
 .lightgreyCard {
     background-color: #c2c1c1;
 }
-.view-card.greenCard {
+.modal-card.greenCard {
     background-color: #59b947;
 }
-.view-card.blueCard {
+.modal-card.blueCard {
     background-color: #5784c3;
 }
-.view-card.purpleCard {
+.modal-card.purpleCard {
     background-color: #8955a2;
 }
-.view-card.yellowCard {
+.modal-card.yellowCard {
     background-color: #fcb315;
 }
-.view-card.lightgreyCard {
+.modal-card.lightgreyCard {
     background-color: #c2c1c1;
 }
 .new-card.greenCard {

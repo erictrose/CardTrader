@@ -1,0 +1,148 @@
+.modal-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+/*    height: 100%;*/
+/*    background-color: rgba(0, 0, 0, 0.25);*/
+}
+
+.modal-card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+/*    height: 500px;*/
+    align-items: center;
+    border: 5px solid black;
+    word-break: break-word;
+    justify-content: flex-start;
+    margin-top: 50px;
+    background-color: lightgrey;
+}
+.modal-card-close {
+    position: absolute;
+    width: 45px;
+    top: 0;
+    right: 0;
+}
+.modal-card-close-img {
+    width: 100%;
+}
+.modal-card-colorselect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    max-width: 160px;
+    height: 45px;
+}
+.modal-card-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+/*    background-color: orange;*/
+    margin-top: 29px;
+}
+.modal-card-type {
+    font-size: 4vw;
+/*    background-color: yellow;*/
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 20%;
+    
+    padding: 0px 0px;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border: none;
+}
+.modal-card-title {
+    font-size: 6vw;
+/*    background-color: green;*/
+    text-align: center;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    width: 60%;
+    overflow: hidden;
+    
+    padding: 0px 0px;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border: none;
+}
+.modal-card-number {
+    font-size: 4vw;
+/*    background-color: blue;*/
+    text-align: center;
+    align-self: center;
+    word-break: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 20%;
+    
+    padding: 0px 0px;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border: none;
+}
+.modal-card-image-container {
+    margin-top: 26px;
+    width: 80%;
+}
+.modal-card-image {
+    width: 100%;
+}
+.modal-card-desc {
+    font-size: 4vw;
+    width: 75%;
+    margin-top: 18px;
+/*    background-color: purple;*/
+/*    text-align: center;*/
+    
+    padding: 0px 0px;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border: none;
+    text-align: center;
+    resize: none;
+    min-height: 136px;
+}
+.modal-card-submit {
+    width: 80%;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mycards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mycards-card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}

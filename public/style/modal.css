@@ -118,31 +118,3 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.mycards-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mycards-card-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}

@@ -1,18 +1,9 @@
-<!--add modal-->
+<!--edit modal-->
 <div class="modal-container" ng-show="addModalOpen">
     <div class="modal-card {{myColor}}Card">
         <div class="modal-card-close" ng-click="switchAddModal()">
             <img class="modal-card-close-img" src="img/close.png">
         </div>
-<!--
-        <select class="add-card-colorselect" ng-model="myColor">
-            <option value="grey">Grey</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-            <option value="purple">Purple</option>
-            <option value="yellow">Yellow</option>
-        </select>
--->
         <div class="modal-card-top">
             <input class="modal-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">
             <p class="modal-card-title">{{myTitle}}</p>
@@ -21,11 +12,6 @@
             </p>
         </div>
         <div class="textcenter modal-card-image-container">
-<!--
-            <div class="file" ng-repeat="file in files">
-                <img class="add-card-image" ngf-src="file.result.url || file">
-            </div>
--->
             <img class="modal-card-image" ng-src="{{myImg}}">
         </div>
         <span>{{notify}}</span>
@@ -35,33 +21,11 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!--my cards-->
 <div class="mycards-container">
-
-
     <h1>my cards</h1>
     <button ng-click="goBack()">back</button>
-
-
    <div class="mycards-card-container">
-   
-<!--    <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in myCards" ng-click="switchViewModal(card)">-->
            <div class="bytype-card {{card.cardColor}}Card" ng-repeat="card in myCards" ng-click="switchAddModal(card)">
         <div class="bytype-card-top">
             <p class="bytype-card-type">
@@ -79,10 +43,5 @@
             {{card.cardDesc}} 
         </p>
     </div>
-    
-     </div> 
-
-
-
-
+     </div>
 </div>

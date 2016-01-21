@@ -381,11 +381,11 @@ html, body {
   body .section-button {
     font-size: 7vw; }
 
-  body .ui-button {
-    font-size: 5vw; }
-
   body .login-email-container {
-    margin-top: 15px; } }
+    margin-top: 15px; }
+
+  body .add-sub {
+    font-size: 5vw; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .sections {
@@ -695,12 +695,7 @@ body {
 
 .section-button {
   width: 100%;
-  font-size: 38px;
-  font-family: troika;
-  outline: 0;
-  cursor: pointer;
-  background: none;
-  border: none; }
+  font-size: 38px; }
 
 .middle {
   /*    height: 500px;*/
@@ -750,27 +745,13 @@ body {
   flex-direction: row;
   /*    background-color: brown;*/
   margin-bottom: 30px;
-  justify-content: center; }
+  justify-content: space-around; }
+
+.add-sub {
+  font-size: 26px; }
 
 .add-divider-1 {
   padding-bottom: 8px; }
-
-.ui-button {
-  background-color: lightgray;
-  display: inline-block;
-  cursor: pointer;
-  color: black;
-  font-size: 24px;
-  padding: 10px 10px;
-  text-decoration: none;
-  width: 100%;
-  max-width: 300px;
-  margin-top: 5px;
-  font-family: troika;
-  outline: 0;
-  cursor: pointer;
-  background: none;
-  border: none; }
 
 footer {
   width: 100%;
@@ -811,6 +792,15 @@ footer {
   /* Standard one last! */
   color: black; }
 
+.ui-button {
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  color: #000000;
+  background: #bdbdbd;
+  border: solid #adadad 2px;
+  text-decoration: none; }
+
 .login-container-vertical {
   display: flex;
   flex-direction: row;
@@ -843,14 +833,7 @@ footer {
   height: 88px;
   margin-top: 10px;
   margin-right: 40px;
-  font-size: 16px;
-  -webkit-border-radius: 2;
-  -moz-border-radius: 2;
-  border-radius: 2px;
-  color: #000000;
-  background: #bdbdbd;
-  border: solid #adadad 2px;
-  text-decoration: none; }
+  font-size: 16px; }
 
 .login-provider-button:hover {
   background: #adadad;
@@ -875,13 +858,6 @@ footer {
 .login-submit {
   height: 36px;
   font-size: 16px;
-  -webkit-border-radius: 2;
-  -moz-border-radius: 2;
-  border-radius: 2px;
-  color: #000000;
-  background: #bdbdbd;
-  border: solid #adadad 2px;
-  text-decoration: none;
   margin-bottom: 26px; }
 
 .login-submit:hover {
@@ -890,14 +866,7 @@ footer {
 
 .register-submit {
   height: 36px;
-  font-size: 16px;
-  -webkit-border-radius: 2;
-  -moz-border-radius: 2;
-  border-radius: 2px;
-  color: #000000;
-  background: #bdbdbd;
-  border: solid #adadad 2px;
-  text-decoration: none; }
+  font-size: 16px; }
 
 .register-submit:hover {
   background: #adadad;

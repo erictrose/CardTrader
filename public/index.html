@@ -67,19 +67,19 @@
                     <img class="login-img" src="img/test-logo.png">
                     <div class="login-options-container">
                         <div class="login-providers-container">
-                            <button class="f1 login-provider-button" ng-click="twitterlogin()">login with twitter</button>
-                            <button class="f1 login-provider-button" ng-click="googlelogin()">login with google</button>
-                            <button class="f1 login-provider-button" ng-click="githublogin()">login with github</button>
+                            <button class="f1 ui-button login-provider-button" ng-click="twitterlogin()">login with twitter</button>
+                            <button class="f1 ui-button login-provider-button" ng-click="googlelogin()">login with google</button>
+                            <button class="f1 ui-button login-provider-button" ng-click="githublogin()">login with github</button>
                         </div>
                         <div class="login-email-container">
                             <p class="f1 login-text">{{loginText}}</p>
                             <input class="f1 login-input" type="email" name="" placeholder="email" ng-model="loginEmail">
                             <input class="f1 login-input" type="password" name="" placeholder="password" ng-model="loginPassword">
-                            <button class="f1 login-submit" ng-click="emaillogin()">login</button>
+                            <button class="f1 ui-button login-submit" ng-click="emaillogin()">login</button>
                             <p class="f1 login-text">{{registerText}}</p>
                             <input class="f1 login-input" type="email" name="" placeholder="email" ng-model="registerEmail">
                             <input class="f1 login-input" type="password" name="" placeholder="password" ng-model="registerPassword">
-                            <button class="f1 register-submit" ng-click="register()">register</button>
+                            <button class="f1 ui-button register-submit" ng-click="register()">register</button>
                         </div>
                     </div>
                 </div>
@@ -105,22 +105,22 @@
             <!--sections-->
             <div class="sections" ng-controller="NavCtrl">
                 <div class="section-text">
-                    <button class="f1 section-button" ng-click="goTo('make')">
+                    <button class="f1 ui-button section-button" ng-click="goTo('make')">
                         MAKE
                     </button>
                 </div>
                 <div class="section-text">
-                    <button class="f1 section-button" ng-click="goTo('battle')">
+                    <button class="f1 ui-button section-button" ng-click="goTo('battle')">
                         BATTLE
                     </button>
                 </div>
                 <div class="section-text">
-                    <button class="f1 section-button" ng-click="goTo('bet')">
+                    <button class="f1 ui-button section-button" ng-click="goTo('bet')">
                         BET
                     </button>
                 </div>
                 <div class="section-text">
-                    <button class="f1 section-button" ng-click="goTo('trade')">
+                    <button class="f1 ui-button section-button" ng-click="goTo('trade')">
                         TRADE
                     </button>
                 </div>

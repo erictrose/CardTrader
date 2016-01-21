@@ -46,7 +46,7 @@
         </div>
         <span class="f1">{{notify}}</span>
         <textarea class="f2 modal-card-desc black-placeholders" name="" maxlength="140" placeholder="description" ng-model="myDesc" required></textarea>
-        <button class="f1 modal-card-submit" ng-click="saveCard()">Save</button>
+        <button class="f1 ui-button modal-card-submit" ng-click="saveCard()">Save</button>
     </div>
         <div class="modal-card-close" ng-click="switchAddModal()">
             <img class="modal-card-close-img" src="img/close.png">
@@ -56,8 +56,8 @@
  
 <!--body-->
 <div class="add">
-        <button class="f1 ui-button" ng-click="goTo('/mycards')">my cards</button>
-        <button class="f1 ui-button" ng-click="switchAddModal()">add card</button>
+        <button class="f1 ui-button add-sub" ng-click="goTo('/mycards')">my cards</button>
+        <button class="f1 ui-button add-sub" ng-click="switchAddModal()">add card</button>
 </div>  
 <div class="middle">
     <div class="new">

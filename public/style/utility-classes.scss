@@ -25,3 +25,15 @@
 .black-placeholders:placeholder-shown { /* Standard one last! */
   color: black;
 }
+
+.ui-button {
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 2px;
+    color: #000000;
+    background: #bdbdbd;
+    //  padding: 10px 20px 10px 20px;
+    border: solid #adadad 2px;
+    text-decoration: none;
+}
+

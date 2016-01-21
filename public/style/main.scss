@@ -50,12 +50,6 @@ body {
 .section-button {
     width: 100%;
     font-size: 38px;
-    font-family: troika;
-    outline: 0;
-    cursor: pointer;
-    background: none;
-    border: none;
-
 }
 .middle {
 /*    height: 500px;*/
@@ -105,28 +99,13 @@ body {
     flex-direction: row;
 /*    background-color: brown;*/
     margin-bottom: 30px;
-    justify-content: center;
+    justify-content: space-around;
+}
+.add-sub {
+    font-size: 26px;
 }
 .add-divider-1 {
     padding-bottom: 8px;
-}
-.ui-button {
-	background-color: lightgray;
-	display:inline-block;
-	cursor:pointer;
-	color: black;
-	font-size: 24px;
-	padding: 10px 10px;
-	text-decoration: none;
-    width: 100%;
-    max-width: 300px;
-    margin-top: 5px;
-
-    font-family: troika;
-    outline: 0;
-    cursor: pointer;
-    background: none;
-    border: none;
 }
 footer {
     width: 100%;

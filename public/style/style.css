@@ -385,7 +385,10 @@ html, body {
     margin-top: 15px; }
 
   body .add-sub {
-    font-size: 5vw; } }
+    font-size: 5vw; }
+
+  body .logout-button {
+    font-size: 2vw; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .sections {
@@ -683,7 +686,10 @@ body {
   width: 100%; }
 
 .logout {
-  /*    background-color: green;*/ }
+  padding-right: 10px; }
+
+.logout-button {
+  font-size: 20px; }
 
 .sections {
   display: flex;

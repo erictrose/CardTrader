@@ -807,6 +807,10 @@ footer {
   border: solid #adadad 2px;
   text-decoration: none; }
 
+.ui-button:hover {
+  background: #adadad;
+  text-decoration: none; }
+
 .login-container-vertical {
   display: flex;
   flex-direction: row;
@@ -866,16 +870,8 @@ footer {
   font-size: 16px;
   margin-bottom: 26px; }
 
-.login-submit:hover {
-  background: #adadad;
-  text-decoration: none; }
-
 .register-submit {
   height: 36px;
   font-size: 16px; }
-
-.register-submit:hover {
-  background: #adadad;
-  text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

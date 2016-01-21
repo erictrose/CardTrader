@@ -3,16 +3,16 @@
 <div class="modal-container">
     <div class="modal-card {{viewColor}}Card">
         <div class="modal-card-top">
-            <p class="modal-card-type">{{viewType}}</p>
-            <p class="modal-card-title">{{viewTitle}}</p>
-            <p class="modal-card-number">
+            <p class="f1 modal-card-type">{{viewType}}</p>
+            <p class="f1 modal-card-title">{{viewTitle}}</p>
+            <p class="f1 modal-card-number">
             {{viewAttack}}/{{viewDefense}}
             </p>
         </div>
         <div class="textcenter modal-card-image-container">
             <img ng-src="{{viewImg}}" class="modal-card-image">
         </div>
-        <p class="modal-card-desc">{{viewDesc}}</p>
+        <p class="f2 modal-card-desc">{{viewDesc}}</p>
     </div>
     <div class="modal-card-close" ng-click="switchViewModal()">
         <img class="modal-card-close-img" src="img/close.png">
@@ -24,7 +24,7 @@
 <div class="modal-bg" ng-show="addModalOpen">
 <div class="modal-container">
     <div class="modal-card {{myColor}}Card">
-        <select class="modal-card-colorselect" ng-model="myColor">
+        <select class="f1 modal-card-colorselect" ng-model="myColor">
             <option value="grey">Grey</option>
             <option value="green">Green</option>
             <option value="blue">Blue</option>
@@ -32,11 +32,11 @@
             <option value="yellow">Yellow</option>
         </select>
         <div class="modal-card-top">
-            <input class="modal-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">
-            <input class="modal-card-title black-placeholders" type="text" placeholder="new" ng-model="myTitle">
-            <p class="modal-card-number">
-            <input class="modal-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack">/<input class="modal-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense">
-            </p>
+            <input class="f1 modal-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">
+            <input class="f1 modal-card-title black-placeholders" type="text" placeholder="new" ng-model="myTitle">
+            <div class="f1 modal-card-number">
+            <input class="f1 modal-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack">/<input class="f1 modal-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense">
+            </div>
         </div>
         <div class="textcenter modal-card-image-container" href="#" ngf-select="uploadFiles($files)" title="upload" resetOnClick="true" >
             <div class="file" ng-repeat="file in files">
@@ -44,9 +44,9 @@
             </div>
             <img class="modal-card-image" src="../img/placeholder.png" ng-hide="files">
         </div>
-        <span>{{notify}}</span>
-        <textarea class="modal-card-desc black-placeholders" name="" maxlength="140" placeholder="description" ng-model="myDesc" required></textarea>
-        <button class="modal-card-submit" ng-click="saveCard()">Save</button>
+        <span class="f1">{{notify}}</span>
+        <textarea class="f2 modal-card-desc black-placeholders" name="" maxlength="140" placeholder="description" ng-model="myDesc" required></textarea>
+        <button class="f1 modal-card-submit" ng-click="saveCard()">Save</button>
     </div>
         <div class="modal-card-close" ng-click="switchAddModal()">
             <img class="modal-card-close-img" src="img/close.png">
@@ -78,7 +78,7 @@
                 </p>
             </div>
             <img class="new-card-image" ng-src="{{card.cardImgSmall}}">
-            <p class="f1 new-card-desc">
+            <p class="f2 new-card-desc">
                 {{card.cardDesc}}
             </p>
         </div>
@@ -101,7 +101,7 @@
                 </p>
             </div>
             <img class="bytype-card-image" ng-src="{{newestGreen.cardImgSmall}}" alt="card image">
-            <p class="f1 bytype-card-desc">
+            <p class="f2 bytype-card-desc">
                 {{newestGreen.cardDesc}}
             </p>
         </div>
@@ -119,7 +119,7 @@
                 </p>
             </div>
             <img class="bytype-card-image" ng-src="{{newestBlue.cardImgSmall}}" alt="card image">
-            <p class="f1 bytype-card-desc">
+            <p class="f2 bytype-card-desc">
                 {{newestBlue.cardDesc}}
             </p>
         </div>
@@ -137,7 +137,7 @@
                 </p>
             </div>
             <img class="bytype-card-image" ng-src="{{newestPurple.cardImgSmall}}" alt="card image">
-            <p class="f1 bytype-card-desc">
+            <p class="f2 bytype-card-desc">
                 {{newestPurple.cardDesc}}
             </p>
         </div>
@@ -155,7 +155,7 @@
                 </p>
             </div>
             <img class="bytype-card-image" ng-src="{{newestYellow.cardImgSmall}}" alt="card image">
-            <p class="f1 bytype-card-desc">
+            <p class="f2 bytype-card-desc">
                 {{newestYellow.cardDesc}}
             </p>
         </div>
@@ -176,7 +176,7 @@
                 </p>
             </div>
             <img class="bytype-card-image" ng-src="{{card.cardImgSmall}}" alt="card image">
-            <p class="f1 bytype-card-desc">
+            <p class="f2 bytype-card-desc">
                 {{card.cardDesc}} 
             </p>
         </div> 

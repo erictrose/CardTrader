@@ -1,6 +1,6 @@
 # cardtrader
 A student project for Streaming Media Servers <br>
-https://cardtrader.firebaseapp.com/
+https://card-trader.firebaseapp.com/
 
 
 static buildout <br>

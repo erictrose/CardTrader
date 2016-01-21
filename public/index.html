@@ -54,46 +54,28 @@
     <div class="auth" ng-controller="AuthCtrl">
         <!--when logged out-->
         <div ng-hide="authData">
-           
-           
-           <div class="login-container-vertical">
-           <div class="login-container-horizontal">
-           
-           
-            <img class="login-img" src="img/test-logo.png">
-            
-            
-            <div class="login-options-container">
-            
-            <div class="login-providers-container">
-            
-            <button class="login-provider-button" ng-click="githublogin()">login with github</button>
-            <button class="login-provider-button" ng-click="twitterlogin()">login with twitter</button>
-            <button class="login-provider-button" ng-click="googlelogin()">login with google</button>
-            
+            <div class="login-container-vertical">
+                <div class="login-container-horizontal">
+                    <img class="login-img" src="img/test-logo.png">
+                    <div class="login-options-container">
+                        <div class="login-providers-container">
+                            <button class="login-provider-button" ng-click="githublogin()">login with github</button>
+                            <button class="login-provider-button" ng-click="twitterlogin()">login with twitter</button>
+                            <button class="login-provider-button" ng-click="googlelogin()">login with google</button>
+                        </div>
+                        <div class="login-email-container">
+                            <p class="login-text">{{loginText}}</p>
+                            <input class="login-input" type="email" name="" placeholder="email" ng-model="loginEmail">
+                            <input class="login-input" type="password" name="" placeholder="password" ng-model="loginPassword">
+                            <button class="login-submit" ng-click="emaillogin()">login</button>
+                            <p class="login-text">{{registerText}}</p>
+                            <input class="login-input" type="email" name="" placeholder="email" ng-model="registerEmail">
+                            <input class="login-input" type="password" name="" placeholder="password" ng-model="registerPassword">
+                            <button class="login-submit" ng-click="register()">register</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            
-            
-            <div class="login-email-container">
-            <p class="login-text">login</p>
-            <input class="login-input" type="email" name="" placeholder="email" ng-model="loginEmail">
-            <input class="login-input" type="password" name="" placeholder="password" ng-model="loginPassword">
-            <button class="login-submit" ng-click="emaillogin()">login</button>
-            <p class="login-text">register</p>
-            <input class="login-input" type="email" name="" placeholder="email" ng-model="registerEmail">
-            <input class="login-input" type="password" name="" placeholder="password" ng-model="registerPassword">
-            <button class="login-submit" ng-click="register()">register</button>
-            
-            </div>
-            
-            </div>
-            
-            </div>
-            </div>
-            
-            
-            
         </div>
         <!--when logged in-->
         <div ng-show="authData">

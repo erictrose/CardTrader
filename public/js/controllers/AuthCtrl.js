@@ -1,4 +1,9 @@
 app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http,$location){
+    
+    //defaults
+    $scope.loginText = 'login';
+    $scope.registerText = 'register';
+    
     //on auth change
     Auth.$onAuth(function(authData){
         $scope.authData = authData;
@@ -12,18 +17,47 @@ app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http,$location){
     });
     //email login
     $scope.emaillogin = function(){
-        Auth.$authWithPassword({
-            email : $scope.loginEmail,
-            password : $scope.loginPassword
-        })
-        .then(function(userData){
-            $scope.provider = userData.provider;
-            $scope.profileName = 'new user';
-            $scope.profilePic = 'http://www.standard-icons.com/stock-icons/standard-dating/unknown_person-icon.gif';
-        })
-        .catch(function(error){
-            console.log(error);
-        });
+        //if an email address is entered
+        if($scope.loginEmail){
+            //if a password is entered
+            if($scope.loginPassword){
+                //if password is 5 characters or more
+                if($scope.loginPassword.length>=5){
+                    //log user in
+                    Auth.$authWithPassword({
+                        email : $scope.loginEmail,
+                        password : $scope.loginPassword
+                    })
+                    .then(function(userData){
+                        $scope.provider = userData.provider;
+                        $scope.profileName = 'new user';
+                        $scope.profilePic = 'http://www.standard-icons.com/stock-icons/standard-dating/unknown_person-icon.gif';
+                        //clear fields
+                        $scope.loginEmail = '';
+                        $scope.loginPassword = '';
+                        $scope.loginText = 'login';
+                        $scope.registerText = 'register';
+                    })
+                    .catch(function(error){
+                        console.log(error);
+                        $scope.loginText = 'sorry, please try again';
+                        //clear fields
+                        $scope.loginEmail = '';
+                        $scope.loginPassword = '';
+                    });
+        
+        
+                } else {
+                    $scope.loginText = 'password must be atleast 5 characters';
+                };
+            } else {
+                $scope.loginText = 'please enter a password';
+            };
+        } else {
+            $scope.loginText = 'please enter an email address';
+        };
+        
+        
     };
     //github login
     $scope.githublogin = function(){
@@ -63,18 +97,54 @@ app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http,$location){
     };
     //register
     $scope.register = function(){
-//        $scope.message = null;
-//        $scope.error = null;
-        Auth.$createUser({
-            email: $scope.registerEmail,
-            password: $scope.registerPassword
-        })
-        .then(function(userData){
-            $scope.message = "User created with uid: " + userData.uid;
-        })
-        .catch(function(error){
-            console.log(error);
-        });
+        //if an email address is entered
+        if($scope.registerEmail){
+            //if a password is entered
+            if($scope.registerPassword){
+                //if password is 5 characters or more
+                if($scope.registerPassword.length>=5){
+                    //create account
+                    Auth.$createUser({
+                        email: $scope.registerEmail,
+                        password: $scope.registerPassword
+                    })
+                    .then(function(userData){
+                        console.log('account created, logging in');
+                        //log account in
+                        var instaAuth = function(){
+                            Auth.$authWithPassword({
+                                email : $scope.registerEmail,
+                                password : $scope.registerPassword
+                            })
+                            .then(function(userData){
+                                $scope.provider = userData.provider;
+                                $scope.profileName = 'new user';
+                                $scope.profilePic = 'http://www.standard-icons.com/stock-icons/standard-dating/unknown_person-icon.gif';
+                                $scope.loginText = 'login';
+                                $scope.registerText = 'register';
+                            })
+                            .catch(function(error){
+                                console.log(error);
+                                $scope.registerText = 'registration error';
+                            });
+                        };
+                        instaAuth();
+                        //clear fields
+                        $scope.registerEmail = '';
+                        $scope.registerPassword = '';
+                    })
+                    .catch(function(error){
+                        console.log(error);
+                    });
+                } else {
+                    $scope.registerText = 'password must be atleast 5 characters';
+                };
+            } else {
+                $scope.registerText = 'please enter a password';
+            };
+        } else {
+            $scope.registerText = 'please enter an email address';
+        };
     };
     //logout
     $scope.logout = function(){

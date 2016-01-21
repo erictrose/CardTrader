@@ -41,18 +41,24 @@ body {
 }
 .sections {
     display: flex;
-/*    background-color: lightgreen;*/
+    background-color: #E2E2E2;
     justify-content: space-around;
     flex-flow: row nowrap;
     margin-bottom: 12px;
     margin-top: 7px;
 }
-.section-text {
-    
-}
 .section-button {
-    width: 100%;
     font-size: 38px;
+    width: 100%;
+    color: black;
+    background: #E2E2E2;
+    //  padding: 10px 20px 10px 20px;
+    border: none;
+    text-decoration: none;
+}
+.section-button:hover {
+    background: #D6D6D6;
+    text-decoration: none;
 }
 .middle {
 /*    height: 500px;*/

@@ -345,7 +345,10 @@ html, body {
     font-size: 4vw; }
 
   .modal-card-close {
-    width: 50px; } }
+    width: 50px; }
+
+  body .section-button {
+    width: auto; } }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 555px) {
   .modal-card {
@@ -693,15 +696,23 @@ body {
 
 .sections {
   display: flex;
-  /*    background-color: lightgreen;*/
+  background-color: #E2E2E2;
   justify-content: space-around;
   flex-flow: row nowrap;
   margin-bottom: 12px;
   margin-top: 7px; }
 
 .section-button {
+  font-size: 38px;
   width: 100%;
-  font-size: 38px; }
+  color: black;
+  background: #E2E2E2;
+  border: none;
+  text-decoration: none; }
+
+.section-button:hover {
+  background: #D6D6D6;
+  text-decoration: none; }
 
 .middle {
   /*    height: 500px;*/
@@ -803,12 +814,12 @@ footer {
   -moz-border-radius: 2;
   border-radius: 2px;
   color: #000000;
-  background: #bdbdbd;
-  border: solid #adadad 2px;
+  background: #E2E2E2;
+  border: none;
   text-decoration: none; }
 
 .ui-button:hover {
-  background: #adadad;
+  background: #D6D6D6;
   text-decoration: none; }
 
 .login-container-vertical {

@@ -1,7 +1,14 @@
-# cardtrader
-A student project for Streaming Media Servers <br>
-https://card-trader.firebaseapp.com/
+Card Trader
+=============
+<!--[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges) <br>-->
+[![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges) <br>
+<!--[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges) <br>-->
+*web app* <br>
 
+Make, battle, bet and trade cards online. <br>
 
-static buildout <br>
-https://nameless-coast-2539.herokuapp.com/
+Technologies: <br>
+[Angular](https://angularjs.org/) <br>
+[Firebase](https://www.firebase.com/) <br>
+[Angularfire](https://www.firebase.com/docs/web/libraries/angular/) <br>
+[Cloudinary](http://cloudinary.com/) <br>

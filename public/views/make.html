@@ -32,10 +32,10 @@
             <option value="yellow">Yellow</option>
         </select>
         <div class="modal-card-top">
-            <input class="f1 modal-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType">
+            <input class="f1 modal-card-type black-placeholders" type="text" placeholder="TYP" ng-model="myType" maxlength="3">
             <input class="f1 modal-card-title black-placeholders" type="text" placeholder="new" ng-model="myTitle">
             <div class="f1 modal-card-number">
-            <input class="f1 modal-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack">/<input class="f1 modal-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense">
+            <input class="f1 modal-card-number black-placeholders" type="text" placeholder="0" ng-model="myAttack" maxlength="1">/<input class="f1 modal-card-number black-placeholders" type="text" placeholder="0" ng-model="myDefense" maxlength="1">
             </div>
         </div>
         <div class="textcenter modal-card-image-container" href="#" ngf-select="uploadFiles($files)" title="upload" resetOnClick="true" >

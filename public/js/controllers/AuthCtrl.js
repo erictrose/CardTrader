@@ -3,6 +3,7 @@ app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http,$location){
     //defaults
     $scope.loginText = 'login';
     $scope.registerText = 'register';
+    $scope.providerError = '';
     
     //on auth change
     Auth.$onAuth(function(authData){
@@ -69,6 +70,7 @@ app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http,$location){
         })
         .catch(function(error){
             console.log(error);
+            $scope.providerError = 'github login error, please try again';
         });
     };
     //twitter login
@@ -81,6 +83,7 @@ app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http,$location){
         })
         .catch(function(error){
             console.log(error);
+            $scope.providerError = 'twitter login error, please try again';
         });
     };
     //google login
@@ -93,6 +96,7 @@ app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http,$location){
         })
         .catch(function(error){
             console.log(error);
+            $scope.providerError = 'google login error, please try again';
         });
     };
     //register
@@ -135,6 +139,9 @@ app.controller("AuthCtrl", function($scope,$rootScope,Auth,$http,$location){
                     })
                     .catch(function(error){
                         console.log(error);
+                        $scope.providerError = 'registration error, please try again';
+                        $scope.registerEmail = '';
+                        $scope.registerPassword = '';
                     });
                 } else {
                     $scope.registerText = 'password must be atleast 5 characters';

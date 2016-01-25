@@ -164,6 +164,14 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
     //save card
     $scope.saveCard = function(){
         if($scope.myTitle && $scope.myDesc && $scope.myImg){
+            
+        if(isNaN($scope.myAttack)||isNaN($scope.myDefense)){
+            console.log('attack and defense must be numbers');
+            $scope.notify = 'attack and defense must be numbers';
+            $scope.myAttack = '';
+            $scope.myDefense = '';
+            
+        } else {
             //total of attack and defense
             var total = parseInt($scope.myAttack) + parseInt($scope.myDefense);
 
@@ -338,6 +346,9 @@ app.controller("MakeCtrl", ["currentAuth", "$scope", "Upload", "$rootScope", "$r
             console.log('card saved');
             //close modal
             $scope.switchAddModal();
+        };
+        } else {
+            $scope.notify = 'please choose a title, image and description';
         };
     };
 }]);

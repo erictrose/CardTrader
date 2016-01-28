@@ -10,3 +10,4 @@ Technologies: <br>
 [Firebase](https://www.firebase.com/) <br>
 [Angularfire](https://www.firebase.com/docs/web/libraries/angular/) <br>
 [Cloudinary](http://cloudinary.com/) <br>
+[Flexbox](https://en.wikipedia.org/wiki/CSS_Flex_Box_Layout) <br>

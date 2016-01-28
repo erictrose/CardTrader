@@ -3,6 +3,9 @@ Card Trader
 [![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges) <br>
 [*web application*](http://cardtrader.eric.hosting/) <br>
 
+[Design Sketches](http://imgur.com/a/rmbVk) <br>
+[Prototype](http://imgur.com/a/ZXxs6)
+
 Make, battle, bet and trade cards online. <br>
 
 Technologies: <br>
